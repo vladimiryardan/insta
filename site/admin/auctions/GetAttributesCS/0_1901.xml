@@ -1,0 +1,6776 @@
+<eBay><Attributes>
+<AttributeSet id='1901' >
+<DomainName><![CDATA[Golf Clubs]]></DomainName>
+</AttributeSet>
+<AttributeSet id='2135' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<Attribute vivisible='true'  id='3805'  count='1'  displaysequence='3'  source='3' >
+<SellingDisplayLabel><![CDATA[Refund will be given as]]></SellingDisplayLabel>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</Attribute>
+<Attribute vivisible='true'  id='3804'  count='1'  displaysequence='2'  source='3' >
+<SellingDisplayLabel><![CDATA[Item must be returned within]]></SellingDisplayLabel>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+</Attribute>
+<Attribute vivisible='true'  id='3993'  count='1'  displaysequence='5'  source='3' >
+<SellingDisplayLabel><![CDATA[Return shipping will be paid by]]></SellingDisplayLabel>
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+</Attribute>
+</AttributeSet>
+</Attributes>
+<Characteristics>
+<CharacteristicsSet id='1901'  order='1' >
+<DomainName><![CDATA[Golf Clubs]]></DomainName>
+<PresentationInstruction>
+    <DomainName>Golf Clubs</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="6" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="14" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="41" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="10244" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="56" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="30482" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="30481" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute id='6'  labelVisible='true' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Club Type]]></Label>
+<ValueList count='9' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30486' >
+<Name><![CDATA[Complete Club Set]]></Name>
+</Value>
+<Value id='30487' >
+<Name><![CDATA[Driver]]></Name>
+</Value>
+<Value id='30494' >
+<Name><![CDATA[Fairway Wood, Hybrid]]></Name>
+</Value>
+<Value id='30495' >
+<Name><![CDATA[Iron: Individual Club]]></Name>
+</Value>
+<Value id='30496' >
+<Name><![CDATA[Irons: Set]]></Name>
+</Value>
+<Value id='30497' >
+<Name><![CDATA[Putter]]></Name>
+</Value>
+<Value id='30498' >
+<Name><![CDATA[Wedge]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<Dependency count='17'  parentValueId='30486'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30483' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='44059' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30484' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30499' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30500' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30501' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30502' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30700' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30503' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30504' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30505' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30506' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30507' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30508' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30509' >
+<Name><![CDATA[Multi Brand]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='29'  parentValueId='30487'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30701' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='44060' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44061' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='44062' >
+<Name><![CDATA[Burrows]]></Name>
+</Value>
+<Value id='30702' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30703' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30704' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44063' >
+<Name><![CDATA[Founders Club]]></Name>
+</Value>
+<Value id='44064' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='44065' >
+<Name><![CDATA[Goldwin]]></Name>
+</Value>
+<Value id='44066' >
+<Name><![CDATA[Integra]]></Name>
+</Value>
+<Value id='44067' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30705' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='44068' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30706' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30510' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='30708' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30511' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30710' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44069' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='30711' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30712' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30713' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30714' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='44070' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='44071' >
+<Name><![CDATA[Walter Hagen]]></Name>
+</Value>
+<Value id='30715' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='27'  parentValueId='30494'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30716' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='44072' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44073' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='44074' >
+<Name><![CDATA[Burrows]]></Name>
+</Value>
+<Value id='30717' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30718' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30719' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44075' >
+<Name><![CDATA[Kasco]]></Name>
+</Value>
+<Value id='30720' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='44076' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30721' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='44077' >
+<Name><![CDATA[Nickent]]></Name>
+</Value>
+<Value id='44078' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='30722' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30723' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30724' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44079' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='30725' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30512' >
+<Name><![CDATA[Sonartec]]></Name>
+</Value>
+<Value id='44080' >
+<Name><![CDATA[Srixon]]></Name>
+</Value>
+<Value id='30726' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30727' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30728' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='44081' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='30729' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='20'  parentValueId='30495'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30730' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30513' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30731' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30732' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30733' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30514' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30734' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30515' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30735' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30736' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30788' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30789' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30790' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30516' >
+<Name><![CDATA[Spalding Top-Flite]]></Name>
+</Value>
+<Value id='30738' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30739' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30740' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30741' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='27'  parentValueId='30496'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30742' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30743' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44082' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='30744' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30745' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30746' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44083' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='30747' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30748' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30749' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30750' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='44682' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='30751' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30752' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30753' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44084' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='30754' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30755' >
+<Name><![CDATA[Spalding Top-Flite]]></Name>
+</Value>
+<Value id='44085' >
+<Name><![CDATA[Srixon]]></Name>
+</Value>
+<Value id='30756' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30757' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30758' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='44087' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='44088' >
+<Name><![CDATA[Walter Hagen]]></Name>
+</Value>
+<Value id='30759' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='23'  parentValueId='30497'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30760' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30761' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30762' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30517' >
+<Name><![CDATA[Carbite]]></Name>
+</Value>
+<Value id='30763' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30764' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44089' >
+<Name><![CDATA[Guerin Rife]]></Name>
+</Value>
+<Value id='30765' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30766' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30518' >
+<Name><![CDATA[Never Compromise]]></Name>
+</Value>
+<Value id='44090' >
+<Name><![CDATA[Nickent]]></Name>
+</Value>
+<Value id='30767' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30519' >
+<Name><![CDATA[Odyssey]]></Name>
+</Value>
+<Value id='30768' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30769' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='44091' >
+<Name><![CDATA[See More]]></Name>
+</Value>
+<Value id='44092' >
+<Name><![CDATA[STX]]></Name>
+</Value>
+<Value id='30770' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30771' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30772' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='44093' >
+<Name><![CDATA[Yes!]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='21'  parentValueId='30498'  childAttrId='14'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30773' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30774' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30775' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30776' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30777' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44094' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='44095' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30778' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30779' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='44096' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='30780' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30781' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30782' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44097' >
+<Name><![CDATA[Pure Spin]]></Name>
+</Value>
+<Value id='30783' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30784' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30785' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30786' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30787' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<ValidationRules>
+<Rule>
+<Length>20</Length><Name>StringLengthRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute id='14'  labelVisible='true'  parentAttrId='6' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Brand]]></Label>
+<ValueList count='154' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30483' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30701' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30716' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30730' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30742' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30760' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30773' >
+<Name><![CDATA[Adams]]></Name>
+</Value>
+<Value id='30513' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30743' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30761' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='30774' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44059' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44060' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44072' >
+<Name><![CDATA[Ben Hogan]]></Name>
+</Value>
+<Value id='44061' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='44073' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='44082' >
+<Name><![CDATA[Bridgestone Precept]]></Name>
+</Value>
+<Value id='44062' >
+<Name><![CDATA[Burrows]]></Name>
+</Value>
+<Value id='44074' >
+<Name><![CDATA[Burrows]]></Name>
+</Value>
+<Value id='30484' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30702' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30717' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30731' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30744' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30762' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30775' >
+<Name><![CDATA[Callaway]]></Name>
+</Value>
+<Value id='30517' >
+<Name><![CDATA[Carbite]]></Name>
+</Value>
+<Value id='30499' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30703' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30718' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30732' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30745' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30763' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30776' >
+<Name><![CDATA[Cleveland]]></Name>
+</Value>
+<Value id='30500' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30704' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30719' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30733' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30746' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30764' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='30777' >
+<Name><![CDATA[Cobra]]></Name>
+</Value>
+<Value id='44063' >
+<Name><![CDATA[Founders Club]]></Name>
+</Value>
+<Value id='44064' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='44083' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='44094' >
+<Name><![CDATA[Giant]]></Name>
+</Value>
+<Value id='44065' >
+<Name><![CDATA[Goldwin]]></Name>
+</Value>
+<Value id='44089' >
+<Name><![CDATA[Guerin Rife]]></Name>
+</Value>
+<Value id='44066' >
+<Name><![CDATA[Integra]]></Name>
+</Value>
+<Value id='44075' >
+<Name><![CDATA[Kasco]]></Name>
+</Value>
+<Value id='30514' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30747' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='44067' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='44095' >
+<Name><![CDATA[Lynx]]></Name>
+</Value>
+<Value id='30501' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30705' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30720' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30734' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30748' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30765' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30778' >
+<Name><![CDATA[MacGregor]]></Name>
+</Value>
+<Value id='30515' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30749' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='44068' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='44076' >
+<Name><![CDATA[MaxFli Dunlop]]></Name>
+</Value>
+<Value id='30502' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30706' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30721' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30735' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30750' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30766' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30779' >
+<Name><![CDATA[Mizuno]]></Name>
+</Value>
+<Value id='30509' >
+<Name><![CDATA[Multi Brand]]></Name>
+</Value>
+<Value id='30518' >
+<Name><![CDATA[Never Compromise]]></Name>
+</Value>
+<Value id='44077' >
+<Name><![CDATA[Nickent]]></Name>
+</Value>
+<Value id='44090' >
+<Name><![CDATA[Nickent]]></Name>
+</Value>
+<Value id='30510' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='44078' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='44096' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='44682' >
+<Name><![CDATA[Nicklaus]]></Name>
+</Value>
+<Value id='2445' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30700' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30708' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30722' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30736' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30751' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30767' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30780' >
+<Name><![CDATA[Nike]]></Name>
+</Value>
+<Value id='30519' >
+<Name><![CDATA[Odyssey]]></Name>
+</Value>
+<Value id='30511' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30723' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30752' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30781' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30788' >
+<Name><![CDATA[Orlimar]]></Name>
+</Value>
+<Value id='30503' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30710' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30724' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30753' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30768' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30782' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='30789' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44069' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='44079' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='44084' >
+<Name><![CDATA[PowerBilt]]></Name>
+</Value>
+<Value id='44097' >
+<Name><![CDATA[Pure Spin]]></Name>
+</Value>
+<Value id='30504' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30711' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30725' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30754' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30769' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30783' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='30790' >
+<Name><![CDATA[Ram]]></Name>
+</Value>
+<Value id='44091' >
+<Name><![CDATA[See More]]></Name>
+</Value>
+<Value id='30512' >
+<Name><![CDATA[Sonartec]]></Name>
+</Value>
+<Value id='30516' >
+<Name><![CDATA[Spalding Top-Flite]]></Name>
+</Value>
+<Value id='30755' >
+<Name><![CDATA[Spalding Top-Flite]]></Name>
+</Value>
+<Value id='44080' >
+<Name><![CDATA[Srixon]]></Name>
+</Value>
+<Value id='44085' >
+<Name><![CDATA[Srixon]]></Name>
+</Value>
+<Value id='44092' >
+<Name><![CDATA[STX]]></Name>
+</Value>
+<Value id='30505' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30712' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30726' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30738' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30756' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30770' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30784' >
+<Name><![CDATA[TaylorMade]]></Name>
+</Value>
+<Value id='30506' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30713' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30727' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30739' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30757' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30771' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30785' >
+<Name><![CDATA[Titleist]]></Name>
+</Value>
+<Value id='30507' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30714' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30728' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30740' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30758' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='30786' >
+<Name><![CDATA[Tommy Armour]]></Name>
+</Value>
+<Value id='44086' >
+<Name><![CDATA[Top-Flite]]></Name>
+</Value>
+<Value id='44070' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='44081' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='44087' >
+<Name><![CDATA[Tour Edge]]></Name>
+</Value>
+<Value id='44071' >
+<Name><![CDATA[Walter Hagen]]></Name>
+</Value>
+<Value id='44088' >
+<Name><![CDATA[Walter Hagen]]></Name>
+</Value>
+<Value id='30508' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30715' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30729' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30741' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30759' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30772' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='30787' >
+<Name><![CDATA[Wilson]]></Name>
+</Value>
+<Value id='44093' >
+<Name><![CDATA[Yes!]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<Dependency count='11'  parentValueId='30701'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44644' >
+<Name><![CDATA[Redline RPM]]></Name>
+</Value>
+<Value id='44499' >
+<Name><![CDATA[Redline RPM 430Q]]></Name>
+</Value>
+<Value id='30488' >
+<Name><![CDATA[Redline Ti 460cc]]></Name>
+</Value>
+<Value id='44500' >
+<Name><![CDATA[Redline Ti 460cc Offset]]></Name>
+</Value>
+<Value id='44511' >
+<Name><![CDATA[SC 814N]]></Name>
+</Value>
+<Value id='30579' >
+<Name><![CDATA[Tight Lies 2]]></Name>
+</Value>
+<Value id='30489' >
+<Name><![CDATA[Tight Lies GT 303]]></Name>
+</Value>
+<Value id='30520' >
+<Name><![CDATA[Tight Lies GT 363]]></Name>
+</Value>
+<Value id='44550' >
+<Name><![CDATA[Tight Lies GT 363 Offset]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='12'  parentValueId='30716'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36564' >
+<Name><![CDATA[Idea i-Wood]]></Name>
+</Value>
+<Value id='36565' >
+<Name><![CDATA[Ovation]]></Name>
+</Value>
+<Value id='44485' >
+<Name><![CDATA[Ovation Offset]]></Name>
+</Value>
+<Value id='30577' >
+<Name><![CDATA[Redline]]></Name>
+</Value>
+<Value id='44644' >
+<Name><![CDATA[Redline RPM]]></Name>
+</Value>
+<Value id='30578' >
+<Name><![CDATA[Tight Lies]]></Name>
+</Value>
+<Value id='30579' >
+<Name><![CDATA[Tight Lies 2]]></Name>
+</Value>
+<Value id='30580' >
+<Name><![CDATA[Tight Lies GT]]></Name>
+</Value>
+<Value id='44654' >
+<Name><![CDATA[Tight Lies ST]]></Name>
+</Value>
+<Value id='44551' >
+<Name><![CDATA[Tight Lies Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='30730'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30602' >
+<Name><![CDATA[Idea]]></Name>
+</Value>
+<Value id='36571' >
+<Name><![CDATA[Idea A1]]></Name>
+</Value>
+<Value id='30578' >
+<Name><![CDATA[Tight Lies]]></Name>
+</Value>
+<Value id='30580' >
+<Name><![CDATA[Tight Lies GT]]></Name>
+</Value>
+<Value id='30603' >
+<Name><![CDATA[Tight Lies Performance]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30742'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30602' >
+<Name><![CDATA[Idea]]></Name>
+</Value>
+<Value id='36571' >
+<Name><![CDATA[Idea A1]]></Name>
+</Value>
+<Value id='44444' >
+<Name><![CDATA[Idea A1 Pro]]></Name>
+</Value>
+<Value id='30578' >
+<Name><![CDATA[Tight Lies]]></Name>
+</Value>
+<Value id='30580' >
+<Name><![CDATA[Tight Lies GT]]></Name>
+</Value>
+<Value id='30603' >
+<Name><![CDATA[Tight Lies Performance]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30513'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30604' >
+<Name><![CDATA[Apex]]></Name>
+</Value>
+<Value id='44583' >
+<Name><![CDATA[Apex 50]]></Name>
+</Value>
+<Value id='30605' >
+<Name><![CDATA[Apex Edge]]></Name>
+</Value>
+<Value id='30606' >
+<Name><![CDATA[Apex Edge Pro]]></Name>
+</Value>
+<Value id='36572' >
+<Name><![CDATA[Apex FTX]]></Name>
+</Value>
+<Value id='44584' >
+<Name><![CDATA[Apex II]]></Name>
+</Value>
+<Value id='44344' >
+<Name><![CDATA[Apex Plus]]></Name>
+</Value>
+<Value id='44600' >
+<Name><![CDATA[Edge]]></Name>
+</Value>
+<Value id='36573' >
+<Name><![CDATA[Edge CFT]]></Name>
+</Value>
+<Value id='36582' >
+<Name><![CDATA[Edge CFT Hybrid]]></Name>
+</Value>
+<Value id='44624' >
+<Name><![CDATA[Medallion]]></Name>
+</Value>
+<Value id='44642' >
+<Name><![CDATA[Radial]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='15'  parentValueId='30743'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30604' >
+<Name><![CDATA[Apex]]></Name>
+</Value>
+<Value id='30605' >
+<Name><![CDATA[Apex Edge]]></Name>
+</Value>
+<Value id='30606' >
+<Name><![CDATA[Apex Edge Pro]]></Name>
+</Value>
+<Value id='36572' >
+<Name><![CDATA[Apex FTX]]></Name>
+</Value>
+<Value id='44344' >
+<Name><![CDATA[Apex Plus]]></Name>
+</Value>
+<Value id='44354' >
+<Name><![CDATA[BH-5]]></Name>
+</Value>
+<Value id='44356' >
+<Name><![CDATA[BH-5 Offset]]></Name>
+</Value>
+<Value id='44600' >
+<Name><![CDATA[Edge]]></Name>
+</Value>
+<Value id='36573' >
+<Name><![CDATA[Edge CFT]]></Name>
+</Value>
+<Value id='36582' >
+<Name><![CDATA[Edge CFT Hybrid]]></Name>
+</Value>
+<Value id='44624' >
+<Name><![CDATA[Medallion]]></Name>
+</Value>
+<Value id='44636' >
+<Name><![CDATA[Precision]]></Name>
+</Value>
+<Value id='44642' >
+<Name><![CDATA[Radial]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='30761'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36595' >
+<Name><![CDATA[Baby Ben]]></Name>
+</Value>
+<Value id='44357' >
+<Name><![CDATA[BHB12-The Hawk]]></Name>
+</Value>
+<Value id='44358' >
+<Name><![CDATA[BHB3-C]]></Name>
+</Value>
+<Value id='44359' >
+<Name><![CDATA[BHB4-CC]]></Name>
+</Value>
+<Value id='36596' >
+<Name><![CDATA[Big Ben]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  parentValueId='30774'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30605' >
+<Name><![CDATA[Apex Edge]]></Name>
+</Value>
+<Value id='36572' >
+<Name><![CDATA[Apex FTX]]></Name>
+</Value>
+<Value id='44344' >
+<Name><![CDATA[Apex Plus]]></Name>
+</Value>
+<Value id='44354' >
+<Name><![CDATA[BH-5]]></Name>
+</Value>
+<Value id='44394' >
+<Name><![CDATA[Carnoustie]]></Name>
+</Value>
+<Value id='36618' >
+<Name><![CDATA[Colonial]]></Name>
+</Value>
+<Value id='36573' >
+<Name><![CDATA[Edge CFT]]></Name>
+</Value>
+<Value id='30673' >
+<Name><![CDATA[Riviera]]></Name>
+</Value>
+<Value id='30674' >
+<Name><![CDATA[Special]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44072'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44360' >
+<Name><![CDATA[Big Ben C455]]></Name>
+</Value>
+<Value id='36582' >
+<Name><![CDATA[Edge CFT Hybrid]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44061'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44451' >
+<Name><![CDATA[J33P]]></Name>
+</Value>
+<Value id='44452' >
+<Name><![CDATA[J33R]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='44073'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44323' >
+<Name><![CDATA[2-EZ]]></Name>
+</Value>
+<Value id='44414' >
+<Name><![CDATA[EC Fuel]]></Name>
+</Value>
+<Value id='44416' >
+<Name><![CDATA[ECU Utility]]></Name>
+</Value>
+<Value id='44449' >
+<Name><![CDATA[J33]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44082'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44415' >
+<Name><![CDATA[EC603]]></Name>
+</Value>
+<Value id='44450' >
+<Name><![CDATA[J33 Forged Combo]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='29'  parentValueId='30702'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30525' >
+<Name><![CDATA[Big Bertha C4]]></Name>
+</Value>
+<Value id='44362' >
+<Name><![CDATA[Big Bertha Fusion FT-3]]></Name>
+</Value>
+<Value id='44587' >
+<Name><![CDATA[Big Bertha Ti 454]]></Name>
+</Value>
+<Value id='30522' >
+<Name><![CDATA[Big Bertha Titanium 2004]]></Name>
+</Value>
+<Value id='30523' >
+<Name><![CDATA[Big Bertha War Bird]]></Name>
+</Value>
+<Value id='30524' >
+<Name><![CDATA[Biggest Big Bertha]]></Name>
+</Value>
+<Value id='44601' >
+<Name><![CDATA[ERC]]></Name>
+</Value>
+<Value id='30526' >
+<Name><![CDATA[ERC Fusion]]></Name>
+</Value>
+<Value id='44602' >
+<Name><![CDATA[ERC II]]></Name>
+</Value>
+<Value id='30527' >
+<Name><![CDATA[Great Big Bertha]]></Name>
+</Value>
+<Value id='30529' >
+<Name><![CDATA[Great Big Bertha Hawk Eye]]></Name>
+</Value>
+<Value id='30528' >
+<Name><![CDATA[Great Big Bertha II]]></Name>
+</Value>
+<Value id='36553' >
+<Name><![CDATA[Great Big Bertha II 415]]></Name>
+</Value>
+<Value id='44611' >
+<Name><![CDATA[Great Big Bertha II 415+]]></Name>
+</Value>
+<Value id='44436' >
+<Name><![CDATA[Great Big Bertha II Plus]]></Name>
+</Value>
+<Value id='44437' >
+<Name><![CDATA[Great Big Bertha II Plus Pro Series]]></Name>
+</Value>
+<Value id='44438' >
+<Name><![CDATA[Great Big Bertha II Pro Series]]></Name>
+</Value>
+<Value id='44439' >
+<Name><![CDATA[Hawk Eye Pro Series]]></Name>
+</Value>
+<Value id='30531' >
+<Name><![CDATA[Hawk Eye VFT Pro Series Titanium]]></Name>
+</Value>
+<Value id='30530' >
+<Name><![CDATA[Hawk Eye VFT Titanium]]></Name>
+</Value>
+<Value id='30521' >
+<Name><![CDATA[Original Big Bertha]]></Name>
+</Value>
+<Value id='44509' >
+<Name><![CDATA[S2H2]]></Name>
+</Value>
+<Value id='44650' >
+<Name><![CDATA[Steelhead]]></Name>
+</Value>
+<Value id='30532' >
+<Name><![CDATA[Steelhead III]]></Name>
+</Value>
+<Value id='30533' >
+<Name><![CDATA[Steelhead Plus]]></Name>
+</Value>
+<Value id='55097' >
+<Name><![CDATA[X460]]></Name>
+</Value>
+<Value id='55099' >
+<Name><![CDATA[X460 Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='22'  parentValueId='30717'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30581' >
+<Name><![CDATA[Big Bertha 2004]]></Name>
+</Value>
+<Value id='44586' >
+<Name><![CDATA[Big Bertha 2005]]></Name>
+</Value>
+<Value id='44361' >
+<Name><![CDATA[Big Bertha Fusion]]></Name>
+</Value>
+<Value id='44363' >
+<Name><![CDATA[Big Bertha Heavenwood]]></Name>
+</Value>
+<Value id='30523' >
+<Name><![CDATA[Big Bertha War Bird]]></Name>
+</Value>
+<Value id='44366' >
+<Name><![CDATA[Bobby Jones]]></Name>
+</Value>
+<Value id='44601' >
+<Name><![CDATA[ERC]]></Name>
+</Value>
+<Value id='30526' >
+<Name><![CDATA[ERC Fusion]]></Name>
+</Value>
+<Value id='55117' >
+<Name><![CDATA[FT Hybrid]]></Name>
+</Value>
+<Value id='30527' >
+<Name><![CDATA[Great Big Bertha]]></Name>
+</Value>
+<Value id='30528' >
+<Name><![CDATA[Great Big Bertha II]]></Name>
+</Value>
+<Value id='44614' >
+<Name><![CDATA[Hawk Eye]]></Name>
+</Value>
+<Value id='30791' >
+<Name><![CDATA[Hawk Eye VFT Pro Series]]></Name>
+</Value>
+<Value id='30530' >
+<Name><![CDATA[Hawk Eye VFT Titanium]]></Name>
+</Value>
+<Value id='30521' >
+<Name><![CDATA[Original Big Bertha]]></Name>
+</Value>
+<Value id='44650' >
+<Name><![CDATA[Steelhead]]></Name>
+</Value>
+<Value id='30532' >
+<Name><![CDATA[Steelhead III]]></Name>
+</Value>
+<Value id='30533' >
+<Name><![CDATA[Steelhead Plus]]></Name>
+</Value>
+<Value id='55150' >
+<Name><![CDATA[X]]></Name>
+</Value>
+<Value id='44662' >
+<Name><![CDATA[X-Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  parentValueId='30731'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30581' >
+<Name><![CDATA[Big Bertha 2004]]></Name>
+</Value>
+<Value id='55106' >
+<Name><![CDATA[Big Bertha 2006]]></Name>
+</Value>
+<Value id='44361' >
+<Name><![CDATA[Big Bertha Fusion]]></Name>
+</Value>
+<Value id='30607' >
+<Name><![CDATA[Big Bertha Original '94]]></Name>
+</Value>
+<Value id='30608' >
+<Name><![CDATA[Big Bertha X-12]]></Name>
+</Value>
+<Value id='30609' >
+<Name><![CDATA[Big Bertha X-12 Pro Series]]></Name>
+</Value>
+<Value id='44614' >
+<Name><![CDATA[Hawk Eye]]></Name>
+</Value>
+<Value id='44615' >
+<Name><![CDATA[Hawk Eye VFT]]></Name>
+</Value>
+<Value id='30610' >
+<Name><![CDATA[Steelhead X-14]]></Name>
+</Value>
+<Value id='30611' >
+<Name><![CDATA[Steelhead X-14 Pro Series]]></Name>
+</Value>
+<Value id='30612' >
+<Name><![CDATA[Steelhead X-16]]></Name>
+</Value>
+<Value id='30613' >
+<Name><![CDATA[Steelhead X-16 Pro Series]]></Name>
+</Value>
+<Value id='44572' >
+<Name><![CDATA[X-18]]></Name>
+</Value>
+<Value id='44662' >
+<Name><![CDATA[X-Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='17'  parentValueId='30744'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30675' >
+<Name><![CDATA[Big Bertha 2002]]></Name>
+</Value>
+<Value id='30581' >
+<Name><![CDATA[Big Bertha 2004]]></Name>
+</Value>
+<Value id='55106' >
+<Name><![CDATA[Big Bertha 2006]]></Name>
+</Value>
+<Value id='44361' >
+<Name><![CDATA[Big Bertha Fusion]]></Name>
+</Value>
+<Value id='30607' >
+<Name><![CDATA[Big Bertha Original '94]]></Name>
+</Value>
+<Value id='30608' >
+<Name><![CDATA[Big Bertha X-12]]></Name>
+</Value>
+<Value id='30609' >
+<Name><![CDATA[Big Bertha X-12 Pro Series]]></Name>
+</Value>
+<Value id='44615' >
+<Name><![CDATA[Hawk Eye VFT]]></Name>
+</Value>
+<Value id='30610' >
+<Name><![CDATA[Steelhead X-14]]></Name>
+</Value>
+<Value id='30611' >
+<Name><![CDATA[Steelhead X-14 Pro Series]]></Name>
+</Value>
+<Value id='30612' >
+<Name><![CDATA[Steelhead X-16]]></Name>
+</Value>
+<Value id='30613' >
+<Name><![CDATA[Steelhead X-16 Pro Series]]></Name>
+</Value>
+<Value id='44572' >
+<Name><![CDATA[X-18]]></Name>
+</Value>
+<Value id='44573' >
+<Name><![CDATA[X-18 Pro Series]]></Name>
+</Value>
+<Value id='44662' >
+<Name><![CDATA[X-Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30762'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44345' >
+<Name><![CDATA[Arnold Palmer]]></Name>
+</Value>
+<Value id='30643' >
+<Name><![CDATA[Hickory Stick]]></Name>
+</Value>
+<Value id='44442' >
+<Name><![CDATA[i-trax]]></Name>
+</Value>
+<Value id='30644' >
+<Name><![CDATA[Tour Blue]]></Name>
+</Value>
+<Value id='36597' >
+<Name><![CDATA[Tour Blue 2]]></Name>
+</Value>
+<Value id='36598' >
+<Name><![CDATA[Tour Blue 3]]></Name>
+</Value>
+<Value id='30645' >
+<Name><![CDATA[Tuttle]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='17'  parentValueId='30775'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30675' >
+<Name><![CDATA[Big Bertha 2002]]></Name>
+</Value>
+<Value id='30581' >
+<Name><![CDATA[Big Bertha 2004]]></Name>
+</Value>
+<Value id='30607' >
+<Name><![CDATA[Big Bertha Original '94]]></Name>
+</Value>
+<Value id='44588' >
+<Name><![CDATA[Big Bertha Tour]]></Name>
+</Value>
+<Value id='30608' >
+<Name><![CDATA[Big Bertha X-12]]></Name>
+</Value>
+<Value id='44424' >
+<Name><![CDATA[Forged + Chrome]]></Name>
+</Value>
+<Value id='44425' >
+<Name><![CDATA[Forged + Vintage]]></Name>
+</Value>
+<Value id='36619' >
+<Name><![CDATA[Forged Chrome]]></Name>
+</Value>
+<Value id='36620' >
+<Name><![CDATA[Forged Vintage]]></Name>
+</Value>
+<Value id='30610' >
+<Name><![CDATA[Steelhead X-14]]></Name>
+</Value>
+<Value id='30611' >
+<Name><![CDATA[Steelhead X-14 Pro Series]]></Name>
+</Value>
+<Value id='30612' >
+<Name><![CDATA[Steelhead X-16]]></Name>
+</Value>
+<Value id='30613' >
+<Name><![CDATA[Steelhead X-16 Pro Series]]></Name>
+</Value>
+<Value id='44572' >
+<Name><![CDATA[X-18]]></Name>
+</Value>
+<Value id='55152' >
+<Name><![CDATA[X-Tour Vintage]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30703'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='55100' >
+<Name><![CDATA[HiBore]]></Name>
+</Value>
+<Value id='30534' >
+<Name><![CDATA[Launcher 330]]></Name>
+</Value>
+<Value id='30535' >
+<Name><![CDATA[Launcher 400]]></Name>
+</Value>
+<Value id='36554' >
+<Name><![CDATA[Launcher 460]]></Name>
+</Value>
+<Value id='44466' >
+<Name><![CDATA[Launcher 460 Comp]]></Name>
+</Value>
+<Value id='55101' >
+<Name><![CDATA[Launcher 460 Ti 2006]]></Name>
+</Value>
+<Value id='55122' >
+<Name><![CDATA[Launcher 460 Ti Offset 2006]]></Name>
+</Value>
+<Value id='44618' >
+<Name><![CDATA[Launcher W]]></Name>
+</Value>
+<Value id='44484' >
+<Name><![CDATA[Original Launcher]]></Name>
+</Value>
+<Value id='30536' >
+<Name><![CDATA[QuadPro]]></Name>
+</Value>
+<Value id='44493' >
+<Name><![CDATA[QuadPro Titanium]]></Name>
+</Value>
+<Value id='44553' >
+<Name><![CDATA[Tour Action Ti]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='10'  parentValueId='30718'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44612' >
+<Name><![CDATA[Halo]]></Name>
+</Value>
+<Value id='30582' >
+<Name><![CDATA[Launcher]]></Name>
+</Value>
+<Value id='44467' >
+<Name><![CDATA[Launcher Comp]]></Name>
+</Value>
+<Value id='36566' >
+<Name><![CDATA[Launcher Ti]]></Name>
+</Value>
+<Value id='44618' >
+<Name><![CDATA[Launcher W]]></Name>
+</Value>
+<Value id='44469' >
+<Name><![CDATA[LDI]]></Name>
+</Value>
+<Value id='30536' >
+<Name><![CDATA[QuadPro]]></Name>
+</Value>
+<Value id='44648' >
+<Name><![CDATA[Sport OS]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  parentValueId='30732'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36574' >
+<Name><![CDATA[CG1]]></Name>
+</Value>
+<Value id='55108' >
+<Name><![CDATA[CG1 Black Pearl]]></Name>
+</Value>
+<Value id='55111' >
+<Name><![CDATA[CG4 Tour]]></Name>
+</Value>
+<Value id='30614' >
+<Name><![CDATA[TA3]]></Name>
+</Value>
+<Value id='30615' >
+<Name><![CDATA[TA5]]></Name>
+</Value>
+<Value id='36575' >
+<Name><![CDATA[TA6]]></Name>
+</Value>
+<Value id='36576' >
+<Name><![CDATA[TA7]]></Name>
+</Value>
+<Value id='30616' >
+<Name><![CDATA[TA7 Tour]]></Name>
+</Value>
+<Value id='44659' >
+<Name><![CDATA[VAS+]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  parentValueId='30745'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44332' >
+<Name><![CDATA[792 VAS]]></Name>
+</Value>
+<Value id='36574' >
+<Name><![CDATA[CG1]]></Name>
+</Value>
+<Value id='55108' >
+<Name><![CDATA[CG1 Black Pearl]]></Name>
+</Value>
+<Value id='44396' >
+<Name><![CDATA[CG2]]></Name>
+</Value>
+<Value id='44397' >
+<Name><![CDATA[CG4]]></Name>
+</Value>
+<Value id='55111' >
+<Name><![CDATA[CG4 Tour]]></Name>
+</Value>
+<Value id='44544' >
+<Name><![CDATA[TA2]]></Name>
+</Value>
+<Value id='30614' >
+<Name><![CDATA[TA3]]></Name>
+</Value>
+<Value id='44545' >
+<Name><![CDATA[TA3 Form Forged]]></Name>
+</Value>
+<Value id='30615' >
+<Name><![CDATA[TA5]]></Name>
+</Value>
+<Value id='36575' >
+<Name><![CDATA[TA6]]></Name>
+</Value>
+<Value id='36576' >
+<Name><![CDATA[TA7]]></Name>
+</Value>
+<Value id='30616' >
+<Name><![CDATA[TA7 Tour]]></Name>
+</Value>
+<Value id='44659' >
+<Name><![CDATA[VAS+]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30763'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44594' >
+<Name><![CDATA[Classic III]]></Name>
+</Value>
+<Value id='44595' >
+<Name><![CDATA[Classic VII]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  parentValueId='30776'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30676' >
+<Name><![CDATA[485 Chrome]]></Name>
+</Value>
+<Value id='30677' >
+<Name><![CDATA[588 Beryllium Copper]]></Name>
+</Value>
+<Value id='30678' >
+<Name><![CDATA[588 Chrome]]></Name>
+</Value>
+<Value id='30679' >
+<Name><![CDATA[588 GunMetal]]></Name>
+</Value>
+<Value id='30680' >
+<Name><![CDATA[588 RTG]]></Name>
+</Value>
+<Value id='36621' >
+<Name><![CDATA[588 Tour Satin Chrome]]></Name>
+</Value>
+<Value id='30681' >
+<Name><![CDATA[900 BRZ]]></Name>
+</Value>
+<Value id='30682' >
+<Name><![CDATA[900 FormForged Chrome]]></Name>
+</Value>
+<Value id='30683' >
+<Name><![CDATA[900 FormForged GunMetal]]></Name>
+</Value>
+<Value id='30684' >
+<Name><![CDATA[900 FormForged RTG]]></Name>
+</Value>
+<Value id='36622' >
+<Name><![CDATA[CG10]]></Name>
+</Value>
+<Value id='44395' >
+<Name><![CDATA[CG10 Black Pearl]]></Name>
+</Value>
+<Value id='55109' >
+<Name><![CDATA[CG11]]></Name>
+</Value>
+<Value id='55110' >
+<Name><![CDATA[CG11 Black Pearl]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='28'  parentValueId='30704'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36555' >
+<Name><![CDATA[414 Comp]]></Name>
+</Value>
+<Value id='44326' >
+<Name><![CDATA[414 Comp Tour]]></Name>
+</Value>
+<Value id='36556' >
+<Name><![CDATA[454 Comp]]></Name>
+</Value>
+<Value id='30583' >
+<Name><![CDATA[Baffler]]></Name>
+</Value>
+<Value id='55115' >
+<Name><![CDATA[F Speed]]></Name>
+</Value>
+<Value id='30537' >
+<Name><![CDATA[Gravity Back]]></Name>
+</Value>
+<Value id='30538' >
+<Name><![CDATA[King Cobra]]></Name>
+</Value>
+<Value id='44459' >
+<Name><![CDATA[King Cobra Deep Face]]></Name>
+</Value>
+<Value id='44461' >
+<Name><![CDATA[King Cobra Offset Steel]]></Name>
+</Value>
+<Value id='30539' >
+<Name><![CDATA[King Cobra Ti]]></Name>
+</Value>
+<Value id='44463' >
+<Name><![CDATA[King Cobra Ti Offset]]></Name>
+</Value>
+<Value id='44616' >
+<Name><![CDATA[King Cobra Tour]]></Name>
+</Value>
+<Value id='44464' >
+<Name><![CDATA[Lady Cobra]]></Name>
+</Value>
+<Value id='55123' >
+<Name><![CDATA[M Speed]]></Name>
+</Value>
+<Value id='30540' >
+<Name><![CDATA[SS 350]]></Name>
+</Value>
+<Value id='44515' >
+<Name><![CDATA[SS 350 Offset]]></Name>
+</Value>
+<Value id='44516' >
+<Name><![CDATA[SS 350 Tour]]></Name>
+</Value>
+<Value id='30541' >
+<Name><![CDATA[SS 380]]></Name>
+</Value>
+<Value id='30542' >
+<Name><![CDATA[SS 427]]></Name>
+</Value>
+<Value id='44536' >
+<Name><![CDATA[SZ 355 Offset]]></Name>
+</Value>
+<Value id='36557' >
+<Name><![CDATA[SZ 400]]></Name>
+</Value>
+<Value id='44537' >
+<Name><![CDATA[SZ 400 Offset]]></Name>
+</Value>
+<Value id='44538' >
+<Name><![CDATA[SZ 400 Tour]]></Name>
+</Value>
+<Value id='36558' >
+<Name><![CDATA[SZ 440]]></Name>
+</Value>
+<Value id='44652' >
+<Name><![CDATA[SZ 460]]></Name>
+</Value>
+<Value id='55151' >
+<Name><![CDATA[X Speed]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='20'  parentValueId='30719'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30583' >
+<Name><![CDATA[Baffler]]></Name>
+</Value>
+<Value id='44348' >
+<Name><![CDATA[Baffler Multi-Metal]]></Name>
+</Value>
+<Value id='44349' >
+<Name><![CDATA[Baffler Utility]]></Name>
+</Value>
+<Value id='44596' >
+<Name><![CDATA[Comp]]></Name>
+</Value>
+<Value id='55115' >
+<Name><![CDATA[F Speed]]></Name>
+</Value>
+<Value id='30537' >
+<Name><![CDATA[Gravity Back]]></Name>
+</Value>
+<Value id='30538' >
+<Name><![CDATA[King Cobra]]></Name>
+</Value>
+<Value id='44460' >
+<Name><![CDATA[King Cobra Offset Senior]]></Name>
+</Value>
+<Value id='44461' >
+<Name><![CDATA[King Cobra Offset Steel]]></Name>
+</Value>
+<Value id='30539' >
+<Name><![CDATA[King Cobra Ti]]></Name>
+</Value>
+<Value id='44463' >
+<Name><![CDATA[King Cobra Ti Offset]]></Name>
+</Value>
+<Value id='44616' >
+<Name><![CDATA[King Cobra Tour]]></Name>
+</Value>
+<Value id='44465' >
+<Name><![CDATA[Lady Cobra Steel]]></Name>
+</Value>
+<Value id='55123' >
+<Name><![CDATA[M Speed]]></Name>
+</Value>
+<Value id='30584' >
+<Name><![CDATA[SS Hyper Steel]]></Name>
+</Value>
+<Value id='44518' >
+<Name><![CDATA[SS Hyper Steel Offset]]></Name>
+</Value>
+<Value id='36567' >
+<Name><![CDATA[SZ]]></Name>
+</Value>
+<Value id='44539' >
+<Name><![CDATA[SZ Offset]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30733'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44598' >
+<Name><![CDATA[CXI]]></Name>
+</Value>
+<Value id='30685' >
+<Name><![CDATA[King Cobra 2 Oversize]]></Name>
+</Value>
+<Value id='44458' >
+<Name><![CDATA[King Cobra 2 Tour]]></Name>
+</Value>
+<Value id='30617' >
+<Name><![CDATA[King Cobra Oversize]]></Name>
+</Value>
+<Value id='44464' >
+<Name><![CDATA[Lady Cobra]]></Name>
+</Value>
+<Value id='30618' >
+<Name><![CDATA[SS I Oversize]]></Name>
+</Value>
+<Value id='44519' >
+<Name><![CDATA[SS Oversize]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30746'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44324' >
+<Name><![CDATA[3100 I/H]]></Name>
+</Value>
+<Value id='44325' >
+<Name><![CDATA[3400 I/XH]]></Name>
+</Value>
+<Value id='44347' >
+<Name><![CDATA[Baffler Blade]]></Name>
+</Value>
+<Value id='44598' >
+<Name><![CDATA[CXI]]></Name>
+</Value>
+<Value id='44607' >
+<Name><![CDATA[Forged CB]]></Name>
+</Value>
+<Value id='30685' >
+<Name><![CDATA[King Cobra 2 Oversize]]></Name>
+</Value>
+<Value id='30617' >
+<Name><![CDATA[King Cobra Oversize]]></Name>
+</Value>
+<Value id='44462' >
+<Name><![CDATA[King Cobra Oversize Senior]]></Name>
+</Value>
+<Value id='44464' >
+<Name><![CDATA[Lady Cobra]]></Name>
+</Value>
+<Value id='44517' >
+<Name><![CDATA[SS Forged]]></Name>
+</Value>
+<Value id='30618' >
+<Name><![CDATA[SS I Oversize]]></Name>
+</Value>
+<Value id='44519' >
+<Name><![CDATA[SS Oversize]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='10'  parentValueId='30764'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30646' >
+<Name><![CDATA[Adelaide]]></Name>
+</Value>
+<Value id='30647' >
+<Name><![CDATA[Canberra]]></Name>
+</Value>
+<Value id='30648' >
+<Name><![CDATA[Melbourne 1]]></Name>
+</Value>
+<Value id='30649' >
+<Name><![CDATA[Melbourne 2]]></Name>
+</Value>
+<Value id='30650' >
+<Name><![CDATA[Perth 1]]></Name>
+</Value>
+<Value id='30651' >
+<Name><![CDATA[Perth 2]]></Name>
+</Value>
+<Value id='30652' >
+<Name><![CDATA[Sydney]]></Name>
+</Value>
+<Value id='30653' >
+<Name><![CDATA[Townsville]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30777'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30685' >
+<Name><![CDATA[King Cobra 2 Oversize]]></Name>
+</Value>
+<Value id='44457' >
+<Name><![CDATA[King Cobra 2 Senior]]></Name>
+</Value>
+<Value id='30617' >
+<Name><![CDATA[King Cobra Oversize]]></Name>
+</Value>
+<Value id='30686' >
+<Name><![CDATA[Phil Rodgers]]></Name>
+</Value>
+<Value id='30618' >
+<Name><![CDATA[SS I Oversize]]></Name>
+</Value>
+<Value id='44519' >
+<Name><![CDATA[SS Oversize]]></Name>
+</Value>
+<Value id='36623' >
+<Name><![CDATA[Trusty Rusty]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44063'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44429' >
+<Name><![CDATA[Fresh Metal]]></Name>
+</Value>
+<Value id='44546' >
+<Name><![CDATA[The Judge]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44066'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30548' >
+<Name><![CDATA[Forged Titanium 400cc]]></Name>
+</Value>
+<Value id='30549' >
+<Name><![CDATA[Forged Titanium 450cc]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44075'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44453' >
+<Name><![CDATA[K2K]]></Name>
+</Value>
+<Value id='44454' >
+<Name><![CDATA[K2K E-Spec]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30747'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44589' >
+<Name><![CDATA[Black Cat]]></Name>
+</Value>
+<Value id='44634' >
+<Name><![CDATA[Parallax]]></Name>
+</Value>
+<Value id='44491' >
+<Name><![CDATA[Predator]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='44067'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44364' >
+<Name><![CDATA[Black Cat Titanium]]></Name>
+</Value>
+<Value id='44367' >
+<Name><![CDATA[Boom Boom Parallax]]></Name>
+</Value>
+<Value id='44491' >
+<Name><![CDATA[Predator]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30705'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44621' >
+<Name><![CDATA[MacTec]]></Name>
+</Value>
+<Value id='30543' >
+<Name><![CDATA[V-Cavity]]></Name>
+</Value>
+<Value id='30544' >
+<Name><![CDATA[V-Foil 410cc High Launch]]></Name>
+</Value>
+<Value id='30545' >
+<Name><![CDATA[V-Foil Eye-O-Matic]]></Name>
+</Value>
+<Value id='44561' >
+<Name><![CDATA[V-Foil Eye-O-Matic M42]]></Name>
+</Value>
+<Value id='44660' >
+<Name><![CDATA[VIP]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30720'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44621' >
+<Name><![CDATA[MacTec]]></Name>
+</Value>
+<Value id='30543' >
+<Name><![CDATA[V-Cavity]]></Name>
+</Value>
+<Value id='30585' >
+<Name><![CDATA[V-Foil]]></Name>
+</Value>
+<Value id='30545' >
+<Name><![CDATA[V-Foil Eye-O-Matic]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='30748'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44622' >
+<Name><![CDATA[Master]]></Name>
+</Value>
+<Value id='36583' >
+<Name><![CDATA[V-Foil M455]]></Name>
+</Value>
+<Value id='36584' >
+<Name><![CDATA[VIP Oversize]]></Name>
+</Value>
+<Value id='36585' >
+<Name><![CDATA[VIP V-Foil 1025 C]]></Name>
+</Value>
+<Value id='36586' >
+<Name><![CDATA[VIP V-Foil 1025 M]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30765'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44562' >
+<Name><![CDATA[V-Foil MOI M5K]]></Name>
+</Value>
+<Value id='44563' >
+<Name><![CDATA[V-Foil MOI M6.4K]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='44068'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44435' >
+<Name><![CDATA[Goliath]]></Name>
+</Value>
+<Value id='44620' >
+<Name><![CDATA[LoCo]]></Name>
+</Value>
+<Value id='44470' >
+<Name><![CDATA[LoCo Pro]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30706'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44365' >
+<Name><![CDATA[Blue Rage 310]]></Name>
+</Value>
+<Value id='36568' >
+<Name><![CDATA[MP-001]]></Name>
+</Value>
+<Value id='44474' >
+<Name><![CDATA[MP-001 370cc]]></Name>
+</Value>
+<Value id='44475' >
+<Name><![CDATA[MP-001 460cc]]></Name>
+</Value>
+<Value id='55127' >
+<Name><![CDATA[MX 500]]></Name>
+</Value>
+<Value id='44653' >
+<Name><![CDATA[T-Zoid Forged Ti]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30721'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30586' >
+<Name><![CDATA[Blue Rage]]></Name>
+</Value>
+<Value id='55116' >
+<Name><![CDATA[F-50]]></Name>
+</Value>
+<Value id='30587' >
+<Name><![CDATA[Fli-Hi]]></Name>
+</Value>
+<Value id='44423' >
+<Name><![CDATA[Fli-Hi CLK]]></Name>
+</Value>
+<Value id='44606' >
+<Name><![CDATA[Fli-Hi II]]></Name>
+</Value>
+<Value id='36568' >
+<Name><![CDATA[MP-001]]></Name>
+</Value>
+<Value id='30588' >
+<Name><![CDATA[T-Zoid Forged Utility]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30735'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30619' >
+<Name><![CDATA[MP 14]]></Name>
+</Value>
+<Value id='30620' >
+<Name><![CDATA[MP 30]]></Name>
+</Value>
+<Value id='36577' >
+<Name><![CDATA[MP 32]]></Name>
+</Value>
+<Value id='30621' >
+<Name><![CDATA[MP 33]]></Name>
+</Value>
+<Value id='36587' >
+<Name><![CDATA[MP 37]]></Name>
+</Value>
+<Value id='55124' >
+<Name><![CDATA[MP 60]]></Name>
+</Value>
+<Value id='30622' >
+<Name><![CDATA[MX 20]]></Name>
+</Value>
+<Value id='36578' >
+<Name><![CDATA[MX 23]]></Name>
+</Value>
+<Value id='55128' >
+<Name><![CDATA[MX 900]]></Name>
+</Value>
+<Value id='44540' >
+<Name><![CDATA[T-Zoid Pro Forged]]></Name>
+</Value>
+<Value id='44541' >
+<Name><![CDATA[T-Zoid Pro II Forged]]></Name>
+</Value>
+<Value id='44685' >
+<Name><![CDATA[T-Zoid Sure]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='15'  parentValueId='30750'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30619' >
+<Name><![CDATA[MP 14]]></Name>
+</Value>
+<Value id='44626' >
+<Name><![CDATA[MP 29]]></Name>
+</Value>
+<Value id='30620' >
+<Name><![CDATA[MP 30]]></Name>
+</Value>
+<Value id='36577' >
+<Name><![CDATA[MP 32]]></Name>
+</Value>
+<Value id='30621' >
+<Name><![CDATA[MP 33]]></Name>
+</Value>
+<Value id='36587' >
+<Name><![CDATA[MP 37]]></Name>
+</Value>
+<Value id='55124' >
+<Name><![CDATA[MP 60]]></Name>
+</Value>
+<Value id='44627' >
+<Name><![CDATA[MX 17]]></Name>
+</Value>
+<Value id='30622' >
+<Name><![CDATA[MX 20]]></Name>
+</Value>
+<Value id='36578' >
+<Name><![CDATA[MX 23]]></Name>
+</Value>
+<Value id='55128' >
+<Name><![CDATA[MX 900]]></Name>
+</Value>
+<Value id='44540' >
+<Name><![CDATA[T-Zoid Pro Forged]]></Name>
+</Value>
+<Value id='44542' >
+<Name><![CDATA[T-Zoid True]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30766'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30654' >
+<Name><![CDATA[TPM 8]]></Name>
+</Value>
+<Value id='30655' >
+<Name><![CDATA[TPM 9]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30779'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30687' >
+<Name><![CDATA[Faldo]]></Name>
+</Value>
+<Value id='30688' >
+<Name><![CDATA[MP Series]]></Name>
+</Value>
+<Value id='30689' >
+<Name><![CDATA[MP Series Raw Black Ox]]></Name>
+</Value>
+<Value id='44472' >
+<Name><![CDATA[MP T Series Black Nickel]]></Name>
+</Value>
+<Value id='55125' >
+<Name><![CDATA[MP T Series Chrome]]></Name>
+</Value>
+<Value id='44473' >
+<Name><![CDATA[MP T Series Raw Haze]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30518'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44565' >
+<Name><![CDATA[Voodoo]]></Name>
+</Value>
+<Value id='44566' >
+<Name><![CDATA[Voodoo Belly]]></Name>
+</Value>
+<Value id='44567' >
+<Name><![CDATA[VooDoo Daddy Center Shaft]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44077'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44433' >
+<Name><![CDATA[Genex 3DX]]></Name>
+</Value>
+<Value id='44434' >
+<Name><![CDATA[Genex 3DX Ironwood]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30510'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44575' >
+<Name><![CDATA[Airmax]]></Name>
+</Value>
+<Value id='44342' >
+<Name><![CDATA[Airmax ML 380]]></Name>
+</Value>
+<Value id='44343' >
+<Name><![CDATA[Airmax ML 440]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='44682'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44341' >
+<Name><![CDATA[Air Bear Offset]]></Name>
+</Value>
+<Value id='44398' >
+<Name><![CDATA[CGX]]></Name>
+</Value>
+<Value id='44476' >
+<Name><![CDATA[N1]]></Name>
+</Value>
+<Value id='44477' >
+<Name><![CDATA[N1 Pro]]></Name>
+</Value>
+<Value id='44637' >
+<Name><![CDATA[Progressive]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='12'  parentValueId='30708'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44427' >
+<Name><![CDATA[Forged Steel 300cc]]></Name>
+</Value>
+<Value id='30546' >
+<Name><![CDATA[Forged Titanium 275cc]]></Name>
+</Value>
+<Value id='30547' >
+<Name><![CDATA[Forged Titanium 350cc]]></Name>
+</Value>
+<Value id='30548' >
+<Name><![CDATA[Forged Titanium 400cc]]></Name>
+</Value>
+<Value id='30549' >
+<Name><![CDATA[Forged Titanium 450cc]]></Name>
+</Value>
+<Value id='36559' >
+<Name><![CDATA[Ignite 410]]></Name>
+</Value>
+<Value id='36560' >
+<Name><![CDATA[Ignite 460]]></Name>
+</Value>
+<Value id='44478' >
+<Name><![CDATA[NDS]]></Name>
+</Value>
+<Value id='44790' >
+<Name><![CDATA[SasQuatch]]></Name>
+</Value>
+<Value id='55141' >
+<Name><![CDATA[SasQuatch 460 Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='13'  parentValueId='30722'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='55113' >
+<Name><![CDATA[CPR 3 Iron-Wood]]></Name>
+</Value>
+<Value id='30589' >
+<Name><![CDATA[CPR]]></Name>
+</Value>
+<Value id='44399' >
+<Name><![CDATA[CPR Iron-Wood]]></Name>
+</Value>
+<Value id='44681' >
+<Name><![CDATA[Ignite T60]]></Name>
+</Value>
+<Value id='44478' >
+<Name><![CDATA[NDS]]></Name>
+</Value>
+<Value id='44492' >
+<Name><![CDATA[Pro Combo Utility]]></Name>
+</Value>
+<Value id='44790' >
+<Name><![CDATA[SasQuatch]]></Name>
+</Value>
+<Value id='55142' >
+<Name><![CDATA[Slingshot (hybrid)]]></Name>
+</Value>
+<Value id='55145' >
+<Name><![CDATA[Slingshot Tour (hybrid)]]></Name>
+</Value>
+<Value id='30590' >
+<Name><![CDATA[T-40 Oversize]]></Name>
+</Value>
+<Value id='30591' >
+<Name><![CDATA[T-40 Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30736'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30589' >
+<Name><![CDATA[CPR]]></Name>
+</Value>
+<Value id='55112' >
+<Name><![CDATA[CPR 2]]></Name>
+</Value>
+<Value id='30623' >
+<Name><![CDATA[Forged Pro Combo]]></Name>
+</Value>
+<Value id='30624' >
+<Name><![CDATA[Slingshot]]></Name>
+</Value>
+<Value id='55143' >
+<Name><![CDATA[Slingshot OSS]]></Name>
+</Value>
+<Value id='55144' >
+<Name><![CDATA[Slingshot Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  parentValueId='30751'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30589' >
+<Name><![CDATA[CPR]]></Name>
+</Value>
+<Value id='55112' >
+<Name><![CDATA[CPR 2]]></Name>
+</Value>
+<Value id='30642' >
+<Name><![CDATA[Forged Blades]]></Name>
+</Value>
+<Value id='30623' >
+<Name><![CDATA[Forged Pro Combo]]></Name>
+</Value>
+<Value id='44426' >
+<Name><![CDATA[Forged Pro Combo Tour]]></Name>
+</Value>
+<Value id='44478' >
+<Name><![CDATA[NDS]]></Name>
+</Value>
+<Value id='30624' >
+<Name><![CDATA[Slingshot]]></Name>
+</Value>
+<Value id='55143' >
+<Name><![CDATA[Slingshot OSS]]></Name>
+</Value>
+<Value id='55144' >
+<Name><![CDATA[Slingshot Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30767'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44352' >
+<Name><![CDATA[BC 101 Heel-Toe]]></Name>
+</Value>
+<Value id='44353' >
+<Name><![CDATA[BC 203]]></Name>
+</Value>
+<Value id='44486' >
+<Name><![CDATA[Oz Mallet]]></Name>
+</Value>
+<Value id='44487' >
+<Name><![CDATA[Oz T100]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30780'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30589' >
+<Name><![CDATA[CPR]]></Name>
+</Value>
+<Value id='30690' >
+<Name><![CDATA[Forged]]></Name>
+</Value>
+<Value id='44428' >
+<Name><![CDATA[Forged Unchromed]]></Name>
+</Value>
+<Value id='44478' >
+<Name><![CDATA[NDS]]></Name>
+</Value>
+<Value id='30624' >
+<Name><![CDATA[Slingshot]]></Name>
+</Value>
+<Value id='44651' >
+<Name><![CDATA[SV]]></Name>
+</Value>
+<Value id='55146' >
+<Name><![CDATA[TW]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='26'  parentValueId='30519'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44409' >
+<Name><![CDATA[DF660]]></Name>
+</Value>
+<Value id='36599' >
+<Name><![CDATA[DFX 2-Ball]]></Name>
+</Value>
+<Value id='36600' >
+<Name><![CDATA[DFX 2-Ball Center-Shafted]]></Name>
+</Value>
+<Value id='44410' >
+<Name><![CDATA[DFX 6600]]></Name>
+</Value>
+<Value id='55114' >
+<Name><![CDATA[Dual Force 2]]></Name>
+</Value>
+<Value id='30658' >
+<Name><![CDATA[Dual Force 550]]></Name>
+</Value>
+<Value id='30656' >
+<Name><![CDATA[Dual Force Rossie 1]]></Name>
+</Value>
+<Value id='30657' >
+<Name><![CDATA[Dual Force Rossie 2]]></Name>
+</Value>
+<Value id='30659' >
+<Name><![CDATA[White Hot #1]]></Name>
+</Value>
+<Value id='30660' >
+<Name><![CDATA[White Hot #2]]></Name>
+</Value>
+<Value id='30661' >
+<Name><![CDATA[White Hot #5]]></Name>
+</Value>
+<Value id='30662' >
+<Name><![CDATA[White Hot #6]]></Name>
+</Value>
+<Value id='36601' >
+<Name><![CDATA[White Hot 2-Ball]]></Name>
+</Value>
+<Value id='36602' >
+<Name><![CDATA[White Hot 2-Ball Center]]></Name>
+</Value>
+<Value id='36603' >
+<Name><![CDATA[White Hot 2-Ball Long]]></Name>
+</Value>
+<Value id='36604' >
+<Name><![CDATA[White Hot 2-Ball Mid]]></Name>
+</Value>
+<Value id='44661' >
+<Name><![CDATA[White Hot 4]]></Name>
+</Value>
+<Value id='30663' >
+<Name><![CDATA[White Hot Mid/Long]]></Name>
+</Value>
+<Value id='44568' >
+<Name><![CDATA[White Hot Rossie]]></Name>
+</Value>
+<Value id='55148' >
+<Name><![CDATA[White Hot XG]]></Name>
+</Value>
+<Value id='44569' >
+<Name><![CDATA[White Steel 1]]></Name>
+</Value>
+<Value id='44570' >
+<Name><![CDATA[White Steel 2]]></Name>
+</Value>
+<Value id='44571' >
+<Name><![CDATA[White Steel 5]]></Name>
+</Value>
+<Value id='55149' >
+<Name><![CDATA[White Steel Tri-Ball SRT]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='30511'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30550' >
+<Name><![CDATA[HipSteel]]></Name>
+</Value>
+<Value id='30551' >
+<Name><![CDATA[HIP-Ti]]></Name>
+</Value>
+<Value id='44440' >
+<Name><![CDATA[HIP-Ti 420]]></Name>
+</Value>
+<Value id='30552' >
+<Name><![CDATA[TriMetal]]></Name>
+</Value>
+<Value id='30592' >
+<Name><![CDATA[TriMetal Plus]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30723'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30550' >
+<Name><![CDATA[HipSteel]]></Name>
+</Value>
+<Value id='30552' >
+<Name><![CDATA[TriMetal]]></Name>
+</Value>
+<Value id='44656' >
+<Name><![CDATA[TriMetal II]]></Name>
+</Value>
+<Value id='30592' >
+<Name><![CDATA[TriMetal Plus]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='13'  parentValueId='30710'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44604' >
+<Name><![CDATA[Eye]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='55118' >
+<Name><![CDATA[G5]]></Name>
+</Value>
+<Value id='30553' >
+<Name><![CDATA[i3]]></Name>
+</Value>
+<Value id='30554' >
+<Name><![CDATA[Si3]]></Name>
+</Value>
+<Value id='44513' >
+<Name><![CDATA[Si3 380cc]]></Name>
+</Value>
+<Value id='30555' >
+<Name><![CDATA[TiSI]]></Name>
+</Value>
+<Value id='30556' >
+<Name><![CDATA[TiSI Tec]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30724'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='55118' >
+<Name><![CDATA[G5]]></Name>
+</Value>
+<Value id='55119' >
+<Name><![CDATA[G5 Hybrid]]></Name>
+</Value>
+<Value id='30553' >
+<Name><![CDATA[i3]]></Name>
+</Value>
+<Value id='44548' >
+<Name><![CDATA[Ti 3]]></Name>
+</Value>
+<Value id='30556' >
+<Name><![CDATA[TiSI Tec]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='22'  parentValueId='30753'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44604' >
+<Name><![CDATA[Eye]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='30691' >
+<Name><![CDATA[Eye 2 Beryllium Copper]]></Name>
+</Value>
+<Value id='30625' >
+<Name><![CDATA[Eye 2 Plus]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='44609' >
+<Name><![CDATA[G2 HL]]></Name>
+</Value>
+<Value id='55118' >
+<Name><![CDATA[G5]]></Name>
+</Value>
+<Value id='30626' >
+<Name><![CDATA[i3 +]]></Name>
+</Value>
+<Value id='44443' >
+<Name><![CDATA[i3 + Blade]]></Name>
+</Value>
+<Value id='30627' >
+<Name><![CDATA[i3 Blade]]></Name>
+</Value>
+<Value id='30628' >
+<Name><![CDATA[i3 O-Size]]></Name>
+</Value>
+<Value id='55121' >
+<Name><![CDATA[i5]]></Name>
+</Value>
+<Value id='44445' >
+<Name><![CDATA[ISI Beryllium Copper]]></Name>
+</Value>
+<Value id='44446' >
+<Name><![CDATA[ISI K]]></Name>
+</Value>
+<Value id='44447' >
+<Name><![CDATA[ISI Nickel]]></Name>
+</Value>
+<Value id='44455' >
+<Name><![CDATA[Karsten I]]></Name>
+</Value>
+<Value id='36579' >
+<Name><![CDATA[S59]]></Name>
+</Value>
+<Value id='44510' >
+<Name><![CDATA[S59 Tour]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='40'  parentValueId='30768'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44340' >
+<Name><![CDATA[A Blade]]></Name>
+</Value>
+<Value id='44576' >
+<Name><![CDATA[Ally]]></Name>
+</Value>
+<Value id='30664' >
+<Name><![CDATA[Anser]]></Name>
+</Value>
+<Value id='30665' >
+<Name><![CDATA[Anser 2]]></Name>
+</Value>
+<Value id='44577' >
+<Name><![CDATA[Anser 2i]]></Name>
+</Value>
+<Value id='44578' >
+<Name><![CDATA[Anser 2x]]></Name>
+</Value>
+<Value id='44579' >
+<Name><![CDATA[Anser 3]]></Name>
+</Value>
+<Value id='44580' >
+<Name><![CDATA[Anser 4]]></Name>
+</Value>
+<Value id='44582' >
+<Name><![CDATA[Anser 5]]></Name>
+</Value>
+<Value id='30666' >
+<Name><![CDATA[B60]]></Name>
+</Value>
+<Value id='44585' >
+<Name><![CDATA[B60i]]></Name>
+</Value>
+<Value id='44346' >
+<Name><![CDATA[B90]]></Name>
+</Value>
+<Value id='36605' >
+<Name><![CDATA[Craz-e]]></Name>
+</Value>
+<Value id='44412' >
+<Name><![CDATA[Doc 12.5]]></Name>
+</Value>
+<Value id='44599' >
+<Name><![CDATA[Doc15]]></Name>
+</Value>
+<Value id='36606' >
+<Name><![CDATA[Doc17]]></Name>
+</Value>
+<Value id='36607' >
+<Name><![CDATA[G2 Ally]]></Name>
+</Value>
+<Value id='36608' >
+<Name><![CDATA[G2 Anser]]></Name>
+</Value>
+<Value id='36609' >
+<Name><![CDATA[G2i Anser]]></Name>
+</Value>
+<Value id='44610' >
+<Name><![CDATA[G2i B60]]></Name>
+</Value>
+<Value id='55120' >
+<Name><![CDATA[G5i Craz-e]]></Name>
+</Value>
+<Value id='36610' >
+<Name><![CDATA[JAS Anser]]></Name>
+</Value>
+<Value id='44617' >
+<Name><![CDATA[Kushin]]></Name>
+</Value>
+<Value id='44628' >
+<Name><![CDATA[My Day]]></Name>
+</Value>
+<Value id='44483' >
+<Name><![CDATA[O Blade]]></Name>
+</Value>
+<Value id='44629' >
+<Name><![CDATA[OLD]]></Name>
+</Value>
+<Value id='44630' >
+<Name><![CDATA[Pal]]></Name>
+</Value>
+<Value id='44631' >
+<Name><![CDATA[Pal 2]]></Name>
+</Value>
+<Value id='44632' >
+<Name><![CDATA[Pal 4]]></Name>
+</Value>
+<Value id='44633' >
+<Name><![CDATA[Pal 5]]></Name>
+</Value>
+<Value id='30667' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44635' >
+<Name><![CDATA[Ping 5]]></Name>
+</Value>
+<Value id='44489' >
+<Name><![CDATA[Ping N Ping]]></Name>
+</Value>
+<Value id='44512' >
+<Name><![CDATA[Scottsdale Anser]]></Name>
+</Value>
+<Value id='44547' >
+<Name><![CDATA[Ti 2]]></Name>
+</Value>
+<Value id='44549' >
+<Name><![CDATA[Ti 4]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  parentValueId='30782'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='30691' >
+<Name><![CDATA[Eye 2 Beryllium Copper]]></Name>
+</Value>
+<Value id='30625' >
+<Name><![CDATA[Eye 2 Plus]]></Name>
+</Value>
+<Value id='44417' >
+<Name><![CDATA[Eye 2 Plus BeCu]]></Name>
+</Value>
+<Value id='44418' >
+<Name><![CDATA[Eye 2 Plus-No-Plus]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='30626' >
+<Name><![CDATA[i3 +]]></Name>
+</Value>
+<Value id='30627' >
+<Name><![CDATA[i3 Blade]]></Name>
+</Value>
+<Value id='30628' >
+<Name><![CDATA[i3 O-Size]]></Name>
+</Value>
+<Value id='44446' >
+<Name><![CDATA[ISI K]]></Name>
+</Value>
+<Value id='30692' >
+<Name><![CDATA[M/B]]></Name>
+</Value>
+<Value id='44683' >
+<Name><![CDATA[Tour]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='21'  parentValueId='30789'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44604' >
+<Name><![CDATA[Eye]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='30625' >
+<Name><![CDATA[Eye 2 Plus]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='44609' >
+<Name><![CDATA[G2 HL]]></Name>
+</Value>
+<Value id='55118' >
+<Name><![CDATA[G5]]></Name>
+</Value>
+<Value id='30626' >
+<Name><![CDATA[i3 +]]></Name>
+</Value>
+<Value id='44443' >
+<Name><![CDATA[i3 + Blade]]></Name>
+</Value>
+<Value id='30627' >
+<Name><![CDATA[i3 Blade]]></Name>
+</Value>
+<Value id='30628' >
+<Name><![CDATA[i3 O-Size]]></Name>
+</Value>
+<Value id='55121' >
+<Name><![CDATA[i5]]></Name>
+</Value>
+<Value id='44446' >
+<Name><![CDATA[ISI K]]></Name>
+</Value>
+<Value id='44447' >
+<Name><![CDATA[ISI Nickel]]></Name>
+</Value>
+<Value id='44448' >
+<Name><![CDATA[ISI S]]></Name>
+</Value>
+<Value id='44455' >
+<Name><![CDATA[Karsten I]]></Name>
+</Value>
+<Value id='44456' >
+<Name><![CDATA[Karsten III]]></Name>
+</Value>
+<Value id='36579' >
+<Name><![CDATA[S59]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30711'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44608' >
+<Name><![CDATA[FX]]></Name>
+</Value>
+<Value id='44430' >
+<Name><![CDATA[FX Oversize]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30725'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44597' >
+<Name><![CDATA[Concept]]></Name>
+</Value>
+<Value id='44608' >
+<Name><![CDATA[FX]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30754'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44432' >
+<Name><![CDATA[FX3]]></Name>
+</Value>
+<Value id='44430' >
+<Name><![CDATA[FX Oversize]]></Name>
+</Value>
+<Value id='44555' >
+<Name><![CDATA[Tour Grind]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='30769'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44664' >
+<Name><![CDATA[Zebra]]></Name>
+</Value>
+<Value id='44574' >
+<Name><![CDATA[Zebra Traditional]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30783'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44431' >
+<Name><![CDATA[FX Satin]]></Name>
+</Value>
+<Value id='44552' >
+<Name><![CDATA[Tom Watson]]></Name>
+</Value>
+<Value id='44555' >
+<Name><![CDATA[Tour Grind]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='4'  parentValueId='44091'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44368' >
+<Name><![CDATA[Brass Blade]]></Name>
+</Value>
+<Value id='44647' >
+<Name><![CDATA[See More]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  parentValueId='30512'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44623' >
+<Name><![CDATA[Md]]></Name>
+</Value>
+<Value id='44482' >
+<Name><![CDATA[NP-99]]></Name>
+</Value>
+<Value id='44520' >
+<Name><![CDATA[SS-02]]></Name>
+</Value>
+<Value id='44522' >
+<Name><![CDATA[SS-03]]></Name>
+</Value>
+<Value id='44543' >
+<Name><![CDATA[T.R.C]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30516'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44684' >
+<Name><![CDATA[Executive]]></Name>
+</Value>
+<Value id='44683' >
+<Name><![CDATA[Tour]]></Name>
+</Value>
+<Value id='44557' >
+<Name><![CDATA[Tour Oversize]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30755'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44684' >
+<Name><![CDATA[Executive]]></Name>
+</Value>
+<Value id='44683' >
+<Name><![CDATA[Tour]]></Name>
+</Value>
+<Value id='44557' >
+<Name><![CDATA[Tour Oversize]]></Name>
+</Value>
+<Value id='44663' >
+<Name><![CDATA[XL2000]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='3'  parentValueId='44085'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44441' >
+<Name><![CDATA[I-302]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='32'  parentValueId='30712'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30594' >
+<Name><![CDATA[200 Steel]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30558' >
+<Name><![CDATA[320]]></Name>
+</Value>
+<Value id='30559' >
+<Name><![CDATA[360]]></Name>
+</Value>
+<Value id='44590' >
+<Name><![CDATA[Burner 2]]></Name>
+</Value>
+<Value id='44591' >
+<Name><![CDATA[Burner 420]]></Name>
+</Value>
+<Value id='30560' >
+<Name><![CDATA[Burner Bubble]]></Name>
+</Value>
+<Value id='30561' >
+<Name><![CDATA[Firesole]]></Name>
+</Value>
+<Value id='44490' >
+<Name><![CDATA[Pittsburgh Persimmon]]></Name>
+</Value>
+<Value id='44494' >
+<Name><![CDATA[R360 XD]]></Name>
+</Value>
+<Value id='36562' >
+<Name><![CDATA[r5 Dual]]></Name>
+</Value>
+<Value id='44638' >
+<Name><![CDATA[r5 Dual TP]]></Name>
+</Value>
+<Value id='30562' >
+<Name><![CDATA[R510]]></Name>
+</Value>
+<Value id='30563' >
+<Name><![CDATA[R510 TP]]></Name>
+</Value>
+<Value id='30564' >
+<Name><![CDATA[R540]]></Name>
+</Value>
+<Value id='30565' >
+<Name><![CDATA[R540 XD]]></Name>
+</Value>
+<Value id='30566' >
+<Name><![CDATA[R580]]></Name>
+</Value>
+<Value id='30567' >
+<Name><![CDATA[R580 XD]]></Name>
+</Value>
+<Value id='55129' >
+<Name><![CDATA[r7 425]]></Name>
+</Value>
+<Value id='55134' >
+<Name><![CDATA[r7 425 TP]]></Name>
+</Value>
+<Value id='55135' >
+<Name><![CDATA[r7 460]]></Name>
+</Value>
+<Value id='36563' >
+<Name><![CDATA[r7 quad]]></Name>
+</Value>
+<Value id='44639' >
+<Name><![CDATA[r7 quad HT]]></Name>
+</Value>
+<Value id='44640' >
+<Name><![CDATA[r7 TP]]></Name>
+</Value>
+<Value id='30568' >
+<Name><![CDATA[SuperSteel]]></Name>
+</Value>
+<Value id='44533' >
+<Name><![CDATA[SuperSteel 250]]></Name>
+</Value>
+<Value id='44534' >
+<Name><![CDATA[SuperSteel Offset]]></Name>
+</Value>
+<Value id='44535' >
+<Name><![CDATA[System 2]]></Name>
+</Value>
+<Value id='30569' >
+<Name><![CDATA[Titanium Bubble]]></Name>
+</Value>
+<Value id='30570' >
+<Name><![CDATA[Titanium Bubble 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='28'  parentValueId='30726'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30594' >
+<Name><![CDATA[200 Steel]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30595' >
+<Name><![CDATA[300 Tour]]></Name>
+</Value>
+<Value id='30560' >
+<Name><![CDATA[Burner Bubble]]></Name>
+</Value>
+<Value id='30561' >
+<Name><![CDATA[Firesole]]></Name>
+</Value>
+<Value id='30596' >
+<Name><![CDATA[Firesole Rescue]]></Name>
+</Value>
+<Value id='44490' >
+<Name><![CDATA[Pittsburgh Persimmon]]></Name>
+</Value>
+<Value id='36562' >
+<Name><![CDATA[r5 Dual]]></Name>
+</Value>
+<Value id='30566' >
+<Name><![CDATA[R580]]></Name>
+</Value>
+<Value id='55137' >
+<Name><![CDATA[r7 Steel]]></Name>
+</Value>
+<Value id='55138' >
+<Name><![CDATA[r7 Ti]]></Name>
+</Value>
+<Value id='44640' >
+<Name><![CDATA[r7 TP]]></Name>
+</Value>
+<Value id='44643' >
+<Name><![CDATA[Raylor]]></Name>
+</Value>
+<Value id='36569' >
+<Name><![CDATA[Rescue]]></Name>
+</Value>
+<Value id='44501' >
+<Name><![CDATA[Rescue Dual]]></Name>
+</Value>
+<Value id='44502' >
+<Name><![CDATA[Rescue Dual TP]]></Name>
+</Value>
+<Value id='30597' >
+<Name><![CDATA[Rescue Mid]]></Name>
+</Value>
+<Value id='44645' >
+<Name><![CDATA[Rescue Mid TP]]></Name>
+</Value>
+<Value id='44503' >
+<Name><![CDATA[Retro Raylor]]></Name>
+</Value>
+<Value id='30568' >
+<Name><![CDATA[SuperSteel]]></Name>
+</Value>
+<Value id='44535' >
+<Name><![CDATA[System 2]]></Name>
+</Value>
+<Value id='30569' >
+<Name><![CDATA[Titanium Bubble]]></Name>
+</Value>
+<Value id='30570' >
+<Name><![CDATA[Titanium Bubble 2]]></Name>
+</Value>
+<Value id='44554' >
+<Name><![CDATA[Tour Cleek]]></Name>
+</Value>
+<Value id='44559' >
+<Name><![CDATA[Tour Spoon]]></Name>
+</Value>
+<Value id='30598' >
+<Name><![CDATA[V-Steel]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='17'  parentValueId='30738'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30594' >
+<Name><![CDATA[200 Steel]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30558' >
+<Name><![CDATA[320]]></Name>
+</Value>
+<Value id='30630' >
+<Name><![CDATA[Burner LCG]]></Name>
+</Value>
+<Value id='44369' >
+<Name><![CDATA[Burner Oversize]]></Name>
+</Value>
+<Value id='30561' >
+<Name><![CDATA[Firesole]]></Name>
+</Value>
+<Value id='55136' >
+<Name><![CDATA[r7 cgb MAX]]></Name>
+</Value>
+<Value id='55139' >
+<Name><![CDATA[r7 XD]]></Name>
+</Value>
+<Value id='36588' >
+<Name><![CDATA[RAC CGB]]></Name>
+</Value>
+<Value id='36589' >
+<Name><![CDATA[RAC HT]]></Name>
+</Value>
+<Value id='36580' >
+<Name><![CDATA[RAC LT]]></Name>
+</Value>
+<Value id='30631' >
+<Name><![CDATA[RAC MB]]></Name>
+</Value>
+<Value id='30632' >
+<Name><![CDATA[RAC OS]]></Name>
+</Value>
+<Value id='36590' >
+<Name><![CDATA[RAC TP 2]]></Name>
+</Value>
+<Value id='30568' >
+<Name><![CDATA[SuperSteel]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='24'  parentValueId='30756'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30594' >
+<Name><![CDATA[200 Steel]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30558' >
+<Name><![CDATA[320]]></Name>
+</Value>
+<Value id='30630' >
+<Name><![CDATA[Burner LCG]]></Name>
+</Value>
+<Value id='44369' >
+<Name><![CDATA[Burner Oversize]]></Name>
+</Value>
+<Value id='30561' >
+<Name><![CDATA[Firesole]]></Name>
+</Value>
+<Value id='44468' >
+<Name><![CDATA[LCG]]></Name>
+</Value>
+<Value id='44471' >
+<Name><![CDATA[Miscela]]></Name>
+</Value>
+<Value id='55139' >
+<Name><![CDATA[r7 XD]]></Name>
+</Value>
+<Value id='55136' >
+<Name><![CDATA[r7 cgb MAX]]></Name>
+</Value>
+<Value id='36588' >
+<Name><![CDATA[RAC CGB]]></Name>
+</Value>
+<Value id='44495' >
+<Name><![CDATA[RAC Forged CB TP]]></Name>
+</Value>
+<Value id='36589' >
+<Name><![CDATA[RAC HT]]></Name>
+</Value>
+<Value id='36580' >
+<Name><![CDATA[RAC LT]]></Name>
+</Value>
+<Value id='30631' >
+<Name><![CDATA[RAC MB]]></Name>
+</Value>
+<Value id='30632' >
+<Name><![CDATA[RAC OS]]></Name>
+</Value>
+<Value id='44496' >
+<Name><![CDATA[RAC OS 2005]]></Name>
+</Value>
+<Value id='36590' >
+<Name><![CDATA[RAC TP 2]]></Name>
+</Value>
+<Value id='44641' >
+<Name><![CDATA[RAC TP 2005]]></Name>
+</Value>
+<Value id='44498' >
+<Name><![CDATA[RAC TP Combo]]></Name>
+</Value>
+<Value id='30568' >
+<Name><![CDATA[SuperSteel]]></Name>
+</Value>
+<Value id='44558' >
+<Name><![CDATA[Tour Preferred]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='13'  parentValueId='30770'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36611' >
+<Name><![CDATA[Rossa CGB Daytona 1]]></Name>
+</Value>
+<Value id='36612' >
+<Name><![CDATA[Rossa CGB Fontana]]></Name>
+</Value>
+<Value id='44646' >
+<Name><![CDATA[Rossa CGB Fontana 7]]></Name>
+</Value>
+<Value id='36613' >
+<Name><![CDATA[Rossa CGB Maranello 4]]></Name>
+</Value>
+<Value id='36614' >
+<Name><![CDATA[Rossa Mezza Monza]]></Name>
+</Value>
+<Value id='44504' >
+<Name><![CDATA[Rossa Mezza Monza Center]]></Name>
+</Value>
+<Value id='36615' >
+<Name><![CDATA[Rossa Monza]]></Name>
+</Value>
+<Value id='44505' >
+<Name><![CDATA[Rossa Monza Center-Shaft]]></Name>
+</Value>
+<Value id='44506' >
+<Name><![CDATA[Rossa Monza Corza]]></Name>
+</Value>
+<Value id='44507' >
+<Name><![CDATA[Rossa Monza Long]]></Name>
+</Value>
+<Value id='44508' >
+<Name><![CDATA[Rossa Monza Mid]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30784'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30630' >
+<Name><![CDATA[Burner LCG]]></Name>
+</Value>
+<Value id='44468' >
+<Name><![CDATA[LCG]]></Name>
+</Value>
+<Value id='30694' >
+<Name><![CDATA[RAC]]></Name>
+</Value>
+<Value id='36624' >
+<Name><![CDATA[RAC Black]]></Name>
+</Value>
+<Value id='55140' >
+<Name><![CDATA[RAC Black TP]]></Name>
+</Value>
+<Value id='36625' >
+<Name><![CDATA[RAC Chrome]]></Name>
+</Value>
+<Value id='36626' >
+<Name><![CDATA[RAC Fe2 O3]]></Name>
+</Value>
+<Value id='36580' >
+<Name><![CDATA[RAC LT]]></Name>
+</Value>
+<Value id='30632' >
+<Name><![CDATA[RAC OS]]></Name>
+</Value>
+<Value id='44497' >
+<Name><![CDATA[RAC Satin Tour]]></Name>
+</Value>
+<Value id='44683' >
+<Name><![CDATA[Tour]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='13'  parentValueId='30713'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='55105' >
+<Name><![CDATA[905R]]></Name>
+</Value>
+<Value id='44336' >
+<Name><![CDATA[905S]]></Name>
+</Value>
+<Value id='44337' >
+<Name><![CDATA[905T]]></Name>
+</Value>
+<Value id='30571' >
+<Name><![CDATA[975D]]></Name>
+</Value>
+<Value id='30572' >
+<Name><![CDATA[975J]]></Name>
+</Value>
+<Value id='30573' >
+<Name><![CDATA[975J VS]]></Name>
+</Value>
+<Value id='30574' >
+<Name><![CDATA[975L FE]]></Name>
+</Value>
+<Value id='44338' >
+<Name><![CDATA[976R]]></Name>
+</Value>
+<Value id='30575' >
+<Name><![CDATA[983E]]></Name>
+</Value>
+<Value id='30576' >
+<Name><![CDATA[983K]]></Name>
+</Value>
+<Value id='30601' >
+<Name><![CDATA[PT]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  parentValueId='30727'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44327' >
+<Name><![CDATA[503.H]]></Name>
+</Value>
+<Value id='44335' >
+<Name><![CDATA[904F]]></Name>
+</Value>
+<Value id='36570' >
+<Name><![CDATA[970]]></Name>
+</Value>
+<Value id='30599' >
+<Name><![CDATA[975F]]></Name>
+</Value>
+<Value id='30600' >
+<Name><![CDATA[980F]]></Name>
+</Value>
+<Value id='44339' >
+<Name><![CDATA[980F Strong]]></Name>
+</Value>
+<Value id='30601' >
+<Name><![CDATA[PT]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  parentValueId='30739'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30633' >
+<Name><![CDATA[690 CB Forged]]></Name>
+</Value>
+<Value id='30634' >
+<Name><![CDATA[690 MB Forged]]></Name>
+</Value>
+<Value id='44328' >
+<Name><![CDATA[690.CB Forged]]></Name>
+</Value>
+<Value id='44330' >
+<Name><![CDATA[690.MB Forged]]></Name>
+</Value>
+<Value id='55103' >
+<Name><![CDATA[735.CM]]></Name>
+</Value>
+<Value id='55104' >
+<Name><![CDATA[775.CB]]></Name>
+</Value>
+<Value id='30635' >
+<Name><![CDATA[DCI 762]]></Name>
+</Value>
+<Value id='30636' >
+<Name><![CDATA[DCI 962]]></Name>
+</Value>
+<Value id='30637' >
+<Name><![CDATA[DCI 981]]></Name>
+</Value>
+<Value id='30638' >
+<Name><![CDATA[DCI 990]]></Name>
+</Value>
+<Value id='44401' >
+<Name><![CDATA[DCI Black]]></Name>
+</Value>
+<Value id='44402' >
+<Name><![CDATA[DCI Black Oversize+]]></Name>
+</Value>
+<Value id='44403' >
+<Name><![CDATA[DCI Gold]]></Name>
+</Value>
+<Value id='44413' >
+<Name><![CDATA[DTR]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='19'  parentValueId='30757'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='36591' >
+<Name><![CDATA[670 Forged]]></Name>
+</Value>
+<Value id='36592' >
+<Name><![CDATA[680 Forged]]></Name>
+</Value>
+<Value id='30633' >
+<Name><![CDATA[690 CB Forged]]></Name>
+</Value>
+<Value id='30634' >
+<Name><![CDATA[690 MB Forged]]></Name>
+</Value>
+<Value id='44328' >
+<Name><![CDATA[690.CB Forged]]></Name>
+</Value>
+<Value id='44330' >
+<Name><![CDATA[690.MB Forged]]></Name>
+</Value>
+<Value id='36593' >
+<Name><![CDATA[704.CB]]></Name>
+</Value>
+<Value id='55103' >
+<Name><![CDATA[735.CM]]></Name>
+</Value>
+<Value id='55104' >
+<Name><![CDATA[775.CB]]></Name>
+</Value>
+<Value id='36594' >
+<Name><![CDATA[804.OS]]></Name>
+</Value>
+<Value id='30635' >
+<Name><![CDATA[DCI 762]]></Name>
+</Value>
+<Value id='44400' >
+<Name><![CDATA[DCI 822 Oversize]]></Name>
+</Value>
+<Value id='30636' >
+<Name><![CDATA[DCI 962]]></Name>
+</Value>
+<Value id='30637' >
+<Name><![CDATA[DCI 981]]></Name>
+</Value>
+<Value id='30638' >
+<Name><![CDATA[DCI 990]]></Name>
+</Value>
+<Value id='44401' >
+<Name><![CDATA[DCI Black]]></Name>
+</Value>
+<Value id='44403' >
+<Name><![CDATA[DCI Gold]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='36'  parentValueId='30771'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='55107' >
+<Name><![CDATA[Cameron Circa '62]]></Name>
+</Value>
+<Value id='44370' >
+<Name><![CDATA[Cameron Coronado]]></Name>
+</Value>
+<Value id='44371' >
+<Name><![CDATA[Cameron Del Mar]]></Name>
+</Value>
+<Value id='30668' >
+<Name><![CDATA[Cameron Futura]]></Name>
+</Value>
+<Value id='44372' >
+<Name><![CDATA[Cameron Futura Phantom]]></Name>
+</Value>
+<Value id='44373' >
+<Name><![CDATA[Cameron Futura Phantom Mallet]]></Name>
+</Value>
+<Value id='44374' >
+<Name><![CDATA[Cameron Futura Phantom Mallet 2]]></Name>
+</Value>
+<Value id='30669' >
+<Name><![CDATA[Cameron Laguna]]></Name>
+</Value>
+<Value id='44375' >
+<Name><![CDATA[Cameron Mil-Spec Newport]]></Name>
+</Value>
+<Value id='44592' >
+<Name><![CDATA[Cameron Napa]]></Name>
+</Value>
+<Value id='30670' >
+<Name><![CDATA[Cameron Newport]]></Name>
+</Value>
+<Value id='30671' >
+<Name><![CDATA[Cameron Newport 2]]></Name>
+</Value>
+<Value id='44376' >
+<Name><![CDATA[Cameron Newport Mid Slant]]></Name>
+</Value>
+<Value id='44377' >
+<Name><![CDATA[Cameron Oil Can Newport]]></Name>
+</Value>
+<Value id='44378' >
+<Name><![CDATA[Cameron Pro Plat. Newport Mid Slant]]></Name>
+</Value>
+<Value id='36616' >
+<Name><![CDATA[Cameron Red X]]></Name>
+</Value>
+<Value id='44379' >
+<Name><![CDATA[Cameron Pro Platinum Mid Sur]]></Name>
+</Value>
+<Value id='44381' >
+<Name><![CDATA[Cameron Pro Platinum Newport 2]]></Name>
+</Value>
+<Value id='44380' >
+<Name><![CDATA[Cameron Pro Platinum Newport]]></Name>
+</Value>
+<Value id='44593' >
+<Name><![CDATA[Cameron Red X2]]></Name>
+</Value>
+<Value id='30672' >
+<Name><![CDATA[Cameron Santa Fe]]></Name>
+</Value>
+<Value id='44382' >
+<Name><![CDATA[Cameron Studio Design 1]]></Name>
+</Value>
+<Value id='44383' >
+<Name><![CDATA[Cameron Studio Design 1.5]]></Name>
+</Value>
+<Value id='44384' >
+<Name><![CDATA[Cameron Studio Design 2]]></Name>
+</Value>
+<Value id='44385' >
+<Name><![CDATA[Cameron Studio Design 2.5]]></Name>
+</Value>
+<Value id='44386' >
+<Name><![CDATA[Cameron Studio Design 3]]></Name>
+</Value>
+<Value id='44387' >
+<Name><![CDATA[Cameron Studio Design 5]]></Name>
+</Value>
+<Value id='36617' >
+<Name><![CDATA[Cameron Studio Stainless]]></Name>
+</Value>
+<Value id='44388' >
+<Name><![CDATA[Cameron Studio Stainless Newport]]></Name>
+</Value>
+<Value id='44389' >
+<Name><![CDATA[Cameron Studio Stainless Newport 2]]></Name>
+</Value>
+<Value id='44390' >
+<Name><![CDATA[Cameron Studio Stainless Newport 2.5]]></Name>
+</Value>
+<Value id='44391' >
+<Name><![CDATA[Cameron Studio Style Newport]]></Name>
+</Value>
+<Value id='44392' >
+<Name><![CDATA[Cameron Studio Style Newport 1.5]]></Name>
+</Value>
+<Value id='44393' >
+<Name><![CDATA[Cameron Studio Style Newport 2]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  parentValueId='30785'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30636' >
+<Name><![CDATA[DCI 962]]></Name>
+</Value>
+<Value id='30695' >
+<Name><![CDATA[Vokey Black Nickel]]></Name>
+</Value>
+<Value id='36627' >
+<Name><![CDATA[Vokey Chrome 200 Series]]></Name>
+</Value>
+<Value id='36628' >
+<Name><![CDATA[Vokey Chrome 300 Series]]></Name>
+</Value>
+<Value id='36629' >
+<Name><![CDATA[Vokey Chrome 400 Series]]></Name>
+</Value>
+<Value id='30696' >
+<Name><![CDATA[Vokey Oil Can]]></Name>
+</Value>
+<Value id='30697' >
+<Name><![CDATA[Vokey Raw]]></Name>
+</Value>
+<Value id='44564' >
+<Name><![CDATA[Vokey Spin Milled]]></Name>
+</Value>
+<Value id='55147' >
+<Name><![CDATA[Vokey Tour Chrome]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30740'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30698' >
+<Name><![CDATA[845s Oversize]]></Name>
+</Value>
+<Value id='30639' >
+<Name><![CDATA[845s Silver Scot]]></Name>
+</Value>
+<Value id='30640' >
+<Name><![CDATA[845u SilverBack]]></Name>
+</Value>
+<Value id='30641' >
+<Name><![CDATA[855s Silver Scot]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  parentValueId='30758'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44333' >
+<Name><![CDATA[845 FS Silver Scot]]></Name>
+</Value>
+<Value id='44334' >
+<Name><![CDATA[845cs SilverBack]]></Name>
+</Value>
+<Value id='30698' >
+<Name><![CDATA[845s Oversize]]></Name>
+</Value>
+<Value id='30639' >
+<Name><![CDATA[845s Silver Scot]]></Name>
+</Value>
+<Value id='30640' >
+<Name><![CDATA[845u SilverBack]]></Name>
+</Value>
+<Value id='30641' >
+<Name><![CDATA[855s Silver Scot]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  parentValueId='30786'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30698' >
+<Name><![CDATA[845s Oversize]]></Name>
+</Value>
+<Value id='30639' >
+<Name><![CDATA[845s Silver Scot]]></Name>
+</Value>
+<Value id='30641' >
+<Name><![CDATA[855s Silver Scot]]></Name>
+</Value>
+<Value id='44603' >
+<Name><![CDATA[EVO]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='44081'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44350' >
+<Name><![CDATA[Bazooka JMAX]]></Name>
+</Value>
+<Value id='44351' >
+<Name><![CDATA[Bazooka JMAX Iron-Wood]]></Name>
+</Value>
+<Value id='44619' >
+<Name><![CDATA[Lift-Off]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  parentValueId='30715'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44405' >
+<Name><![CDATA[Deep Red II Distance]]></Name>
+</Value>
+<Value id='44406' >
+<Name><![CDATA[Deep Red II Maxx]]></Name>
+</Value>
+<Value id='44407' >
+<Name><![CDATA[Deep Red II Tour]]></Name>
+</Value>
+<Value id='44408' >
+<Name><![CDATA[Deep Red Steel]]></Name>
+</Value>
+<Value id='44605' >
+<Name><![CDATA[Fat Boy]]></Name>
+</Value>
+<Value id='44419' >
+<Name><![CDATA[Fat Shaft]]></Name>
+</Value>
+<Value id='44488' >
+<Name><![CDATA[Persimmon]]></Name>
+</Value>
+<Value id='44523' >
+<Name><![CDATA[Staff Dd5]]></Name>
+</Value>
+<Value id='44529' >
+<Name><![CDATA[Staff Pd5]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='12'  parentValueId='30729'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44404' >
+<Name><![CDATA[Deep Red]]></Name>
+</Value>
+<Value id='44405' >
+<Name><![CDATA[Deep Red II Distance]]></Name>
+</Value>
+<Value id='44407' >
+<Name><![CDATA[Deep Red II Tour]]></Name>
+</Value>
+<Value id='44605' >
+<Name><![CDATA[Fat Boy]]></Name>
+</Value>
+<Value id='44419' >
+<Name><![CDATA[Fat Shaft]]></Name>
+</Value>
+<Value id='44420' >
+<Name><![CDATA[Fat Shaft Hybrid]]></Name>
+</Value>
+<Value id='44527' >
+<Name><![CDATA[Staff FwC]]></Name>
+</Value>
+<Value id='44528' >
+<Name><![CDATA[Staff Hb5]]></Name>
+</Value>
+<Value id='44658' >
+<Name><![CDATA[Ultra]]></Name>
+</Value>
+<Value id='44665' >
+<Name><![CDATA[Zip]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='30741'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44404' >
+<Name><![CDATA[Deep Red]]></Name>
+</Value>
+<Value id='44419' >
+<Name><![CDATA[Fat Shaft]]></Name>
+</Value>
+<Value id='44649' >
+<Name><![CDATA[Staff]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  parentValueId='30759'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44404' >
+<Name><![CDATA[Deep Red]]></Name>
+</Value>
+<Value id='44405' >
+<Name><![CDATA[Deep Red II Distance]]></Name>
+</Value>
+<Value id='44407' >
+<Name><![CDATA[Deep Red II Tour]]></Name>
+</Value>
+<Value id='44419' >
+<Name><![CDATA[Fat Shaft]]></Name>
+</Value>
+<Value id='44421' >
+<Name><![CDATA[Fat Shaft II]]></Name>
+</Value>
+<Value id='44422' >
+<Name><![CDATA[Fat Shaft III]]></Name>
+</Value>
+<Value id='44637' >
+<Name><![CDATA[Progressive]]></Name>
+</Value>
+<Value id='44649' >
+<Name><![CDATA[Staff]]></Name>
+</Value>
+<Value id='44524' >
+<Name><![CDATA[Staff Di5]]></Name>
+</Value>
+<Value id='44526' >
+<Name><![CDATA[Staff FG-17]]></Name>
+</Value>
+<Value id='44530' >
+<Name><![CDATA[Staff Pi5]]></Name>
+</Value>
+<Value id='44531' >
+<Name><![CDATA[Staff Tour Blade]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='10'  parentValueId='30787'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44404' >
+<Name><![CDATA[Deep Red]]></Name>
+</Value>
+<Value id='44405' >
+<Name><![CDATA[Deep Red II Distance]]></Name>
+</Value>
+<Value id='44422' >
+<Name><![CDATA[Fat Shaft III]]></Name>
+</Value>
+<Value id='44613' >
+<Name><![CDATA[Harmonized]]></Name>
+</Value>
+<Value id='44649' >
+<Name><![CDATA[Staff]]></Name>
+</Value>
+<Value id='44525' >
+<Name><![CDATA[Staff Dyna-Powered]]></Name>
+</Value>
+<Value id='44531' >
+<Name><![CDATA[Staff Tour Blade]]></Name>
+</Value>
+<Value id='44532' >
+<Name><![CDATA[Staff Tw5]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='44093'  childAttrId='41'  type='1' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44560' >
+<Name><![CDATA[Tracy II]]></Name>
+</Value>
+<Value id='44655' >
+<Name><![CDATA[Tracy]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+<Value id='44514' >
+<Name><![CDATA[Sophia]]></Name>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='41'  labelVisible='true'  parentAttrId='14' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Model]]></Label>
+<ValueList count='645' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30594' >
+<Name><![CDATA[200 Steel]]></Name>
+</Value>
+<Value id='44323' >
+<Name><![CDATA[2-EZ]]></Name>
+</Value>
+<Value id='30557' >
+<Name><![CDATA[300]]></Name>
+</Value>
+<Value id='30595' >
+<Name><![CDATA[300 Tour]]></Name>
+</Value>
+<Value id='44324' >
+<Name><![CDATA[3100 I/H]]></Name>
+</Value>
+<Value id='30558' >
+<Name><![CDATA[320]]></Name>
+</Value>
+<Value id='44325' >
+<Name><![CDATA[3400 I/XH]]></Name>
+</Value>
+<Value id='30559' >
+<Name><![CDATA[360]]></Name>
+</Value>
+<Value id='36555' >
+<Name><![CDATA[414 Comp]]></Name>
+</Value>
+<Value id='44326' >
+<Name><![CDATA[414 Comp Tour]]></Name>
+</Value>
+<Value id='36556' >
+<Name><![CDATA[454 Comp]]></Name>
+</Value>
+<Value id='30676' >
+<Name><![CDATA[485 Chrome]]></Name>
+</Value>
+<Value id='44327' >
+<Name><![CDATA[503.H]]></Name>
+</Value>
+<Value id='30677' >
+<Name><![CDATA[588 Beryllium Copper]]></Name>
+</Value>
+<Value id='30678' >
+<Name><![CDATA[588 Chrome]]></Name>
+</Value>
+<Value id='30679' >
+<Name><![CDATA[588 GunMetal]]></Name>
+</Value>
+<Value id='30680' >
+<Name><![CDATA[588 RTG]]></Name>
+</Value>
+<Value id='36621' >
+<Name><![CDATA[588 Tour Satin Chrome]]></Name>
+</Value>
+<Value id='36591' >
+<Name><![CDATA[670 Forged]]></Name>
+</Value>
+<Value id='36592' >
+<Name><![CDATA[680 Forged]]></Name>
+</Value>
+<Value id='44328' >
+<Name><![CDATA[690.CB Forged]]></Name>
+</Value>
+<Value id='44330' >
+<Name><![CDATA[690.MB Forged]]></Name>
+</Value>
+<Value id='30633' >
+<Name><![CDATA[690 CB Forged]]></Name>
+</Value>
+<Value id='30634' >
+<Name><![CDATA[690 MB Forged]]></Name>
+</Value>
+<Value id='36593' >
+<Name><![CDATA[704.CB]]></Name>
+</Value>
+<Value id='44332' >
+<Name><![CDATA[792 VAS]]></Name>
+</Value>
+<Value id='36594' >
+<Name><![CDATA[804.OS]]></Name>
+</Value>
+<Value id='44334' >
+<Name><![CDATA[845cs SilverBack]]></Name>
+</Value>
+<Value id='44333' >
+<Name><![CDATA[845 FS Silver Scot]]></Name>
+</Value>
+<Value id='30698' >
+<Name><![CDATA[845s Oversize]]></Name>
+</Value>
+<Value id='30639' >
+<Name><![CDATA[845s Silver Scot]]></Name>
+</Value>
+<Value id='30640' >
+<Name><![CDATA[845u SilverBack]]></Name>
+</Value>
+<Value id='30641' >
+<Name><![CDATA[855s Silver Scot]]></Name>
+</Value>
+<Value id='30681' >
+<Name><![CDATA[900 BRZ]]></Name>
+</Value>
+<Value id='30682' >
+<Name><![CDATA[900 FormForged Chrome]]></Name>
+</Value>
+<Value id='30683' >
+<Name><![CDATA[900 FormForged GunMetal]]></Name>
+</Value>
+<Value id='30684' >
+<Name><![CDATA[900 FormForged RTG]]></Name>
+</Value>
+<Value id='44335' >
+<Name><![CDATA[904F]]></Name>
+</Value>
+<Value id='44336' >
+<Name><![CDATA[905S]]></Name>
+</Value>
+<Value id='44337' >
+<Name><![CDATA[905T]]></Name>
+</Value>
+<Value id='36570' >
+<Name><![CDATA[970]]></Name>
+</Value>
+<Value id='30571' >
+<Name><![CDATA[975D]]></Name>
+</Value>
+<Value id='30599' >
+<Name><![CDATA[975F]]></Name>
+</Value>
+<Value id='30572' >
+<Name><![CDATA[975J]]></Name>
+</Value>
+<Value id='30573' >
+<Name><![CDATA[975J VS]]></Name>
+</Value>
+<Value id='30574' >
+<Name><![CDATA[975L FE]]></Name>
+</Value>
+<Value id='44338' >
+<Name><![CDATA[976R]]></Name>
+</Value>
+<Value id='30600' >
+<Name><![CDATA[980F]]></Name>
+</Value>
+<Value id='44339' >
+<Name><![CDATA[980F Strong]]></Name>
+</Value>
+<Value id='30575' >
+<Name><![CDATA[983E]]></Name>
+</Value>
+<Value id='30576' >
+<Name><![CDATA[983K]]></Name>
+</Value>
+<Value id='44340' >
+<Name><![CDATA[A Blade]]></Name>
+</Value>
+<Value id='30646' >
+<Name><![CDATA[Adelaide]]></Name>
+</Value>
+<Value id='44341' >
+<Name><![CDATA[Air Bear Offset]]></Name>
+</Value>
+<Value id='44575' >
+<Name><![CDATA[Airmax]]></Name>
+</Value>
+<Value id='44342' >
+<Name><![CDATA[Airmax ML 380]]></Name>
+</Value>
+<Value id='44343' >
+<Name><![CDATA[Airmax ML 440]]></Name>
+</Value>
+<Value id='44576' >
+<Name><![CDATA[Ally]]></Name>
+</Value>
+<Value id='30664' >
+<Name><![CDATA[Anser]]></Name>
+</Value>
+<Value id='30665' >
+<Name><![CDATA[Anser 2]]></Name>
+</Value>
+<Value id='44577' >
+<Name><![CDATA[Anser 2i]]></Name>
+</Value>
+<Value id='44578' >
+<Name><![CDATA[Anser 2x]]></Name>
+</Value>
+<Value id='44579' >
+<Name><![CDATA[Anser 3]]></Name>
+</Value>
+<Value id='44580' >
+<Name><![CDATA[Anser 4]]></Name>
+</Value>
+<Value id='44582' >
+<Name><![CDATA[Anser 5]]></Name>
+</Value>
+<Value id='30604' >
+<Name><![CDATA[Apex]]></Name>
+</Value>
+<Value id='44583' >
+<Name><![CDATA[Apex 50]]></Name>
+</Value>
+<Value id='30605' >
+<Name><![CDATA[Apex Edge]]></Name>
+</Value>
+<Value id='30606' >
+<Name><![CDATA[Apex Edge Pro]]></Name>
+</Value>
+<Value id='36572' >
+<Name><![CDATA[Apex FTX]]></Name>
+</Value>
+<Value id='44584' >
+<Name><![CDATA[Apex II]]></Name>
+</Value>
+<Value id='44344' >
+<Name><![CDATA[Apex Plus]]></Name>
+</Value>
+<Value id='44345' >
+<Name><![CDATA[Arnold Palmer]]></Name>
+</Value>
+<Value id='30666' >
+<Name><![CDATA[B60]]></Name>
+</Value>
+<Value id='44585' >
+<Name><![CDATA[B60i]]></Name>
+</Value>
+<Value id='44346' >
+<Name><![CDATA[B90]]></Name>
+</Value>
+<Value id='36595' >
+<Name><![CDATA[Baby Ben]]></Name>
+</Value>
+<Value id='30583' >
+<Name><![CDATA[Baffler]]></Name>
+</Value>
+<Value id='44347' >
+<Name><![CDATA[Baffler Blade]]></Name>
+</Value>
+<Value id='44348' >
+<Name><![CDATA[Baffler Multi-Metal]]></Name>
+</Value>
+<Value id='44349' >
+<Name><![CDATA[Baffler Utility]]></Name>
+</Value>
+<Value id='44350' >
+<Name><![CDATA[Bazooka JMAX]]></Name>
+</Value>
+<Value id='44351' >
+<Name><![CDATA[Bazooka JMAX Iron-Wood]]></Name>
+</Value>
+<Value id='44352' >
+<Name><![CDATA[BC 101 Heel-Toe]]></Name>
+</Value>
+<Value id='44353' >
+<Name><![CDATA[BC 203]]></Name>
+</Value>
+<Value id='44354' >
+<Name><![CDATA[BH-5]]></Name>
+</Value>
+<Value id='44356' >
+<Name><![CDATA[BH-5 Offset]]></Name>
+</Value>
+<Value id='44357' >
+<Name><![CDATA[BHB12-The Hawk]]></Name>
+</Value>
+<Value id='44358' >
+<Name><![CDATA[BHB3-C]]></Name>
+</Value>
+<Value id='44359' >
+<Name><![CDATA[BHB4-CC]]></Name>
+</Value>
+<Value id='36596' >
+<Name><![CDATA[Big Ben]]></Name>
+</Value>
+<Value id='44360' >
+<Name><![CDATA[Big Ben C455]]></Name>
+</Value>
+<Value id='30675' >
+<Name><![CDATA[Big Bertha 2002]]></Name>
+</Value>
+<Value id='30581' >
+<Name><![CDATA[Big Bertha 2004]]></Name>
+</Value>
+<Value id='44586' >
+<Name><![CDATA[Big Bertha 2005]]></Name>
+</Value>
+<Value id='30525' >
+<Name><![CDATA[Big Bertha C4]]></Name>
+</Value>
+<Value id='44361' >
+<Name><![CDATA[Big Bertha Fusion]]></Name>
+</Value>
+<Value id='44362' >
+<Name><![CDATA[Big Bertha Fusion FT-3]]></Name>
+</Value>
+<Value id='44363' >
+<Name><![CDATA[Big Bertha Heavenwood]]></Name>
+</Value>
+<Value id='30607' >
+<Name><![CDATA[Big Bertha Original '94]]></Name>
+</Value>
+<Value id='44587' >
+<Name><![CDATA[Big Bertha Ti 454]]></Name>
+</Value>
+<Value id='30522' >
+<Name><![CDATA[Big Bertha Titanium 2004]]></Name>
+</Value>
+<Value id='44588' >
+<Name><![CDATA[Big Bertha Tour]]></Name>
+</Value>
+<Value id='30523' >
+<Name><![CDATA[Big Bertha War Bird]]></Name>
+</Value>
+<Value id='30608' >
+<Name><![CDATA[Big Bertha X-12]]></Name>
+</Value>
+<Value id='30609' >
+<Name><![CDATA[Big Bertha X-12 Pro Series]]></Name>
+</Value>
+<Value id='30524' >
+<Name><![CDATA[Biggest Big Bertha]]></Name>
+</Value>
+<Value id='44589' >
+<Name><![CDATA[Black Cat]]></Name>
+</Value>
+<Value id='44364' >
+<Name><![CDATA[Black Cat Titanium]]></Name>
+</Value>
+<Value id='30586' >
+<Name><![CDATA[Blue Rage]]></Name>
+</Value>
+<Value id='44365' >
+<Name><![CDATA[Blue Rage 310]]></Name>
+</Value>
+<Value id='44366' >
+<Name><![CDATA[Bobby Jones]]></Name>
+</Value>
+<Value id='44367' >
+<Name><![CDATA[Boom Boom Parallax]]></Name>
+</Value>
+<Value id='44368' >
+<Name><![CDATA[Brass Blade]]></Name>
+</Value>
+<Value id='44590' >
+<Name><![CDATA[Burner 2]]></Name>
+</Value>
+<Value id='44591' >
+<Name><![CDATA[Burner 420]]></Name>
+</Value>
+<Value id='30560' >
+<Name><![CDATA[Burner Bubble]]></Name>
+</Value>
+<Value id='30630' >
+<Name><![CDATA[Burner LCG]]></Name>
+</Value>
+<Value id='44369' >
+<Name><![CDATA[Burner Oversize]]></Name>
+</Value>
+<Value id='44370' >
+<Name><![CDATA[Cameron Coronado]]></Name>
+</Value>
+<Value id='44371' >
+<Name><![CDATA[Cameron Del Mar]]></Name>
+</Value>
+<Value id='30668' >
+<Name><![CDATA[Cameron Futura]]></Name>
+</Value>
+<Value id='44372' >
+<Name><![CDATA[Cameron Futura Phantom]]></Name>
+</Value>
+<Value id='44373' >
+<Name><![CDATA[Cameron Futura Phantom Mallet]]></Name>
+</Value>
+<Value id='44374' >
+<Name><![CDATA[Cameron Futura Phantom Mallet 2]]></Name>
+</Value>
+<Value id='30669' >
+<Name><![CDATA[Cameron Laguna]]></Name>
+</Value>
+<Value id='44375' >
+<Name><![CDATA[Cameron Mil-Spec Newport]]></Name>
+</Value>
+<Value id='44592' >
+<Name><![CDATA[Cameron Napa]]></Name>
+</Value>
+<Value id='30670' >
+<Name><![CDATA[Cameron Newport]]></Name>
+</Value>
+<Value id='30671' >
+<Name><![CDATA[Cameron Newport 2]]></Name>
+</Value>
+<Value id='44376' >
+<Name><![CDATA[Cameron Newport Mid Slant]]></Name>
+</Value>
+<Value id='44377' >
+<Name><![CDATA[Cameron Oil Can Newport]]></Name>
+</Value>
+<Value id='44378' >
+<Name><![CDATA[Cameron Pro Plat. Newport Mid Slant]]></Name>
+</Value>
+<Value id='44379' >
+<Name><![CDATA[Cameron Pro Platinum Mid Sur]]></Name>
+</Value>
+<Value id='44380' >
+<Name><![CDATA[Cameron Pro Platinum Newport]]></Name>
+</Value>
+<Value id='44381' >
+<Name><![CDATA[Cameron Pro Platinum Newport 2]]></Name>
+</Value>
+<Value id='36616' >
+<Name><![CDATA[Cameron Red X]]></Name>
+</Value>
+<Value id='44593' >
+<Name><![CDATA[Cameron Red X2]]></Name>
+</Value>
+<Value id='30672' >
+<Name><![CDATA[Cameron Santa Fe]]></Name>
+</Value>
+<Value id='44382' >
+<Name><![CDATA[Cameron Studio Design 1]]></Name>
+</Value>
+<Value id='44383' >
+<Name><![CDATA[Cameron Studio Design 1.5]]></Name>
+</Value>
+<Value id='44384' >
+<Name><![CDATA[Cameron Studio Design 2]]></Name>
+</Value>
+<Value id='44385' >
+<Name><![CDATA[Cameron Studio Design 2.5]]></Name>
+</Value>
+<Value id='44386' >
+<Name><![CDATA[Cameron Studio Design 3]]></Name>
+</Value>
+<Value id='44387' >
+<Name><![CDATA[Cameron Studio Design 5]]></Name>
+</Value>
+<Value id='36617' >
+<Name><![CDATA[Cameron Studio Stainless]]></Name>
+</Value>
+<Value id='44388' >
+<Name><![CDATA[Cameron Studio Stainless Newport]]></Name>
+</Value>
+<Value id='44389' >
+<Name><![CDATA[Cameron Studio Stainless Newport 2]]></Name>
+</Value>
+<Value id='44390' >
+<Name><![CDATA[Cameron Studio Stainless Newport 2.5]]></Name>
+</Value>
+<Value id='44391' >
+<Name><![CDATA[Cameron Studio Style Newport]]></Name>
+</Value>
+<Value id='44392' >
+<Name><![CDATA[Cameron Studio Style Newport 1.5]]></Name>
+</Value>
+<Value id='44393' >
+<Name><![CDATA[Cameron Studio Style Newport 2]]></Name>
+</Value>
+<Value id='30647' >
+<Name><![CDATA[Canberra]]></Name>
+</Value>
+<Value id='44394' >
+<Name><![CDATA[Carnoustie]]></Name>
+</Value>
+<Value id='36574' >
+<Name><![CDATA[CG1]]></Name>
+</Value>
+<Value id='36622' >
+<Name><![CDATA[CG10]]></Name>
+</Value>
+<Value id='44395' >
+<Name><![CDATA[CG10 Black Pearl]]></Name>
+</Value>
+<Value id='44396' >
+<Name><![CDATA[CG2]]></Name>
+</Value>
+<Value id='44397' >
+<Name><![CDATA[CG4]]></Name>
+</Value>
+<Value id='44398' >
+<Name><![CDATA[CGX]]></Name>
+</Value>
+<Value id='44594' >
+<Name><![CDATA[Classic III]]></Name>
+</Value>
+<Value id='44595' >
+<Name><![CDATA[Classic VII]]></Name>
+</Value>
+<Value id='36618' >
+<Name><![CDATA[Colonial]]></Name>
+</Value>
+<Value id='44596' >
+<Name><![CDATA[Comp]]></Name>
+</Value>
+<Value id='44597' >
+<Name><![CDATA[Concept]]></Name>
+</Value>
+<Value id='30589' >
+<Name><![CDATA[CPR]]></Name>
+</Value>
+<Value id='44399' >
+<Name><![CDATA[CPR Iron-Wood]]></Name>
+</Value>
+<Value id='36605' >
+<Name><![CDATA[Craz-e]]></Name>
+</Value>
+<Value id='44598' >
+<Name><![CDATA[CXI]]></Name>
+</Value>
+<Value id='30635' >
+<Name><![CDATA[DCI 762]]></Name>
+</Value>
+<Value id='44400' >
+<Name><![CDATA[DCI 822 Oversize]]></Name>
+</Value>
+<Value id='30636' >
+<Name><![CDATA[DCI 962]]></Name>
+</Value>
+<Value id='30637' >
+<Name><![CDATA[DCI 981]]></Name>
+</Value>
+<Value id='30638' >
+<Name><![CDATA[DCI 990]]></Name>
+</Value>
+<Value id='44401' >
+<Name><![CDATA[DCI Black]]></Name>
+</Value>
+<Value id='44402' >
+<Name><![CDATA[DCI Black Oversize+]]></Name>
+</Value>
+<Value id='44403' >
+<Name><![CDATA[DCI Gold]]></Name>
+</Value>
+<Value id='44404' >
+<Name><![CDATA[Deep Red]]></Name>
+</Value>
+<Value id='44405' >
+<Name><![CDATA[Deep Red II Distance]]></Name>
+</Value>
+<Value id='44406' >
+<Name><![CDATA[Deep Red II Maxx]]></Name>
+</Value>
+<Value id='44407' >
+<Name><![CDATA[Deep Red II Tour]]></Name>
+</Value>
+<Value id='44408' >
+<Name><![CDATA[Deep Red Steel]]></Name>
+</Value>
+<Value id='44409' >
+<Name><![CDATA[DF660]]></Name>
+</Value>
+<Value id='36599' >
+<Name><![CDATA[DFX 2-Ball]]></Name>
+</Value>
+<Value id='36600' >
+<Name><![CDATA[DFX 2-Ball Center-Shafted]]></Name>
+</Value>
+<Value id='44410' >
+<Name><![CDATA[DFX 6600]]></Name>
+</Value>
+<Value id='44412' >
+<Name><![CDATA[Doc 12.5]]></Name>
+</Value>
+<Value id='44599' >
+<Name><![CDATA[Doc15]]></Name>
+</Value>
+<Value id='36606' >
+<Name><![CDATA[Doc17]]></Name>
+</Value>
+<Value id='44413' >
+<Name><![CDATA[DTR]]></Name>
+</Value>
+<Value id='30658' >
+<Name><![CDATA[Dual Force 550]]></Name>
+</Value>
+<Value id='30656' >
+<Name><![CDATA[Dual Force Rossie 1]]></Name>
+</Value>
+<Value id='30657' >
+<Name><![CDATA[Dual Force Rossie 2]]></Name>
+</Value>
+<Value id='44415' >
+<Name><![CDATA[EC603]]></Name>
+</Value>
+<Value id='44414' >
+<Name><![CDATA[EC Fuel]]></Name>
+</Value>
+<Value id='44416' >
+<Name><![CDATA[ECU Utility]]></Name>
+</Value>
+<Value id='44600' >
+<Name><![CDATA[Edge]]></Name>
+</Value>
+<Value id='36573' >
+<Name><![CDATA[Edge CFT]]></Name>
+</Value>
+<Value id='36582' >
+<Name><![CDATA[Edge CFT Hybrid]]></Name>
+</Value>
+<Value id='44601' >
+<Name><![CDATA[ERC]]></Name>
+</Value>
+<Value id='30526' >
+<Name><![CDATA[ERC Fusion]]></Name>
+</Value>
+<Value id='44602' >
+<Name><![CDATA[ERC II]]></Name>
+</Value>
+<Value id='44603' >
+<Name><![CDATA[EVO]]></Name>
+</Value>
+<Value id='44684' >
+<Name><![CDATA[Executive]]></Name>
+</Value>
+<Value id='44604' >
+<Name><![CDATA[Eye]]></Name>
+</Value>
+<Value id='30593' >
+<Name><![CDATA[Eye 2]]></Name>
+</Value>
+<Value id='30691' >
+<Name><![CDATA[Eye 2 Beryllium Copper]]></Name>
+</Value>
+<Value id='30625' >
+<Name><![CDATA[Eye 2 Plus]]></Name>
+</Value>
+<Value id='44417' >
+<Name><![CDATA[Eye 2 Plus BeCu]]></Name>
+</Value>
+<Value id='44418' >
+<Name><![CDATA[Eye 2 Plus-No-Plus]]></Name>
+</Value>
+<Value id='30687' >
+<Name><![CDATA[Faldo]]></Name>
+</Value>
+<Value id='44605' >
+<Name><![CDATA[Fat Boy]]></Name>
+</Value>
+<Value id='44419' >
+<Name><![CDATA[Fat Shaft]]></Name>
+</Value>
+<Value id='44420' >
+<Name><![CDATA[Fat Shaft Hybrid]]></Name>
+</Value>
+<Value id='44421' >
+<Name><![CDATA[Fat Shaft II]]></Name>
+</Value>
+<Value id='44422' >
+<Name><![CDATA[Fat Shaft III]]></Name>
+</Value>
+<Value id='30561' >
+<Name><![CDATA[Firesole]]></Name>
+</Value>
+<Value id='30596' >
+<Name><![CDATA[Firesole Rescue]]></Name>
+</Value>
+<Value id='30587' >
+<Name><![CDATA[Fli-Hi]]></Name>
+</Value>
+<Value id='44423' >
+<Name><![CDATA[Fli-Hi CLK]]></Name>
+</Value>
+<Value id='44606' >
+<Name><![CDATA[Fli-Hi II]]></Name>
+</Value>
+<Value id='30690' >
+<Name><![CDATA[Forged]]></Name>
+</Value>
+<Value id='44424' >
+<Name><![CDATA[Forged + Chrome]]></Name>
+</Value>
+<Value id='44425' >
+<Name><![CDATA[Forged + Vintage]]></Name>
+</Value>
+<Value id='30642' >
+<Name><![CDATA[Forged Blades]]></Name>
+</Value>
+<Value id='44607' >
+<Name><![CDATA[Forged CB]]></Name>
+</Value>
+<Value id='36619' >
+<Name><![CDATA[Forged Chrome]]></Name>
+</Value>
+<Value id='30623' >
+<Name><![CDATA[Forged Pro Combo]]></Name>
+</Value>
+<Value id='44426' >
+<Name><![CDATA[Forged Pro Combo Tour]]></Name>
+</Value>
+<Value id='44427' >
+<Name><![CDATA[Forged Steel 300cc]]></Name>
+</Value>
+<Value id='30546' >
+<Name><![CDATA[Forged Titanium 275cc]]></Name>
+</Value>
+<Value id='30547' >
+<Name><![CDATA[Forged Titanium 350cc]]></Name>
+</Value>
+<Value id='30548' >
+<Name><![CDATA[Forged Titanium 400cc]]></Name>
+</Value>
+<Value id='30549' >
+<Name><![CDATA[Forged Titanium 450cc]]></Name>
+</Value>
+<Value id='44428' >
+<Name><![CDATA[Forged Unchromed]]></Name>
+</Value>
+<Value id='36620' >
+<Name><![CDATA[Forged Vintage]]></Name>
+</Value>
+<Value id='44429' >
+<Name><![CDATA[Fresh Metal]]></Name>
+</Value>
+<Value id='44608' >
+<Name><![CDATA[FX]]></Name>
+</Value>
+<Value id='44432' >
+<Name><![CDATA[FX3]]></Name>
+</Value>
+<Value id='44430' >
+<Name><![CDATA[FX Oversize]]></Name>
+</Value>
+<Value id='44431' >
+<Name><![CDATA[FX Satin]]></Name>
+</Value>
+<Value id='36561' >
+<Name><![CDATA[G2]]></Name>
+</Value>
+<Value id='36607' >
+<Name><![CDATA[G2 Ally]]></Name>
+</Value>
+<Value id='36608' >
+<Name><![CDATA[G2 Anser]]></Name>
+</Value>
+<Value id='44609' >
+<Name><![CDATA[G2 HL]]></Name>
+</Value>
+<Value id='36609' >
+<Name><![CDATA[G2i Anser]]></Name>
+</Value>
+<Value id='44610' >
+<Name><![CDATA[G2i B60]]></Name>
+</Value>
+<Value id='44433' >
+<Name><![CDATA[Genex 3DX]]></Name>
+</Value>
+<Value id='44434' >
+<Name><![CDATA[Genex 3DX Ironwood]]></Name>
+</Value>
+<Value id='44435' >
+<Name><![CDATA[Goliath]]></Name>
+</Value>
+<Value id='30537' >
+<Name><![CDATA[Gravity Back]]></Name>
+</Value>
+<Value id='30527' >
+<Name><![CDATA[Great Big Bertha]]></Name>
+</Value>
+<Value id='30529' >
+<Name><![CDATA[Great Big Bertha Hawk Eye]]></Name>
+</Value>
+<Value id='30528' >
+<Name><![CDATA[Great Big Bertha II]]></Name>
+</Value>
+<Value id='36553' >
+<Name><![CDATA[Great Big Bertha II 415]]></Name>
+</Value>
+<Value id='44611' >
+<Name><![CDATA[Great Big Bertha II 415+]]></Name>
+</Value>
+<Value id='44436' >
+<Name><![CDATA[Great Big Bertha II Plus]]></Name>
+</Value>
+<Value id='44437' >
+<Name><![CDATA[Great Big Bertha II Plus Pro Series]]></Name>
+</Value>
+<Value id='44438' >
+<Name><![CDATA[Great Big Bertha II Pro Series]]></Name>
+</Value>
+<Value id='44612' >
+<Name><![CDATA[Halo]]></Name>
+</Value>
+<Value id='44613' >
+<Name><![CDATA[Harmonized]]></Name>
+</Value>
+<Value id='44614' >
+<Name><![CDATA[Hawk Eye]]></Name>
+</Value>
+<Value id='44439' >
+<Name><![CDATA[Hawk Eye Pro Series]]></Name>
+</Value>
+<Value id='44615' >
+<Name><![CDATA[Hawk Eye VFT]]></Name>
+</Value>
+<Value id='30791' >
+<Name><![CDATA[Hawk Eye VFT Pro Series]]></Name>
+</Value>
+<Value id='30531' >
+<Name><![CDATA[Hawk Eye VFT Pro Series Titanium]]></Name>
+</Value>
+<Value id='30530' >
+<Name><![CDATA[Hawk Eye VFT Titanium]]></Name>
+</Value>
+<Value id='30643' >
+<Name><![CDATA[Hickory Stick]]></Name>
+</Value>
+<Value id='30550' >
+<Name><![CDATA[HipSteel]]></Name>
+</Value>
+<Value id='30551' >
+<Name><![CDATA[HIP-Ti]]></Name>
+</Value>
+<Value id='44440' >
+<Name><![CDATA[HIP-Ti 420]]></Name>
+</Value>
+<Value id='30553' >
+<Name><![CDATA[i3]]></Name>
+</Value>
+<Value id='30626' >
+<Name><![CDATA[i3 +]]></Name>
+</Value>
+<Value id='44443' >
+<Name><![CDATA[i3 + Blade]]></Name>
+</Value>
+<Value id='44441' >
+<Name><![CDATA[I-302]]></Name>
+</Value>
+<Value id='30627' >
+<Name><![CDATA[i3 Blade]]></Name>
+</Value>
+<Value id='30628' >
+<Name><![CDATA[i3 O-Size]]></Name>
+</Value>
+<Value id='30602' >
+<Name><![CDATA[Idea]]></Name>
+</Value>
+<Value id='36571' >
+<Name><![CDATA[Idea A1]]></Name>
+</Value>
+<Value id='44444' >
+<Name><![CDATA[Idea A1 Pro]]></Name>
+</Value>
+<Value id='36564' >
+<Name><![CDATA[Idea i-Wood]]></Name>
+</Value>
+<Value id='36559' >
+<Name><![CDATA[Ignite 410]]></Name>
+</Value>
+<Value id='36560' >
+<Name><![CDATA[Ignite 460]]></Name>
+</Value>
+<Value id='44681' >
+<Name><![CDATA[Ignite T60]]></Name>
+</Value>
+<Value id='44445' >
+<Name><![CDATA[ISI Beryllium Copper]]></Name>
+</Value>
+<Value id='44446' >
+<Name><![CDATA[ISI K]]></Name>
+</Value>
+<Value id='44447' >
+<Name><![CDATA[ISI Nickel]]></Name>
+</Value>
+<Value id='44448' >
+<Name><![CDATA[ISI S]]></Name>
+</Value>
+<Value id='44442' >
+<Name><![CDATA[i-trax]]></Name>
+</Value>
+<Value id='44449' >
+<Name><![CDATA[J33]]></Name>
+</Value>
+<Value id='44450' >
+<Name><![CDATA[J33 Forged Combo]]></Name>
+</Value>
+<Value id='44451' >
+<Name><![CDATA[J33P]]></Name>
+</Value>
+<Value id='44452' >
+<Name><![CDATA[J33R]]></Name>
+</Value>
+<Value id='36610' >
+<Name><![CDATA[JAS Anser]]></Name>
+</Value>
+<Value id='44453' >
+<Name><![CDATA[K2K]]></Name>
+</Value>
+<Value id='44454' >
+<Name><![CDATA[K2K E-Spec]]></Name>
+</Value>
+<Value id='44455' >
+<Name><![CDATA[Karsten I]]></Name>
+</Value>
+<Value id='44456' >
+<Name><![CDATA[Karsten III]]></Name>
+</Value>
+<Value id='30538' >
+<Name><![CDATA[King Cobra]]></Name>
+</Value>
+<Value id='30685' >
+<Name><![CDATA[King Cobra 2 Oversize]]></Name>
+</Value>
+<Value id='44457' >
+<Name><![CDATA[King Cobra 2 Senior]]></Name>
+</Value>
+<Value id='44458' >
+<Name><![CDATA[King Cobra 2 Tour]]></Name>
+</Value>
+<Value id='44459' >
+<Name><![CDATA[King Cobra Deep Face]]></Name>
+</Value>
+<Value id='44460' >
+<Name><![CDATA[King Cobra Offset Senior]]></Name>
+</Value>
+<Value id='44461' >
+<Name><![CDATA[King Cobra Offset Steel]]></Name>
+</Value>
+<Value id='30617' >
+<Name><![CDATA[King Cobra Oversize]]></Name>
+</Value>
+<Value id='44462' >
+<Name><![CDATA[King Cobra Oversize Senior]]></Name>
+</Value>
+<Value id='30539' >
+<Name><![CDATA[King Cobra Ti]]></Name>
+</Value>
+<Value id='44463' >
+<Name><![CDATA[King Cobra Ti Offset]]></Name>
+</Value>
+<Value id='44616' >
+<Name><![CDATA[King Cobra Tour]]></Name>
+</Value>
+<Value id='44617' >
+<Name><![CDATA[Kushin]]></Name>
+</Value>
+<Value id='44464' >
+<Name><![CDATA[Lady Cobra]]></Name>
+</Value>
+<Value id='44465' >
+<Name><![CDATA[Lady Cobra Steel]]></Name>
+</Value>
+<Value id='30582' >
+<Name><![CDATA[Launcher]]></Name>
+</Value>
+<Value id='30534' >
+<Name><![CDATA[Launcher 330]]></Name>
+</Value>
+<Value id='30535' >
+<Name><![CDATA[Launcher 400]]></Name>
+</Value>
+<Value id='36554' >
+<Name><![CDATA[Launcher 460]]></Name>
+</Value>
+<Value id='44466' >
+<Name><![CDATA[Launcher 460 Comp]]></Name>
+</Value>
+<Value id='44467' >
+<Name><![CDATA[Launcher Comp]]></Name>
+</Value>
+<Value id='36566' >
+<Name><![CDATA[Launcher Ti]]></Name>
+</Value>
+<Value id='44618' >
+<Name><![CDATA[Launcher W]]></Name>
+</Value>
+<Value id='44468' >
+<Name><![CDATA[LCG]]></Name>
+</Value>
+<Value id='44469' >
+<Name><![CDATA[LDI]]></Name>
+</Value>
+<Value id='44619' >
+<Name><![CDATA[Lift-Off]]></Name>
+</Value>
+<Value id='44620' >
+<Name><![CDATA[LoCo]]></Name>
+</Value>
+<Value id='44470' >
+<Name><![CDATA[LoCo Pro]]></Name>
+</Value>
+<Value id='30692' >
+<Name><![CDATA[M/B]]></Name>
+</Value>
+<Value id='44621' >
+<Name><![CDATA[MacTec]]></Name>
+</Value>
+<Value id='44622' >
+<Name><![CDATA[Master]]></Name>
+</Value>
+<Value id='44623' >
+<Name><![CDATA[Md]]></Name>
+</Value>
+<Value id='44624' >
+<Name><![CDATA[Medallion]]></Name>
+</Value>
+<Value id='30648' >
+<Name><![CDATA[Melbourne 1]]></Name>
+</Value>
+<Value id='30649' >
+<Name><![CDATA[Melbourne 2]]></Name>
+</Value>
+<Value id='44471' >
+<Name><![CDATA[Miscela]]></Name>
+</Value>
+<Value id='36568' >
+<Name><![CDATA[MP-001]]></Name>
+</Value>
+<Value id='44474' >
+<Name><![CDATA[MP-001 370cc]]></Name>
+</Value>
+<Value id='44475' >
+<Name><![CDATA[MP-001 460cc]]></Name>
+</Value>
+<Value id='30619' >
+<Name><![CDATA[MP 14]]></Name>
+</Value>
+<Value id='44626' >
+<Name><![CDATA[MP 29]]></Name>
+</Value>
+<Value id='30620' >
+<Name><![CDATA[MP 30]]></Name>
+</Value>
+<Value id='36577' >
+<Name><![CDATA[MP 32]]></Name>
+</Value>
+<Value id='30621' >
+<Name><![CDATA[MP 33]]></Name>
+</Value>
+<Value id='36587' >
+<Name><![CDATA[MP 37]]></Name>
+</Value>
+<Value id='30688' >
+<Name><![CDATA[MP Series]]></Name>
+</Value>
+<Value id='30689' >
+<Name><![CDATA[MP Series Raw Black Ox]]></Name>
+</Value>
+<Value id='44472' >
+<Name><![CDATA[MP T Series Black Nickel]]></Name>
+</Value>
+<Value id='44473' >
+<Name><![CDATA[MP T Series Raw Haze]]></Name>
+</Value>
+<Value id='44627' >
+<Name><![CDATA[MX 17]]></Name>
+</Value>
+<Value id='30622' >
+<Name><![CDATA[MX 20]]></Name>
+</Value>
+<Value id='36578' >
+<Name><![CDATA[MX 23]]></Name>
+</Value>
+<Value id='44628' >
+<Name><![CDATA[My Day]]></Name>
+</Value>
+<Value id='44476' >
+<Name><![CDATA[N1]]></Name>
+</Value>
+<Value id='44477' >
+<Name><![CDATA[N1 Pro]]></Name>
+</Value>
+<Value id='44478' >
+<Name><![CDATA[NDS]]></Name>
+</Value>
+<Value id='44482' >
+<Name><![CDATA[NP-99]]></Name>
+</Value>
+<Value id='44483' >
+<Name><![CDATA[O Blade]]></Name>
+</Value>
+<Value id='44629' >
+<Name><![CDATA[OLD]]></Name>
+</Value>
+<Value id='30521' >
+<Name><![CDATA[Original Big Bertha]]></Name>
+</Value>
+<Value id='44484' >
+<Name><![CDATA[Original Launcher]]></Name>
+</Value>
+<Value id='36565' >
+<Name><![CDATA[Ovation]]></Name>
+</Value>
+<Value id='44485' >
+<Name><![CDATA[Ovation Offset]]></Name>
+</Value>
+<Value id='44486' >
+<Name><![CDATA[Oz Mallet]]></Name>
+</Value>
+<Value id='44487' >
+<Name><![CDATA[Oz T100]]></Name>
+</Value>
+<Value id='44630' >
+<Name><![CDATA[Pal]]></Name>
+</Value>
+<Value id='44631' >
+<Name><![CDATA[Pal 2]]></Name>
+</Value>
+<Value id='44632' >
+<Name><![CDATA[Pal 4]]></Name>
+</Value>
+<Value id='44633' >
+<Name><![CDATA[Pal 5]]></Name>
+</Value>
+<Value id='44634' >
+<Name><![CDATA[Parallax]]></Name>
+</Value>
+<Value id='44488' >
+<Name><![CDATA[Persimmon]]></Name>
+</Value>
+<Value id='30650' >
+<Name><![CDATA[Perth 1]]></Name>
+</Value>
+<Value id='30651' >
+<Name><![CDATA[Perth 2]]></Name>
+</Value>
+<Value id='30686' >
+<Name><![CDATA[Phil Rodgers]]></Name>
+</Value>
+<Value id='30667' >
+<Name><![CDATA[Ping]]></Name>
+</Value>
+<Value id='44635' >
+<Name><![CDATA[Ping 5]]></Name>
+</Value>
+<Value id='44489' >
+<Name><![CDATA[Ping N Ping]]></Name>
+</Value>
+<Value id='44490' >
+<Name><![CDATA[Pittsburgh Persimmon]]></Name>
+</Value>
+<Value id='44636' >
+<Name><![CDATA[Precision]]></Name>
+</Value>
+<Value id='44491' >
+<Name><![CDATA[Predator]]></Name>
+</Value>
+<Value id='44492' >
+<Name><![CDATA[Pro Combo Utility]]></Name>
+</Value>
+<Value id='44637' >
+<Name><![CDATA[Progressive]]></Name>
+</Value>
+<Value id='30601' >
+<Name><![CDATA[PT]]></Name>
+</Value>
+<Value id='30536' >
+<Name><![CDATA[QuadPro]]></Name>
+</Value>
+<Value id='44493' >
+<Name><![CDATA[QuadPro Titanium]]></Name>
+</Value>
+<Value id='44494' >
+<Name><![CDATA[R360 XD]]></Name>
+</Value>
+<Value id='30562' >
+<Name><![CDATA[R510]]></Name>
+</Value>
+<Value id='30563' >
+<Name><![CDATA[R510 TP]]></Name>
+</Value>
+<Value id='30564' >
+<Name><![CDATA[R540]]></Name>
+</Value>
+<Value id='30565' >
+<Name><![CDATA[R540 XD]]></Name>
+</Value>
+<Value id='30566' >
+<Name><![CDATA[R580]]></Name>
+</Value>
+<Value id='30567' >
+<Name><![CDATA[R580 XD]]></Name>
+</Value>
+<Value id='36562' >
+<Name><![CDATA[r5 Dual]]></Name>
+</Value>
+<Value id='44638' >
+<Name><![CDATA[r5 Dual TP]]></Name>
+</Value>
+<Value id='36563' >
+<Name><![CDATA[r7 quad]]></Name>
+</Value>
+<Value id='44639' >
+<Name><![CDATA[r7 quad HT]]></Name>
+</Value>
+<Value id='44640' >
+<Name><![CDATA[r7 TP]]></Name>
+</Value>
+<Value id='30694' >
+<Name><![CDATA[RAC]]></Name>
+</Value>
+<Value id='36624' >
+<Name><![CDATA[RAC Black]]></Name>
+</Value>
+<Value id='36588' >
+<Name><![CDATA[RAC CGB]]></Name>
+</Value>
+<Value id='36625' >
+<Name><![CDATA[RAC Chrome]]></Name>
+</Value>
+<Value id='36626' >
+<Name><![CDATA[RAC Fe2 O3]]></Name>
+</Value>
+<Value id='44495' >
+<Name><![CDATA[RAC Forged CB TP]]></Name>
+</Value>
+<Value id='36589' >
+<Name><![CDATA[RAC HT]]></Name>
+</Value>
+<Value id='36580' >
+<Name><![CDATA[RAC LT]]></Name>
+</Value>
+<Value id='30631' >
+<Name><![CDATA[RAC MB]]></Name>
+</Value>
+<Value id='30632' >
+<Name><![CDATA[RAC OS]]></Name>
+</Value>
+<Value id='44496' >
+<Name><![CDATA[RAC OS 2005]]></Name>
+</Value>
+<Value id='44497' >
+<Name><![CDATA[RAC Satin Tour]]></Name>
+</Value>
+<Value id='36590' >
+<Name><![CDATA[RAC TP 2]]></Name>
+</Value>
+<Value id='44641' >
+<Name><![CDATA[RAC TP 2005]]></Name>
+</Value>
+<Value id='44498' >
+<Name><![CDATA[RAC TP Combo]]></Name>
+</Value>
+<Value id='44642' >
+<Name><![CDATA[Radial]]></Name>
+</Value>
+<Value id='44643' >
+<Name><![CDATA[Raylor]]></Name>
+</Value>
+<Value id='30577' >
+<Name><![CDATA[Redline]]></Name>
+</Value>
+<Value id='44644' >
+<Name><![CDATA[Redline RPM]]></Name>
+</Value>
+<Value id='44499' >
+<Name><![CDATA[Redline RPM 430Q]]></Name>
+</Value>
+<Value id='30488' >
+<Name><![CDATA[Redline Ti 460cc]]></Name>
+</Value>
+<Value id='44500' >
+<Name><![CDATA[Redline Ti 460cc Offset]]></Name>
+</Value>
+<Value id='36569' >
+<Name><![CDATA[Rescue]]></Name>
+</Value>
+<Value id='44501' >
+<Name><![CDATA[Rescue Dual]]></Name>
+</Value>
+<Value id='44502' >
+<Name><![CDATA[Rescue Dual TP]]></Name>
+</Value>
+<Value id='30597' >
+<Name><![CDATA[Rescue Mid]]></Name>
+</Value>
+<Value id='44645' >
+<Name><![CDATA[Rescue Mid TP]]></Name>
+</Value>
+<Value id='44503' >
+<Name><![CDATA[Retro Raylor]]></Name>
+</Value>
+<Value id='30673' >
+<Name><![CDATA[Riviera]]></Name>
+</Value>
+<Value id='36611' >
+<Name><![CDATA[Rossa CGB Daytona 1]]></Name>
+</Value>
+<Value id='36612' >
+<Name><![CDATA[Rossa CGB Fontana]]></Name>
+</Value>
+<Value id='44646' >
+<Name><![CDATA[Rossa CGB Fontana 7]]></Name>
+</Value>
+<Value id='36613' >
+<Name><![CDATA[Rossa CGB Maranello 4]]></Name>
+</Value>
+<Value id='36614' >
+<Name><![CDATA[Rossa Mezza Monza]]></Name>
+</Value>
+<Value id='44504' >
+<Name><![CDATA[Rossa Mezza Monza Center]]></Name>
+</Value>
+<Value id='36615' >
+<Name><![CDATA[Rossa Monza]]></Name>
+</Value>
+<Value id='44505' >
+<Name><![CDATA[Rossa Monza Center-Shaft]]></Name>
+</Value>
+<Value id='44506' >
+<Name><![CDATA[Rossa Monza Corza]]></Name>
+</Value>
+<Value id='44507' >
+<Name><![CDATA[Rossa Monza Long]]></Name>
+</Value>
+<Value id='44508' >
+<Name><![CDATA[Rossa Monza Mid]]></Name>
+</Value>
+<Value id='44509' >
+<Name><![CDATA[S2H2]]></Name>
+</Value>
+<Value id='36579' >
+<Name><![CDATA[S59]]></Name>
+</Value>
+<Value id='44510' >
+<Name><![CDATA[S59 Tour]]></Name>
+</Value>
+<Value id='44511' >
+<Name><![CDATA[SC 814N]]></Name>
+</Value>
+<Value id='44512' >
+<Name><![CDATA[Scottsdale Anser]]></Name>
+</Value>
+<Value id='44647' >
+<Name><![CDATA[See More]]></Name>
+</Value>
+<Value id='30554' >
+<Name><![CDATA[Si3]]></Name>
+</Value>
+<Value id='44513' >
+<Name><![CDATA[Si3 380cc]]></Name>
+</Value>
+<Value id='30624' >
+<Name><![CDATA[Slingshot]]></Name>
+</Value>
+<Value id='44514' >
+<Name><![CDATA[Sophia]]></Name>
+</Value>
+<Value id='30674' >
+<Name><![CDATA[Special]]></Name>
+</Value>
+<Value id='44648' >
+<Name><![CDATA[Sport OS]]></Name>
+</Value>
+<Value id='44520' >
+<Name><![CDATA[SS-02]]></Name>
+</Value>
+<Value id='44522' >
+<Name><![CDATA[SS-03]]></Name>
+</Value>
+<Value id='30540' >
+<Name><![CDATA[SS 350]]></Name>
+</Value>
+<Value id='44515' >
+<Name><![CDATA[SS 350 Offset]]></Name>
+</Value>
+<Value id='44516' >
+<Name><![CDATA[SS 350 Tour]]></Name>
+</Value>
+<Value id='30541' >
+<Name><![CDATA[SS 380]]></Name>
+</Value>
+<Value id='30542' >
+<Name><![CDATA[SS 427]]></Name>
+</Value>
+<Value id='44517' >
+<Name><![CDATA[SS Forged]]></Name>
+</Value>
+<Value id='30584' >
+<Name><![CDATA[SS Hyper Steel]]></Name>
+</Value>
+<Value id='44518' >
+<Name><![CDATA[SS Hyper Steel Offset]]></Name>
+</Value>
+<Value id='30618' >
+<Name><![CDATA[SS I Oversize]]></Name>
+</Value>
+<Value id='44519' >
+<Name><![CDATA[SS Oversize]]></Name>
+</Value>
+<Value id='44649' >
+<Name><![CDATA[Staff]]></Name>
+</Value>
+<Value id='44523' >
+<Name><![CDATA[Staff Dd5]]></Name>
+</Value>
+<Value id='44524' >
+<Name><![CDATA[Staff Di5]]></Name>
+</Value>
+<Value id='44525' >
+<Name><![CDATA[Staff Dyna-Powered]]></Name>
+</Value>
+<Value id='44526' >
+<Name><![CDATA[Staff FG-17]]></Name>
+</Value>
+<Value id='44527' >
+<Name><![CDATA[Staff FwC]]></Name>
+</Value>
+<Value id='44528' >
+<Name><![CDATA[Staff Hb5]]></Name>
+</Value>
+<Value id='44529' >
+<Name><![CDATA[Staff Pd5]]></Name>
+</Value>
+<Value id='44530' >
+<Name><![CDATA[Staff Pi5]]></Name>
+</Value>
+<Value id='44531' >
+<Name><![CDATA[Staff Tour Blade]]></Name>
+</Value>
+<Value id='44532' >
+<Name><![CDATA[Staff Tw5]]></Name>
+</Value>
+<Value id='44650' >
+<Name><![CDATA[Steelhead]]></Name>
+</Value>
+<Value id='30532' >
+<Name><![CDATA[Steelhead III]]></Name>
+</Value>
+<Value id='30533' >
+<Name><![CDATA[Steelhead Plus]]></Name>
+</Value>
+<Value id='30610' >
+<Name><![CDATA[Steelhead X-14]]></Name>
+</Value>
+<Value id='30611' >
+<Name><![CDATA[Steelhead X-14 Pro Series]]></Name>
+</Value>
+<Value id='30612' >
+<Name><![CDATA[Steelhead X-16]]></Name>
+</Value>
+<Value id='30613' >
+<Name><![CDATA[Steelhead X-16 Pro Series]]></Name>
+</Value>
+<Value id='30568' >
+<Name><![CDATA[SuperSteel]]></Name>
+</Value>
+<Value id='44533' >
+<Name><![CDATA[SuperSteel 250]]></Name>
+</Value>
+<Value id='44534' >
+<Name><![CDATA[SuperSteel Offset]]></Name>
+</Value>
+<Value id='44651' >
+<Name><![CDATA[SV]]></Name>
+</Value>
+<Value id='30652' >
+<Name><![CDATA[Sydney]]></Name>
+</Value>
+<Value id='44535' >
+<Name><![CDATA[System 2]]></Name>
+</Value>
+<Value id='36567' >
+<Name><![CDATA[SZ]]></Name>
+</Value>
+<Value id='44536' >
+<Name><![CDATA[SZ 355 Offset]]></Name>
+</Value>
+<Value id='36557' >
+<Name><![CDATA[SZ 400]]></Name>
+</Value>
+<Value id='44537' >
+<Name><![CDATA[SZ 400 Offset]]></Name>
+</Value>
+<Value id='44538' >
+<Name><![CDATA[SZ 400 Tour]]></Name>
+</Value>
+<Value id='36558' >
+<Name><![CDATA[SZ 440]]></Name>
+</Value>
+<Value id='44652' >
+<Name><![CDATA[SZ 460]]></Name>
+</Value>
+<Value id='44539' >
+<Name><![CDATA[SZ Offset]]></Name>
+</Value>
+<Value id='44543' >
+<Name><![CDATA[T.R.C]]></Name>
+</Value>
+<Value id='30590' >
+<Name><![CDATA[T-40 Oversize]]></Name>
+</Value>
+<Value id='30591' >
+<Name><![CDATA[T-40 Tour]]></Name>
+</Value>
+<Value id='44544' >
+<Name><![CDATA[TA2]]></Name>
+</Value>
+<Value id='30614' >
+<Name><![CDATA[TA3]]></Name>
+</Value>
+<Value id='44545' >
+<Name><![CDATA[TA3 Form Forged]]></Name>
+</Value>
+<Value id='30615' >
+<Name><![CDATA[TA5]]></Name>
+</Value>
+<Value id='36575' >
+<Name><![CDATA[TA6]]></Name>
+</Value>
+<Value id='36576' >
+<Name><![CDATA[TA7]]></Name>
+</Value>
+<Value id='30616' >
+<Name><![CDATA[TA7 Tour]]></Name>
+</Value>
+<Value id='44546' >
+<Name><![CDATA[The Judge]]></Name>
+</Value>
+<Value id='44547' >
+<Name><![CDATA[Ti 2]]></Name>
+</Value>
+<Value id='44548' >
+<Name><![CDATA[Ti 3]]></Name>
+</Value>
+<Value id='44549' >
+<Name><![CDATA[Ti 4]]></Name>
+</Value>
+<Value id='30578' >
+<Name><![CDATA[Tight Lies]]></Name>
+</Value>
+<Value id='30579' >
+<Name><![CDATA[Tight Lies 2]]></Name>
+</Value>
+<Value id='30580' >
+<Name><![CDATA[Tight Lies GT]]></Name>
+</Value>
+<Value id='30489' >
+<Name><![CDATA[Tight Lies GT 303]]></Name>
+</Value>
+<Value id='30520' >
+<Name><![CDATA[Tight Lies GT 363]]></Name>
+</Value>
+<Value id='44550' >
+<Name><![CDATA[Tight Lies GT 363 Offset]]></Name>
+</Value>
+<Value id='30603' >
+<Name><![CDATA[Tight Lies Performance]]></Name>
+</Value>
+<Value id='44654' >
+<Name><![CDATA[Tight Lies ST]]></Name>
+</Value>
+<Value id='44551' >
+<Name><![CDATA[Tight Lies Tour]]></Name>
+</Value>
+<Value id='30555' >
+<Name><![CDATA[TiSI]]></Name>
+</Value>
+<Value id='30556' >
+<Name><![CDATA[TiSI Tec]]></Name>
+</Value>
+<Value id='30569' >
+<Name><![CDATA[Titanium Bubble]]></Name>
+</Value>
+<Value id='30570' >
+<Name><![CDATA[Titanium Bubble 2]]></Name>
+</Value>
+<Value id='44552' >
+<Name><![CDATA[Tom Watson]]></Name>
+</Value>
+<Value id='44683' >
+<Name><![CDATA[Tour]]></Name>
+</Value>
+<Value id='44553' >
+<Name><![CDATA[Tour Action Ti]]></Name>
+</Value>
+<Value id='30644' >
+<Name><![CDATA[Tour Blue]]></Name>
+</Value>
+<Value id='36597' >
+<Name><![CDATA[Tour Blue 2]]></Name>
+</Value>
+<Value id='36598' >
+<Name><![CDATA[Tour Blue 3]]></Name>
+</Value>
+<Value id='44554' >
+<Name><![CDATA[Tour Cleek]]></Name>
+</Value>
+<Value id='44555' >
+<Name><![CDATA[Tour Grind]]></Name>
+</Value>
+<Value id='44557' >
+<Name><![CDATA[Tour Oversize]]></Name>
+</Value>
+<Value id='44558' >
+<Name><![CDATA[Tour Preferred]]></Name>
+</Value>
+<Value id='44559' >
+<Name><![CDATA[Tour Spoon]]></Name>
+</Value>
+<Value id='30653' >
+<Name><![CDATA[Townsville]]></Name>
+</Value>
+<Value id='30654' >
+<Name><![CDATA[TPM 8]]></Name>
+</Value>
+<Value id='30655' >
+<Name><![CDATA[TPM 9]]></Name>
+</Value>
+<Value id='44655' >
+<Name><![CDATA[Tracy]]></Name>
+</Value>
+<Value id='44560' >
+<Name><![CDATA[Tracy II]]></Name>
+</Value>
+<Value id='30552' >
+<Name><![CDATA[TriMetal]]></Name>
+</Value>
+<Value id='44656' >
+<Name><![CDATA[TriMetal II]]></Name>
+</Value>
+<Value id='30592' >
+<Name><![CDATA[TriMetal Plus]]></Name>
+</Value>
+<Value id='36623' >
+<Name><![CDATA[Trusty Rusty]]></Name>
+</Value>
+<Value id='30645' >
+<Name><![CDATA[Tuttle]]></Name>
+</Value>
+<Value id='44653' >
+<Name><![CDATA[T-Zoid Forged Ti]]></Name>
+</Value>
+<Value id='30588' >
+<Name><![CDATA[T-Zoid Forged Utility]]></Name>
+</Value>
+<Value id='44540' >
+<Name><![CDATA[T-Zoid Pro Forged]]></Name>
+</Value>
+<Value id='44541' >
+<Name><![CDATA[T-Zoid Pro II Forged]]></Name>
+</Value>
+<Value id='44685' >
+<Name><![CDATA[T-Zoid Sure]]></Name>
+</Value>
+<Value id='44542' >
+<Name><![CDATA[T-Zoid True]]></Name>
+</Value>
+<Value id='44658' >
+<Name><![CDATA[Ultra]]></Name>
+</Value>
+<Value id='44659' >
+<Name><![CDATA[VAS+]]></Name>
+</Value>
+<Value id='30543' >
+<Name><![CDATA[V-Cavity]]></Name>
+</Value>
+<Value id='30585' >
+<Name><![CDATA[V-Foil]]></Name>
+</Value>
+<Value id='30544' >
+<Name><![CDATA[V-Foil 410cc High Launch]]></Name>
+</Value>
+<Value id='30545' >
+<Name><![CDATA[V-Foil Eye-O-Matic]]></Name>
+</Value>
+<Value id='44561' >
+<Name><![CDATA[V-Foil Eye-O-Matic M42]]></Name>
+</Value>
+<Value id='36583' >
+<Name><![CDATA[V-Foil M455]]></Name>
+</Value>
+<Value id='44562' >
+<Name><![CDATA[V-Foil MOI M5K]]></Name>
+</Value>
+<Value id='44563' >
+<Name><![CDATA[V-Foil MOI M6.4K]]></Name>
+</Value>
+<Value id='44660' >
+<Name><![CDATA[VIP]]></Name>
+</Value>
+<Value id='36584' >
+<Name><![CDATA[VIP Oversize]]></Name>
+</Value>
+<Value id='36585' >
+<Name><![CDATA[VIP V-Foil 1025 C]]></Name>
+</Value>
+<Value id='36586' >
+<Name><![CDATA[VIP V-Foil 1025 M]]></Name>
+</Value>
+<Value id='30695' >
+<Name><![CDATA[Vokey Black Nickel]]></Name>
+</Value>
+<Value id='36627' >
+<Name><![CDATA[Vokey Chrome 200 Series]]></Name>
+</Value>
+<Value id='36628' >
+<Name><![CDATA[Vokey Chrome 300 Series]]></Name>
+</Value>
+<Value id='36629' >
+<Name><![CDATA[Vokey Chrome 400 Series]]></Name>
+</Value>
+<Value id='30696' >
+<Name><![CDATA[Vokey Oil Can]]></Name>
+</Value>
+<Value id='30697' >
+<Name><![CDATA[Vokey Raw]]></Name>
+</Value>
+<Value id='44564' >
+<Name><![CDATA[Vokey Spin Milled]]></Name>
+</Value>
+<Value id='44565' >
+<Name><![CDATA[Voodoo]]></Name>
+</Value>
+<Value id='44566' >
+<Name><![CDATA[Voodoo Belly]]></Name>
+</Value>
+<Value id='44567' >
+<Name><![CDATA[VooDoo Daddy Center Shaft]]></Name>
+</Value>
+<Value id='30598' >
+<Name><![CDATA[V-Steel]]></Name>
+</Value>
+<Value id='30659' >
+<Name><![CDATA[White Hot #1]]></Name>
+</Value>
+<Value id='30660' >
+<Name><![CDATA[White Hot #2]]></Name>
+</Value>
+<Value id='30661' >
+<Name><![CDATA[White Hot #5]]></Name>
+</Value>
+<Value id='30662' >
+<Name><![CDATA[White Hot #6]]></Name>
+</Value>
+<Value id='36601' >
+<Name><![CDATA[White Hot 2-Ball]]></Name>
+</Value>
+<Value id='36602' >
+<Name><![CDATA[White Hot 2-Ball Center]]></Name>
+</Value>
+<Value id='36603' >
+<Name><![CDATA[White Hot 2-Ball Long]]></Name>
+</Value>
+<Value id='36604' >
+<Name><![CDATA[White Hot 2-Ball Mid]]></Name>
+</Value>
+<Value id='44661' >
+<Name><![CDATA[White Hot 4]]></Name>
+</Value>
+<Value id='30663' >
+<Name><![CDATA[White Hot Mid/Long]]></Name>
+</Value>
+<Value id='44568' >
+<Name><![CDATA[White Hot Rossie]]></Name>
+</Value>
+<Value id='44569' >
+<Name><![CDATA[White Steel 1]]></Name>
+</Value>
+<Value id='44570' >
+<Name><![CDATA[White Steel 2]]></Name>
+</Value>
+<Value id='44571' >
+<Name><![CDATA[White Steel 5]]></Name>
+</Value>
+<Value id='44572' >
+<Name><![CDATA[X-18]]></Name>
+</Value>
+<Value id='44573' >
+<Name><![CDATA[X-18 Pro Series]]></Name>
+</Value>
+<Value id='44663' >
+<Name><![CDATA[XL2000]]></Name>
+</Value>
+<Value id='44662' >
+<Name><![CDATA[X-Tour]]></Name>
+</Value>
+<Value id='44664' >
+<Name><![CDATA[Zebra]]></Name>
+</Value>
+<Value id='44574' >
+<Name><![CDATA[Zebra Traditional]]></Name>
+</Value>
+<Value id='30629' >
+<Name><![CDATA[Zing]]></Name>
+</Value>
+<Value id='30693' >
+<Name><![CDATA[Zing 2]]></Name>
+</Value>
+<Value id='44665' >
+<Name><![CDATA[Zip]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+<Value id='44790' >
+<Name><![CDATA[SasQuatch]]></Name>
+</Value>
+<Value id='55103' >
+<Name><![CDATA[735.CM]]></Name>
+</Value>
+<Value id='55104' >
+<Name><![CDATA[775.CB]]></Name>
+</Value>
+<Value id='55105' >
+<Name><![CDATA[905R]]></Name>
+</Value>
+<Value id='55106' >
+<Name><![CDATA[Big Bertha 2006]]></Name>
+</Value>
+<Value id='55107' >
+<Name><![CDATA[Cameron Circa '62]]></Name>
+</Value>
+<Value id='55113' >
+<Name><![CDATA[CPR 3 Iron-Wood]]></Name>
+</Value>
+<Value id='55114' >
+<Name><![CDATA[Dual Force 2]]></Name>
+</Value>
+<Value id='55110' >
+<Name><![CDATA[CG11 Black Pearl]]></Name>
+</Value>
+<Value id='55111' >
+<Name><![CDATA[CG4 Tour]]></Name>
+</Value>
+<Value id='55116' >
+<Name><![CDATA[F-50]]></Name>
+</Value>
+<Value id='55112' >
+<Name><![CDATA[CPR 2]]></Name>
+</Value>
+<Value id='55117' >
+<Name><![CDATA[FT Hybrid]]></Name>
+</Value>
+<Value id='55109' >
+<Name><![CDATA[CG11]]></Name>
+</Value>
+<Value id='55108' >
+<Name><![CDATA[CG1 Black Pearl]]></Name>
+</Value>
+<Value id='55115' >
+<Name><![CDATA[F Speed]]></Name>
+</Value>
+<Value id='55118' >
+<Name><![CDATA[G5]]></Name>
+</Value>
+<Value id='55119' >
+<Name><![CDATA[G5 Hybrid]]></Name>
+</Value>
+<Value id='55120' >
+<Name><![CDATA[G5i Craz-e]]></Name>
+</Value>
+<Value id='55100' >
+<Name><![CDATA[HiBore]]></Name>
+</Value>
+<Value id='55121' >
+<Name><![CDATA[i5]]></Name>
+</Value>
+<Value id='55101' >
+<Name><![CDATA[Launcher 460 Ti 2006]]></Name>
+</Value>
+<Value id='55122' >
+<Name><![CDATA[Launcher 460 Ti Offset 2006]]></Name>
+</Value>
+<Value id='55123' >
+<Name><![CDATA[M Speed]]></Name>
+</Value>
+<Value id='55124' >
+<Name><![CDATA[MP 60]]></Name>
+</Value>
+<Value id='55125' >
+<Name><![CDATA[MP T Series Chrome]]></Name>
+</Value>
+<Value id='55127' >
+<Name><![CDATA[MX 500]]></Name>
+</Value>
+<Value id='55128' >
+<Name><![CDATA[MX 900]]></Name>
+</Value>
+<Value id='55134' >
+<Name><![CDATA[r7 425 TP]]></Name>
+</Value>
+<Value id='55129' >
+<Name><![CDATA[r7 425]]></Name>
+</Value>
+<Value id='55135' >
+<Name><![CDATA[r7 460]]></Name>
+</Value>
+<Value id='55136' >
+<Name><![CDATA[r7 cgb MAX]]></Name>
+</Value>
+<Value id='55137' >
+<Name><![CDATA[r7 Steel]]></Name>
+</Value>
+<Value id='55138' >
+<Name><![CDATA[r7 Ti]]></Name>
+</Value>
+<Value id='55139' >
+<Name><![CDATA[r7 XD]]></Name>
+</Value>
+<Value id='55140' >
+<Name><![CDATA[RAC Black TP]]></Name>
+</Value>
+<Value id='55141' >
+<Name><![CDATA[SasQuatch 460 Tour]]></Name>
+</Value>
+<Value id='55142' >
+<Name><![CDATA[Slingshot (hybrid)]]></Name>
+</Value>
+<Value id='55143' >
+<Name><![CDATA[Slingshot OSS]]></Name>
+</Value>
+<Value id='55144' >
+<Name><![CDATA[Slingshot Tour]]></Name>
+</Value>
+<Value id='55145' >
+<Name><![CDATA[Slingshot Tour (hybrid)]]></Name>
+</Value>
+<Value id='55146' >
+<Name><![CDATA[TW]]></Name>
+</Value>
+<Value id='55147' >
+<Name><![CDATA[Vokey Tour Chrome]]></Name>
+</Value>
+<Value id='55148' >
+<Name><![CDATA[White Hot XG]]></Name>
+</Value>
+<Value id='55149' >
+<Name><![CDATA[White Steel Tri-Ball SRT]]></Name>
+</Value>
+<Value id='55151' >
+<Name><![CDATA[X Speed]]></Name>
+</Value>
+<Value id='55099' >
+<Name><![CDATA[X460 Tour]]></Name>
+</Value>
+<Value id='55097' >
+<Name><![CDATA[X460]]></Name>
+</Value>
+<Value id='55152' >
+<Name><![CDATA[X-Tour Vintage]]></Name>
+</Value>
+<Value id='55150' >
+<Name><![CDATA[X]]></Name>
+</Value>
+</ValueList>
+<ValidationRules>
+<Rule>
+<Length>20</Length><Name>StringLengthRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute id='56'  labelVisible='true' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Shaft Material]]></Label>
+<ValueList count='4' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30490' >
+<Name><![CDATA[Graphite]]></Name>
+</Value>
+<Value id='30472' >
+<Name><![CDATA[Steel]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules>
+<Rule>
+<Length>20</Length><Name>StringLengthRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute id='194'  Invisible='true' >
+<Type><![CDATA[1]]></Type>
+<EditType>0</EditType><Label><![CDATA[Popularity]]></Label>
+<ValueList count='2' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='10244'  labelVisible='true' >
+<HasGlossary/>
+<HelpText><![CDATA[http://pages.ebay.com/help/attrhelp/contextual/siteid0_vcsid1901_attrid10244.html]]></HelpText>
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Condition]]></Label>
+<ValueList count='4' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='10425' >
+<Name><![CDATA[New]]></Name>
+</Value>
+<Value id='10426' >
+<Name><![CDATA[Used]]></Name>
+</Value>
+<Value id='30699' >
+<Name><![CDATA[Vintage]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='30481'  labelVisible='true' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Gender]]></Label>
+<ValueList count='4' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='2467' >
+<Name><![CDATA[Men]]></Name>
+</Value>
+<Value id='2468' >
+<Name><![CDATA[Women]]></Name>
+</Value>
+<Value id='2466' >
+<Name><![CDATA[Juniors]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='30482'  labelVisible='true' >
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><Label><![CDATA[Dexterity]]></Label>
+<ValueList count='3' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='30491' >
+<Name><![CDATA[Left-Handed]]></Name>
+</Value>
+<Value id='30492' >
+<Name><![CDATA[Right-Handed]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other>
+<Attribute id='14' >
+<Label><![CDATA[Brand]]></Label>
+</Attribute>
+<Attribute id='41' >
+<Label><![CDATA[Model]]></Label>
+</Attribute>
+<Attribute id='56' >
+<Label><![CDATA[Shaft Material]]></Label>
+</Attribute>
+<Attribute id='6' >
+<Label><![CDATA[Club Type]]></Label>
+</Attribute>
+<Attribute id='194' >
+<Label><![CDATA[Popularity]]></Label>
+</Attribute>
+</Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+<CharacteristicsSet id='2135'  type='SiteWide'  order='2' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<PresentationInstruction pageLocation="ReturnPolicy">
+    <DomainName>Return Policy</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3803" quadrant="top">
+                    <Input align="left" bold="true" color="#000000" columns="1" face="Arial, Helvetica, Sans-Serif" size="2" type="checkbox"/>
+                </Attribute>
+                <MessageRight color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3804" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3805" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3993" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3806" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input cols="70" rows="6" type="collapsible_textarea"/>
+                </Attribute>
+                <MessageBottom color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute id='3803'  pageLocation="ReturnPolicy">
+<MessageRight><![CDATA[- Specify a return policy. <A HREF="http://pages.ebay.com/help/sell/contextual/return-policy.html" onClick="if(window.openContextualHelpWindow){return openContextualHelpWindow(this.href)}" target="helpwin">Learn More</A>.]]></MessageRight>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><Label><![CDATA[Returns Accepted]]></Label>
+<ValueList count='1' >
+<Value id='32040' >
+<Name><![CDATA[Returns Accepted]]></Name>
+</Value>
+</ValueList>
+<Dependency count='3'  parentValueId='32040'  childAttrId='3805'  type='2' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+<IsDefault/>
+</Value>
+</Dependency>
+<Dependency count='5'  parentValueId='32040'  childAttrId='3804'  type='2' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+<IsDefault/>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</Dependency>
+<Dependency count='2'  parentValueId='32040'  childAttrId='3993'  type='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+<IsDefault/>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='3804'  labelVisible='true'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><Label><![CDATA[Item must be returned within]]></Label>
+<ValueList count='5' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='3805'  labelVisible='true'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><Label><![CDATA[Refund will be given as]]></Label>
+<ValueList count='3' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='3806'  labelVisible='true'  pageLocation="ReturnPolicy">
+<Type><![CDATA[2]]></Type>
+<MessageBottom><![CDATA[Note: 500 character limit]]></MessageBottom>
+<EditType>3</EditType><Label><![CDATA[Return policy details]]></Label>
+<ValidationRules>
+<Rule>
+<Length>500</Length><Name>StringLengthRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute id='3993'  labelVisible='true'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><Label><![CDATA[Return shipping will be paid by]]></Label>
+<ValueList count='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other></Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+</Characteristics>
+<GlobalSettings>
+<MonthDescendingLong>December;November;October;September;August;July;June;May;April;March;February;January;</MonthDescendingLong><MonthAscendingShort>Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec;</MonthAscendingShort><MonthDescendingShort>Dec;Nov;Oct;Sep;Aug;Jul;Jun;May;Apr;Mar;Feb;Jan;</MonthDescendingShort><MonthAscendingLong>January;February;March;April;May;June;July;August;September;October;November;December;</MonthAscendingLong><BaseHTMLPath><![CDATA[http://pages.ebay.com/]]></BaseHTMLPath>
+</GlobalSettings>
+</eBay>

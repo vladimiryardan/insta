@@ -1,0 +1,441 @@
+<cfif NOT isAllowed("Lister_ListAuction")>
+	<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
+</cfif>
+
+<cfparam name="attributes.item">
+<cfinclude template="get_item.cfm">
+<cfset attributes.SiteID = sqlAuction.SiteID>
+
+<cfif isDefined("attributes.vcsid")>
+	<cfset attributes.AttributeSetID = attributes.vcsid>
+<cfelse>
+	<cfquery name="sqlCategory2CS" datasource="#request.dsn#">
+		SELECT csName, csAttributeSetID, swName, swAttributeSetID
+		FROM category2cs
+		WHERE CategoryID = <cfqueryparam cfsqltype="cf_sql_bigint" value="#sqlAuction.CategoryID#">
+			AND SiteID = <cfqueryparam cfsqltype="cf_sql_bigint" value="#attributes.SiteID#">
+	</cfquery>
+	<cfset attributes.AttributeSetID = sqlCategory2CS.csAttributeSetID>
+	<cfset attributes.vcsid = sqlCategory2CS.csAttributeSetID><!--- Skip "Return Policy" (Site Wide Attribute Set) --->
+</cfif>
+<cfif isDefined("attributes.AUS_FORM_CHANGED")>
+	<cfinclude template="act_parseItemSpecific.cfm">
+<cfelse>
+	<cfset attributes.AUS_FORM_CHANGED = "default">
+</cfif>
+<cfif isDefined("attributes.done")>
+	<cfscript>
+		xmlDoc = xmlNew();
+		xmlDoc.xmlRoot = xmlElemNew(xmlDoc, "AttributeSetArray");
+		for(i=1; i LTE ArrayLen(asa); i=i+1){
+			ArrayAppend(xmlDoc.xmlRoot.xmlChildren, xmlElemNew(xmlDoc, "AttributeSet"));
+			AttributeSet = xmlDoc.xmlRoot.xmlChildren[ArrayLen(xmlDoc.xmlRoot.xmlChildren)];
+			StructInsert(AttributeSet.xmlAttributes, "attributeSetID", asa[i].attributeSetID);
+			for(j=1; j LTE ArrayLen(asa[i].attr); j=j+1){
+				ArrayAppend(AttributeSet.xmlChildren,
+					fAddAttribute(xmlDoc, asa[i].attr[j].attributeID, asa[i].attr[j].ValueID, asa[i].attr[j].ValueLiteral, asa[i].attr[j].metacharacter));
+			}
+		}
+	</cfscript>
+	
+
+	<!--- we change this
+	<cfquery datasource="#request.dsn#">
+		UPDATE auctions
+		SET AttributeSetArray = <cfqueryparam cfsqltype="cf_sql_longvarchar" value="#toString(xmlDoc)#">
+		WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+	 --->
+	
+	<cftransaction>
+	<!--- lets check first if there is existing itemspecifcs in the db for this itemid--->
+	<cfquery datasource="#request.dsn#" name="chk_itemspecifics">
+		select * from auction_itemspecifics
+		where itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+	<cfif chk_itemspecifics.recordcount gte 1>
+		<!--- if there is existing lets delete and might replace with incoming or none --->
+		<cfquery datasource="#request.dsn#">
+			DELETE from auction_itemspecifics
+			where itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+		</cfquery>
+	</cfif>
+	</cftransaction>
+	
+	<!--- item specifics --->
+	<CFLOOP COLLECTION="#Form#" ITEM="VarName">
+
+    
+		<!--- is there item specifics?--->
+		<cfif LEFT(VarName, 14) IS "itemspecifics_" >
+			<CFSET spcfcsName = RemoveChars(VarName, 1, 14)>
+			<CFSET spcfcsValue = #Form[VarName]#>
+		
+			<!--- get selection mode --->
+			<CFSET selmode = #Form["mode_"&rereplace(spcfcsName,"[^A-Za-z0-9]","","all")]# >
+		
+		
+			<!--- this is a complex form. if user enters something in the input box it will overwrite what's selected --->
+			<CFSET userTextSpcfcs = #Form[rereplace(spcfcsName,"[^A-Za-z0-9]","","all")]# >
+			<cfif userTextSpcfcs neq "">
+				<CFSET spcfcsValue = userTextSpcfcs >
+			</cfif>	
+				
+		<cftry>					
+			<cfcatch></cfcatch>
+		</cftry>
+
+			<!--- lets insert to db:auction_itemspecifics --->
+			<cfquery datasource="#request.dsn#">
+				 insert into auction_itemspecifics
+				(itemid,iname,ivalue,selection_mode)
+				values
+				(
+				<cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">,
+				<cfqueryparam cfsqltype="cf_sql_varchar" value="#spcfcsName#">,
+				<cfqueryparam cfsqltype="cf_sql_varchar" value="#spcfcsValue#">,
+				<cfqueryparam cfsqltype="cf_sql_varchar" value="#selmode#">
+				)
+			</cfquery>
+			
+		</cfif>
+	</cfloop> 
+	 
+	 
+	 
+	<cfquery datasource="#request.dsn#">
+		UPDATE auctions
+		SET conditionID = <cfqueryparam cfsqltype="CF_SQL_INTEGER" value="#form.ItemCondition#">
+		WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+	
+	
+	<!--- lets handle item specifics --->
+	
+	
+	<cfif attributes.dsp EQ "admin.auctions.item_specific_popup">
+		<cfoutput>
+		<table height="290" align="center">
+		<tr><td valign="middle">
+			Item Specific was added.
+		</td></tr>
+		</table>
+		<script language="javascript" type="text/javascript">
+		<!--//
+			var i = setInterval(function(){clearInterval(i);window.close();}, 500);
+		//-->
+		</script>
+		</cfoutput>
+	<cfelse>
+		<cfif attributes.done EQ "back">
+			<cflocation url="index.cfm?dsp=admin.auctions.step1&item=#attributes.item#" addtoken="no">
+		<cfelseif attributes.done EQ "finish">
+			<cflocation url="index.cfm?dsp=management.items.awaiting_listing" addtoken="no">
+		<cfelse><!--- next --->
+			<cflocation url="index.cfm?dsp=admin.auctions.step2&item=#attributes.item#" addtoken="no">
+		</cfif>
+	</cfif>
+<cfelse>
+	<!--- generates xmlIS --->
+	<cfinclude template="act_GetAttributesCS.cfm">
+
+	<!--- MOVED TO admin\api\st_runall.cfm cfinclude template="act_GetAttributesXSL.cfm" --->
+	<cffile action="read" file="#request.basepath#site/admin/auctions/syi_attributes.xsl" variable="XSLFile">
+
+
+	<cfscript>
+		// xmlIS = XMLParse(variables.AttributeData);
+		if(attributes.AUS_FORM_CHANGED EQ "1"){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			for(i=1; i LTE ArrayLen(asa); i=i+1){
+				ArrayAppend(xmlIS.xmlRoot.SelectedAttributes.xmlChildren, xmlElemNew(xmlIS, "AttributeSet"));
+				AttributeSet = xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)];
+				StructInsert(AttributeSet.xmlAttributes, "id", asa[i].attributeSetID);
+				for(j=1; j LTE ArrayLen(asa[i].attr); j=j+1){
+					ArrayAppend(AttributeSet.xmlChildren,
+						addSelectedAttributes(xmlIS, asa[i].attr[j].attributeID, asa[i].attr[j].ValueID, asa[i].attr[j].ValueLiteral, asa[i].attr[j].metacharacter));
+				}
+			}
+		}else if(sqlAuction.AttributeSetArray NEQ ""){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			xmlASA = XMLParse(sqlAuction.AttributeSetArray);
+			for(i=1; i LTE ArrayLen(xmlASA.xmlRoot.xmlChildren); i=i+1){
+				ArrayAppend(xmlIS.xmlRoot.SelectedAttributes.xmlChildren, xmlElemNew(xmlIS, "AttributeSet"));
+				AttributeSet = xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)];
+				StructInsert(AttributeSet.xmlAttributes, "id", xmlASA.xmlRoot.xmlChildren[i].xmlAttributes["attributeSetID"]);
+				for(j=1; j LTE ArrayLen(xmlASA.xmlRoot.xmlChildren[i].xmlChildren); j=j+1){
+					attributeID = xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlAttributes["attributeID"];
+					ValueID = "";
+					ValueLiteral = "";
+					metacharacter = "";
+					for(k=1; k LTE ArrayLen(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren); k=k+1){
+						if(StructKeyExists(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k], "ValueID")){
+							ValueID = ListAppend(ValueID, xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k].ValueID.xmlText);
+							if(ValueID EQ -5){
+								metacharacter = "Y";
+							}
+						}
+						if(StructKeyExists(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k], "ValueLiteral")){
+							ValueLiteral = ListAppend(ValueLiteral, xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k].ValueLiteral.xmlText);
+							if(metacharacter EQ "Y"){
+								ValueLiteral = Left(ValueLiteral, 4);
+							}
+						}
+					}
+					ArrayAppend(AttributeSet.xmlChildren,
+						addSelectedAttributes(xmlIS, attributeID, ValueID, ValueLiteral, metacharacter));
+				}
+			}
+		}else if(isDefined("attributes.vcsid")){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			if((attributes.SiteID EQ 0) AND (attributes.AttributeSetID EQ 2135)){
+				// Return Policy could not be displayed together with any other AttributesSet
+				xmlIS.xmlRoot.SelectedAttributes.xmlAttributes["pageId"] = "ReturnPolicy";
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet.xmlAttributes["id"] = "2135";
+			}else if((attributes.SiteID EQ 100) AND (attributes.AttributeSetID EQ 2318)){
+				// Return Policy could not be displayed together with any other AttributesSet
+				xmlIS.xmlRoot.SelectedAttributes.xmlAttributes["pageId"] = "ReturnPolicy";
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet.xmlAttributes["id"] = "2318";
+			}else{
+				// multiple allowed here
+				xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)+1] = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)].xmlAttributes["id"] = attributes.AttributeSetID;
+			}
+		}
+	</cfscript>
+	
+<!--- add GetCategoryFeatures --->
+<cfset _ebay.CallName ="GetCategoryFeatures">
+<cfset _ebay.XMLRequest = '<?xml version="1.0" encoding="utf-8"?>
+<#_ebay.CallName#Request xmlns="urn:ebay:apis:eBLBaseComponents">
+	<RequesterCredentials>
+		<eBayAuthToken>#_ebay.RequestToken#</eBayAuthToken>
+	</RequesterCredentials>
+
+  <DetailLevel>ReturnAll</DetailLevel>
+  <ViewAllNodes>true</ViewAllNodes>  
+
+<CategoryID>#sqlAuction.CategoryID#</CategoryID>
+  <FeatureID>ConditionEnabled</FeatureID>
+  <FeatureID>ConditionValues</FeatureID>
+
+</#_ebay.CallName#Request>'>
+<cfset _ebay.ThrowOnError = false>
+<cfinclude template="../../api/act_call.cfm">	
+<!--- add GetCategoryFeatures ENDS--->	
+  
+<!---<cfdump var="#_ebay.xmlResponse#">--->
+
+
+
+
+
+
+	
+	<cfoutput>
+	<table width="100%" style="text-align: justify;">
+	<tr><td>
+		<font size="4"><strong>Auction Management - Step 2 of 4:</strong></font><br>
+		<hr size="1" style="color: Black;" noshade>
+		<strong>Administrator:</strong> #session.user.first# #session.user.last#<br><br>
+		<table width="100%" bgcolor="##aaaaaa" border="0" cellspacing="0" cellpadding="0">
+		<tr><td>
+			<table width="100%" border="0" cellpadding="4" cellspacing="1">
+			<tr bgcolor="##F0F1F3">
+				<td width="25%" valign="middle" align="right"><b>Item Number:</b></td>
+				<td align="left"><b>#sqlAuction.itemid#</b></td>
+			</tr>
+			<tr bgcolor="white"><td colspan="2">
+				<!---#XmlTransform(toString(xmlIS), XSLFile)#--->
+			</td></tr>
+			<tr bgcolor="white"><td colspan="2">
+			<!--- display the condition id --->
+				<cfif isDefined("_ebay.xmlResponse") AND (_ebay.Ack EQ "Success")>
+					<cfoutput>		
+						<form name="APIForm" id="APIForm" action="" method="post">
+						<a href="#_ebay.xmlResponse.GetCategoryFeaturesResponse.Category.ConditionValues.ConditionHelpURL.XmlText#" target="_blank">Condition</a><br>
+						<select name="ItemCondition">
+								<!---<option value="">	- </option>--->
+								<cfloop index="i" from="1" to="#ArrayLen(_ebay.xmlResponse.GetCategoryFeaturesResponse.Category.ConditionValues.Condition)#">	
+									<option value="#_ebay.xmlResponse.GetCategoryFeaturesResponse.Category.ConditionValues.Condition[i].XmlChildren['1'].XmlText#" <cfif "#sqlAuction.conditionID#" eq "#_ebay.xmlResponse.GetCategoryFeaturesResponse.Category.ConditionValues.Condition[i].XmlChildren['1'].XmlText#">selected</cfif>>#_ebay.xmlResponse.GetCategoryFeaturesResponse.Category.ConditionValues.Condition[i].XmlChildren['2'].XmlText#</option>										
+								</cfloop>
+						</select>
+
+
+<!---GetCategorySpecifics  starts--->
+<cfset _ebay.CallName ="GetCategorySpecifics">
+<cfset _ebay.XMLRequest = '<?xml version="1.0" encoding="utf-8"?>
+<#_ebay.CallName#Request xmlns="urn:ebay:apis:eBLBaseComponents">
+	<RequesterCredentials>
+		<eBayAuthToken>#_ebay.RequestToken#</eBayAuthToken>
+	</RequesterCredentials>
+	
+	<WarningLevel>High</WarningLevel>
+  <CategorySpecific>
+    <CategoryID>#sqlAuction.CategoryID#</CategoryID>
+  </CategorySpecific>  
+  <MaxValuesPerName>50</MaxValuesPerName>	
+</#_ebay.CallName#Request>'>
+<cfset _ebay.ThrowOnError = false>
+<cfinclude template="../../api/act_call.cfm">		
+<!---GetCategorySpecifics  ENDS--->
+
+<!---<cfdump var="#_ebay.xmlResponse#">--->
+
+<cfif isDefined("_ebay.xmlResponse") AND (_ebay.Ack EQ "Success")>
+<cfoutput>
+	<!---#ArrayLen(_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation)#--->
+	<!--- 
+	how to do it:
+	- has name recommendations 
+		- get ValidationRules for this namerecommnedations
+			*max values
+			*SelectionMode
+		- get helpurl
+		- ValueRecommendation existing and count
+	- is it freetext, prefilled, or Selection Only
+	Check ValidationRules
+		- Maxvalues is 1. for now we will just do maxvalues 1,
+		
+	for now:
+	- maxvalues 1
+	- ValidationRules.SelectionMode will be freetext or selection only. we won't code the prefilled coz of complexity
+			
+	--->
+	<!--- check nameRecommendation first --->
+	<cfif isdefined("_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation")>
+			<h3 style="border-bottom: 3px double ##4D4C9A;">Item Specifics:</h3><br>
+			<cfset loopCount = 0>
+			<table border="0">
+			<cfloop index="i" from="1" to="#ArrayLen(_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation)#">
+			<cfset loopCount++>
+				<cfset iName = #_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].Name.XmlText# >
+				<cfset vRulesMaxValues = #_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValidationRules.MaxValues.XmlText# > 
+				<cfset vRulesSelMode = #_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValidationRules.SelectionMode.XmlText# >	
+									
+				<cfset HelpURL = "">	
+				<cftry>
+				<cfset HelpURL = "#_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].HelpURL.XmlText#">	
+				<cfcatch></cfcatch>
+				</cftry>
+				<cfset countVrecom = "#ArrayLen(_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValueRecommendation)#">				
+				<!---iName:#iName#<br> M:#vRulesMaxValues#<br> sel:#vRulesSelMode#<br> HelpURL:#HelpURL#<br> countVrecom:#countVrecom#<br>--->
+				
+				<cfset dbIname = "">
+				<cfset dbIValue = "">
+					<!--- lets get the values from db --->
+					<cfquery name="getIspecifcs" datasource="#request.dsn#">
+						select iname,ivalue from auction_itemspecifics
+						where itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+						and iname = <cfqueryparam cfsqltype="cf_sql_varchar" value="#iName#">
+					</cfquery>
+				<cfif getIspecifcs.recordcount gte 1>
+						<cfset dbIname 	= #Replace(getIspecifcs.iname, '_', ' ','all')# >
+						<cfset dbIValue = getIspecifcs.ivalue >
+				</cfif>
+				
+				
+					<!--- lets show some options --->				
+					<CFIF loopCount MOD 2 is 1>
+						<CFSET bgcolor = "white">
+						<CFELSE>
+						<CFSET bgcolor = "##CCDFFC">
+					</CFIF>
+					<TR bgcolor="#bgcolor#">
+					<td align="right">	
+					#iName#:
+					<select name="itemspecifics_#iName#" <cfif vRulesSelMode is "prefilled">onfocus="this.defaultIndex=this.selectedIndex;" onchange="this.selectedIndex=this.defaultIndex;"</cfif> >	
+						<option value=""></option> 
+						<cfloop index="vc" from="1" to="#countVrecom#">							
+							<option values="#_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValueRecommendation[vc].Value.XmlText#" 
+							<cfif dbIValue eq "#_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValueRecommendation[vc].Value.XmlText#">selected</cfif>>
+								#_ebay.xmlResponse.GetCategorySpecificsResponse.Recommendations.NameRecommendation[i].ValueRecommendation[vc].Value.XmlText#
+							</option>
+						</cfloop>
+					</select>	
+					</td>
+				<td>	
+				<!---remove the special characters --->		
+				
+				<!--- selection mode for editing item specifics offline --->
+				<input type="hidden" name="mode_#rereplace(iname,'[^A-Za-z0-9]','','all')#"	value="#vRulesSelMode#">
+				
+				<!--- selection mode to allow text input--->
+				<cfif vRulesSelMode is "freetext">						
+					Enter your own:<input type="text" name="#rereplace(iname,'[^A-Za-z0-9]','','all')#"	<cfif dbIValue neq "">value="#dbIValue#"<cfelse>value=""</cfif> style=" border:1px solid ##666699;padding: 5px;" >
+				<cfelse>
+					<input type="hidden" name="#rereplace(iname,'[^A-Za-z0-9]','','all')#" value="#vRulesSelMode#">					
+				</cfif>
+				<cfif HelpURL neq ""><a href="#HelpURL#" target="_blank">Help</a></cfif>	
+				</td>	
+				</tr>
+			</cfloop>
+			</table>
+	<cfelse>
+		<h3>No Item Specifics Found!</h3>
+	</cfif>
+	
+
+
+	
+</cfoutput>
+<cfelse><!--- errors catch here --->
+		<cfif isDefined("_ebay.XMLResponse.xmlRoot.Errors.LongMessage.xmlText")>
+			<cfoutput><h1 style="color:red;">#_ebay.XMLResponse.xmlRoot.Errors.LongMessage.xmlText#</h1></cfoutput>
+		<cfelse>
+			<cfdump var="#_ebay#">
+		</cfif>
+		<cfabort>
+</cfif>
+
+
+
+						<!--- get this default --->
+						<input type="hidden" name="aus_form_changed" value="default">
+						<input type="hidden" name="ButtonLoad" value="default">
+						</form>
+					</cfoutput>
+					<cfelse>
+						<cfif isDefined("_ebay.XMLResponse.xmlRoot.Errors.LongMessage.xmlText")>
+							<cfoutput><h1 style="color:red;">#_ebay.XMLResponse.xmlRoot.Errors.LongMessage.xmlText#</h1></cfoutput>
+						<cfelse>
+							<cfdump var="#_ebay#">
+						</cfif>
+						<cfabort>
+					</cfif>			
+			</td></tr>
+			</table>
+		</td></tr>
+		</table>
+	</td></tr>
+	</table>
+	
+	
+
+
+
+	
+	<cfset formAction = "#_machine.self#&item=#attributes.item#">
+
+	<script language="javascript" type="text/javascript">
+	<!--//
+		document.forms['APIForm'].action = "#formAction#";
+	//-->
+	</script>
+	<center>
+
+		<br>
+		<cfif isDefined("attributes.vcsid")>
+			<input type="button" name="back" value="Back" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=back'; document.forms['APIForm'].submit()">
+			&nbsp;
+			<input type="button" name="next" value="Next" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=next'; document.forms['APIForm'].submit()">
+			<br><br>
+			<input type="button" name="finish" value="Finish" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=finish'; document.forms['APIForm'].submit()">
+			<br>
+		</cfif>
+		<br>
+	</center>
+	</cfoutput>
+</cfif>

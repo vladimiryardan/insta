@@ -1,0 +1,111 @@
+<cfoutput>
+	
+<style type="text/css">
+
+	##itmDisplay ul {
+	    border: 1px solid ##444;
+	    display: inline-block;
+	    position: relative;
+		    height: 1100px;
+		    list-style: outside none none;
+		    width: 1000px;
+	}
+
+	.item-html1:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/1.jpg) no-repeat;
+	}	
+	.item-html2:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/2.jpg) no-repeat;
+	}	
+	.item-html3:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/3.jpg) no-repeat;
+	}	
+	.item-html4:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/4.jpg) no-repeat;
+	}	
+	.item-html5:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/5.jpg) no-repeat;
+	}	
+	.item-html6:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/6.jpg) no-repeat;
+	}					
+	.item-html7:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/7.jpg) no-repeat;
+	}		
+	.item-html8:hover ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/8.jpg) no-repeat;
+	}		
+
+	
+	<!---target --->
+	.item-html1:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/1.jpg) no-repeat;
+	}	
+	.item-html2:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/2.jpg) no-repeat;
+	}	
+	.item-html3:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/3.jpg) no-repeat;
+	}	
+	.item-html4:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/4.jpg) no-repeat;
+	}	
+	.item-html5:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/5.jpg) no-repeat;
+	}	
+	.item-html6:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/6.jpg) no-repeat;
+	}					
+	.item-html7:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/7.jpg) no-repeat;
+	}		
+	.item-html8:target ~ li div.clicPicBig {
+		background: url(#_layout.ia_images##sqlAuction.use_pictures#/8.jpg) no-repeat;
+	}
+	
+
+	.clicPicBig {
+	    left: 150px;
+	    position: absolute;
+	    top: 0;
+	    background-image: url(#_layout.ia_images##sqlAuction.use_pictures#/1.jpg);
+	    width:750px;
+	    height:1000px
+	}	
+		 
+</style>
+
+
+<table valign="middle" align="center" cellpadding="0" cellspacing="0" border="0" style='table-layout:fixed'>
+<tr>
+	<td valign="top" id="itmDisplay">
+		
+			<!--- image display --->
+			<ul>
+		    
+			    <cfloop from="1" to="8" index="i" >
+				    <cfset imgNum = i>
+				    <cfif FileExists("#request.basepath##_layout.images_path##sqlAuction.use_pictures#/#imgNum#.jpg")>
+				    <li class="item-html#imgNum#" id="item-html#imgNum#">
+				        <a class="showImage#imgNum#" href="##item-html#imgNum#">
+				        	<img src="#_layout.ia_images##sqlAuction.use_pictures#/#imgNum#thumb.jpg" border="1" >
+				        </a>
+				    </li>
+				    </cfif>
+			    </cfloop>
+			
+			<li class="lastElementBig">
+				<div class="clicPicBig">
+				</div>					
+			</li>    
+		    
+			    			    	    	    
+			    			        			    			    			    			    
+			</ul>
+	</td>
+
+</tr>
+</table>
+
+
+</cfoutput>

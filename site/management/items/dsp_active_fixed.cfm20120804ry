@@ -1,0 +1,245 @@
+﻿<cfif NOT isAllowed("Lister_ActiveListings")>
+	<cflocation url="index.cfm?dsp=slim_login&next_dsp=#attributes.dsp#" addtoken="no">
+</cfif>
+<cfparam name="attributes.orderby" default="10">
+<cfparam name="attributes.dir" default="DESC">
+<cfparam name="attributes.page" default="1">
+<cfparam name="attributes.secondsort" default="internal_itemSKU">
+<cfoutput>
+<script language="javascript" type="text/javascript">
+<!--//
+function fPage(Page){
+	window.location.href = "#_machine.self#&orderby=#attributes.orderby#&dir=#attributes.dir#&page="+Page;
+}
+function fSort(OrderBy){
+	if ('#attributes.orderby#' == OrderBy){
+		dir = <cfif attributes.dir EQ "ASC">"DESC"<cfelse>"ASC"</cfif>;
+	}else{
+		dir = "ASC";
+	}
+	window.location.href = "#_machine.self#&page=#attributes.page#&orderby="+OrderBy+"&dir="+dir;
+}
+//-->
+</script>
+<table width="100%" style="text-align: justify;">
+<tr><td>
+	<font size="4"><strong>Fixed Item Active Listings:</strong></font><br>
+	<hr size="1" style="color: Black;" noshade>
+	<table width="100%"><tr><td align="left" width="50%"><strong>Administrator:</strong> #session.user.first# #session.user.last#</td><td align="right" width="50%">
+<!---
+<cfif isAllowed("EndOfDay_Listings")>
+	<b>Print Daily Report For: </b>
+	<a href="index.cfm?dsp=admin.listing_daily_report&repday=#DateFormat(DateAdd('d', -1, Now()))#" target="_blank">Yesterday</a>
+	&nbsp;|&nbsp;
+	<a href="index.cfm?dsp=admin.listing_daily_report&repday=#DateFormat(Now())#" target="_blank">Today</a>
+</cfif>
+--->
+	</td></tr></table>
+	<br><br>
+
+	<center>
+	<table bgcolor="##aaaaaa" border=0 cellspacing="0" cellpadding=0 width="100%">
+	<tr><td>
+		<table width="100%" cellspacing="1" cellpadding="4">
+		<tr bgcolor="##F0F1F3">
+		<td class="ColHead"><a href="JavaScript: void fSort(1);">Item ID</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(2);">eBay Item</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(3);">Title</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(4);">Start Time</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(5);">End Time</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(6);">Times Launched</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(7);">Price</a></td>
+		<td class="ColHead"><a href="JavaScript: void fSort(8);">SKU</a></td>
+		<td class="ColHead">Fixed Inventory<br>count</td>
+		<td class="ColHead"><a href="JavaScript: void fSort(10);">Count</a></td>
+		<td class="ColHead">Dups</td>
+		<td class="ColHead"><a href="JavaScript: void fSort(10);">SKU<br>Count</a></td>
+		</cfoutput>
+		<cfquery name="sqlTemp" datasource="#request.dsn#">
+			SELECT i.item AS itemid, i.ebayitem, e.title, e.dtstart, e.dtend, i.listcount, e.price AS finalprice,
+			i.internal_itemSKU, a.listingtype, status.status as istatus,
+			(
+			SELECT count(*)
+			FROM dbo.items x
+				INNER JOIN auctions y ON x.item = y.itemid
+				WHERE  x.status = 4
+				and (x.lid != 'P&S' or x.lid is null)
+				and y.listingtype =  '1'
+				and x.internal_itemSKU = i.internal_itemSKU
+			) as dupcount
+
+			FROM items i
+				INNER JOIN ebitems e ON i.ebayitem = e.ebayitem
+				INNER JOIN auctions a ON i.item = a.itemid
+				INNER JOIN status status ON i.status = status.id
+			WHERE (i.status = 4 or i.status = 10 or (i.status = 11 and i.paidtime > (GetDate()-30))  )<!--- Auction Listed --->
+				  and a.listingtype =  '1' <!--- display only fixed price items --->
+				  <!---and (i.lid != 'P&S' or i.lid is null) <!--- don't display paid and shipped --->--->
+				   and i.internal_itemSKU != '' <!---don't display null --->
+				   and i.offebay = '0'
+				   	<!---and  (i.paidtime > (GetDate()-30))--->
+			ORDER BY #attributes.orderby# #attributes.dir#
+			<cfif attributes.orderby neq 8>
+			, #attributes.secondsort# #attributes.dir#
+			</cfif>
+		</cfquery>
+
+
+
+
+
+		<cfset _paging.RecordCount = sqlTemp.RecordCount>
+		<cfset _paging.StartRow = (attributes.page-1)*_paging.RowsOnPage + 1>
+		<cfoutput query="sqlTemp" maxrows="#_paging.RowsOnPage#" startrow="#_paging.StartRow#">
+
+		<!--- items count base on sku and item condition--->
+			<cfquery name="rs_skuCondFixedPriceItem" datasource="#request.dsn#">
+				SELECT     i.item AS itemid, i.ebayitem,  i.listcount,  i.internal_itemSKU, i.internal_itemCondition, i.status
+				FROM         dbo.items i
+				INNER JOIN auctions a ON i.item = a.itemid
+				WHERE  i.status = 4 <!--- Auction Listed --->
+					and (i.lid != 'P&S' or i.lid is null) <!--- don't display paid and shipped --->
+					and a.listingtype =  '1' <!---only fixed price items --->
+					and i.offebay = '0'
+				and i.internal_itemSKU = '#sqlTemp.internal_itemSKU#'
+			</cfquery>
+
+			<!--- fixed inventory count --->
+			<cfquery name="rs_FixedInventoryCount" datasource="#request.dsn#">
+					select item from items i
+					INNER JOIN auctions a ON i.item = a.itemid
+					where i.internal_itemSKU = '#sqlTemp.internal_itemSKU#'
+					and i.status = 16 <!--- Auction Listed --->
+					<!---and (i.lid != 'P&S' or i.lid is null) <!--- don't display paid and shipped --->--->
+					<!---and a.listingtype =  '1' <!---only fixed price items --->--->
+					and i.offebay = '0'
+			</cfquery>
+		<tr bgcolor="###iif(currentrow MOD 2,DE('ffffff'),DE('E7E6F2'))#">
+			<td><a href="index.cfm?dsp=management.items.edit&item=#sqlTemp.itemid#" target="_blank">#sqlTemp.itemid#</a></td>
+			<td><a href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=#sqlTemp.ebayitem#" target="_blank">#sqlTemp.ebayitem#</a></td>
+			<td>#sqlTemp.title#</td>
+			<td>#strDate(sqlTemp.dtstart)#</td>
+			<td>#strDate(sqlTemp.dtend)#</td>
+			<td>#sqlTemp.listcount#</td>
+			<td>$#sqlTemp.finalprice#</td>
+			<td>#sqlTemp.internal_itemSKU#</td>
+			<td>#rs_FixedInventoryCount.RecordCount# #rs_FixedInventoryCount.item#</td>
+
+			<td>#sqlTemp.dupcount#</td>
+			<td>
+				<cfif rs_skuCondFixedPriceItem.recordcount gt 1>
+					<cfloop query="rs_skuCondFixedPriceItem">
+						<cfif rs_skuCondFixedPriceItem.itemid neq sqlTemp.itemid>
+						#rs_skuCondFixedPriceItem.itemid#<br>
+						</cfif>
+					</cfloop>
+				<cfelse>
+					None
+				</cfif>
+			</td>
+			<td>
+				<cfquery name="get_InstaItemCount" datasource="#request.dsn#">
+					SELECT items.item
+							,items.aid
+							,items.cid
+					      ,items.title
+					      ,items.description
+					      ,items.make
+					      ,items.model
+					      ,items.value
+					      ,items.age
+					      ,items.ebaytitle
+					      ,items.ebaydesc
+					      ,items.status
+					      ,items.ebayitem
+					      ,items.shipper
+					      ,items.tracking
+					      ,items.invoicenum
+					      ,items.weight
+					      ,items.commission
+					      ,items.dcreated
+					      ,items.dreceived
+					      ,items.listcount
+					      ,items.dinvoiced
+					      ,items.offebay
+					      ,items.shipped
+					      ,items.paid
+					      ,items.PaidTime
+					      ,items.ShippedTime
+					      ,items.shipnote
+					      ,items.ShipCharge
+					      ,items.byrName
+					      ,items.byrStreet1
+					      ,items.byrStreet2
+					      ,items.byrCityName
+					      ,items.byrStateOrProvince
+					      ,items.byrCountry
+					      ,items.byrPhone
+					      ,items.byrPostalCode
+					      ,items.byrCompanyName
+					      ,items.byrOrderQtyToShip
+					      ,items.startprice
+					      ,items.dcalled
+					      ,items.bold
+					      ,items.border
+					      ,items.highlight
+					      ,items.vehicle
+					      ,items.drefund
+					      ,items.refundpr
+					      ,items.lid
+					      ,items.lid2
+					      ,items.dlid
+					      ,items.startprice_real
+					      ,items.buy_it_now
+					      ,items.dpacked
+					      ,items.dpictured
+					      ,items.who_created
+					      ,items.exception
+					      ,items.purchase_price
+					      ,items.multiple
+					      ,items.pos
+					      ,items.aid_checkout_complete
+					      ,items.combined
+					      ,items.width
+					      ,items.height
+					      ,items.depth
+					      ,items.weight_oz
+					      ,items.label_printed
+					      ,items.internal_itemSKU
+					      ,items.internal_itemCondition
+					      ,items.itemManual
+					      ,items.itemComplete
+					      ,items.itemTested
+					      ,items.retailPackingIncluded
+					      ,items.specialNotes
+					      ,items.internalShipToLocations
+					      ,status.status as istatus
+					  FROM items
+					  left JOIN status ON status.id = items.status
+					  where
+					  (
+					  	items.internal_itemSKU = '#sqlTemp.internal_itemSKU#'
+					  )
+					  and (items.internal_itemCondition != 'amazon' and items.internal_itemCondition != 'AS-IS' and items.internal_itemCondition != 'New with Defect')
+					 and (items.status != 11 and items.status != 4 and items.status != 5 and items.status != 10)
+					  and items.offebay = '0'
+					   <!---and (items.status = '3' or items.status='8')<!--- 3 = item received --->--->
+					order by items.status desc, items.dcreated asc
+					</cfquery>
+
+
+
+
+				<a href="index.cfm?dsp=management.items.active_fixedList&item=#sqlTemp.itemid#">#get_InstaItemCount.recordcount#</a></td>
+		</tr>
+		</cfoutput>
+		<cfoutput>
+		<tr bgcolor="##FFFFFF"><td colspan="7" align="center">
+			</cfoutput><cfinclude template="../../../paging.cfm"><cfoutput>
+		</td></tr>
+		</table>
+	</td></tr>
+	</table>
+</td></tr>
+</table>
+</cfoutput>

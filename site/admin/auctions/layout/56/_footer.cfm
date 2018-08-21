@@ -1,0 +1,1 @@
+<cfoutput><TD><IMG SRC="https://pics.ebay.com/aw/pics/x.gif" WIDTH="3" HEIGHT="1" /></TD></TR><TR><TD COLSPAN="3"><IMG SRC="https://pics.ebay.com/aw/pics/x.gif" WIDTH="1" HEIGHT="31" /></TD></TR></TABLE></td></tr></table><span class="ebay"></span><br><img src="https://pics.ebaystatic.com/aw/pics/s.gif" width="100%" height="8"></td></tr></table></td></cfoutput>

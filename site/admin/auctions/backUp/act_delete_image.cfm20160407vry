@@ -1,0 +1,29 @@
+<cfif NOT isAllowed("Items_UploadPictures")>
+	<cflocation url="index.cfm?dsp=slim_login&next_dsp=#attributes.dsp#" addtoken="no">
+</cfif>
+
+<cfif isDefined("attributes.multiple")>
+	<cfset _machine.cflocation = "index.cfm?dsp=admin.auctions.manage_images&itemid=#attributes.item#">
+	<cfif isDefined("attributes.images2delete")>
+		<cfloop index="imgnum" list="#attributes.images2delete#">
+			<cffile action="delete" file="#request.basepath##_layout.images_path##attributes.item#\#imgnum#.jpg">
+			<cffile action="delete" file="#request.basepath##_layout.images_path##attributes.item#\#imgnum#thumb.jpg">
+		</cfloop>
+	</cfif>
+<cfelse>
+	<cfset _machine.cflocation = "index.cfm?dsp=admin.auctions.step3_right&item=#attributes.item#">
+	<cffile action="delete" file="#request.basepath##_layout.images_path##attributes.item#\#attributes.imgnum#.jpg">
+	<cffile action="delete" file="#request.basepath##_layout.images_path##attributes.item#\#attributes.imgnum#thumb.jpg">
+</cfif>
+
+<!--- RENUMBER IMAGES --->
+<cfset imgnum = 1>
+<cfloop index="i" from="1" to="10">
+	<cfif FileExists("#request.basepath##_layout.images_path##attributes.item#/#i#.jpg")>
+		<cfif i NEQ imgnum>
+			<cffile action="rename" destination="#request.basepath##_layout.images_path##attributes.item#/#imgnum#.jpg" source="#request.basepath##_layout.images_path##attributes.item#/#i#.jpg">
+			<cffile action="rename" destination="#request.basepath##_layout.images_path##attributes.item#/#imgnum#thumb.jpg" source="#request.basepath##_layout.images_path##attributes.item#/#i#thumb.jpg">
+		</cfif>
+		<cfset imgnum = imgnum + 1>
+	</cfif>
+</cfloop>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<GetSellerEventsRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+	<RequesterCredentials>
+		<eBayAuthToken>AgAAAA**AQAAAA**aAAAAA**GnIqSw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wGkICoD5OCpwmdj6x9nY+seQ**lawAAA**AAMAAA**UbY+tSKX+pDvFWdFF7i7bijcwvkudop9J6ZBETB2pdMenSBFOWjq7lcnFpb9Ypf+FfdnED5A6JBGsHrk6po1MF8zkY2pzmaSQwMd9Ptfilu+cwFPFZVGuDpSTXxPlS9mUVENClLWO/xe84oZXiQxuPfryxG5MW+q8E2t1u6QuUYy0pU8sem73f4huxr+ogSbkWTIGClyPpyb4BhXTSH4EHbpAagpopkUJFpIP3LxHv/YJlgOAQrN6nKc0YN0iL9poUjAjy/LI5hkrlg4I1voOZZ+A4riAP+BVHV2MTZcA/7Exz3OHAvz1HOfQTa68QMCL1tWuSsuD7RbC9l7Zjlaee6nmGElZqr0F4tPb3qRkDcocM5FSehum3/MzYzblSY5qTPCPVzXWTDtCTZyPU0iAopUhQVElVuioGVYZvejiW4hW7EqtX8ahpF5P2iRLc3TPOJlVyQGN3m41QxPgkGXyUAsWm+fyxnjRiw1+Oc/ag2dxvT8rd+Sqn//UzvRA5iQwX3kMwnxocZfRwh57M2ex1LnpgHs9yZNU2aki8oAqDQCpSH4rqn8hrgCvz3X6kXNnLJ25YWaWLE4eSFB9bUCQD/TjUuJls2C8mmjlkvyvGucUE0EwuEcFL44NXOYqTUH813rgKmP0HdadLS7VGtXPFjN105v9KvzTjdLQRe4Wf6191u6Y/kgIxl6YX/Gsv4GMVXsSI9gGf95AAt2hyTTO9oy2Jt4ZMxOAPLYTnEJOxdiOye28HL4vvyzb7IlY0R6</eBayAuthToken>
+	</RequesterCredentials>
+	<UserID>hernicole</UserID>
+	<DetailLevel>ReturnAll</DetailLevel>
+	<EndTimeFrom>2010-05-16 12:30:02</EndTimeFrom>
+	<EndTimeTo>2010-06-14 12:30:02</EndTimeTo>
+	</GetSellerEventsRequest>

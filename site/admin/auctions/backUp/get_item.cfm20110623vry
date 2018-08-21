@@ -1,0 +1,103 @@
+<cfquery datasource="#request.dsn#" name="sqlDefault">
+	SELECT item, title, description, weight, weight_oz, bold, border, highlight, startprice_real, startprice, buy_it_now, internal_itemCondition, age,
+	itemManual, itemComplete, itemTested, retailPackingIncluded, specialNotes, internalShipToLocations
+	FROM items
+	WHERE item = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+</cfquery>
+
+<cfif sqlDefault.RecordCount EQ 0><!--- INVALID OR NOT EXISTED ITEM --->
+	<cflocation url="index.cfm?dsp=management.items.invalid&item=#attributes.item#">
+</cfif>
+<cfquery name="sqlAuction" datasource="#request.dsn#">
+	SELECT *
+	FROM auctions
+	WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+</cfquery>
+
+<!--- vlad added get auction itemspecifics --->
+<cfquery name="get_ItemSpecifics" datasource="#request.dsn#">
+	SELECT *
+	FROM auction_itemspecifics
+	WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+</cfquery>
+
+
+<cfif sqlAuction.RecordCount EQ 0>
+<cfset DynamicDescription = #Replace(_vars.lister.descriptionBegin, '{Description}', sqlDefault.description, 'ALL')#>
+<cfset DynamicDescription = #Replace(DynamicDescription, '{internal_item_condition}', sqlDefault.internal_itemCondition, 'ALL')#>
+<cfset DynamicDescription = #Replace(DynamicDescription, '{item_title}', sqlDefault.title, 'ALL')#>
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{itemManual}', YesNoFormat(sqlDefault.itemManual), 'ALL')#>
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{itemComplete}', YesNoFormat(sqlDefault.itemComplete), 'ALL')#>
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{itemTested}', YesNoFormat(sqlDefault.itemTested), 'ALL')#>
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{retailPackingIncluded}', YesNoFormat(sqlDefault.retailPackingIncluded), 'ALL')#>
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{retailPrice}', sqlDefault.age, 'ALL')#>
+<cfif sqlDefault.specialNotes eq "">
+	<cfset sqlDefault.specialNotes = "N/A">
+</cfif>
+
+<!---
+<cfif sqlDefault.internalShipToLocations eq "">
+	<cfset sqlDefault.internalShipToLocations = "WorldWide">
+</cfif>
+--->
+
+<cfset DynamicDescription =  #Replace(DynamicDescription, '{specialNotes}', sqlDefault.specialNotes, 'ALL')#>
+	<cfif NOT isAllowed("Lister_CreateAuction")>
+		<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
+	</cfif>
+	<cfset LogAction("created auction for item #attributes.item#")>
+	<cfquery datasource="#request.dsn#">
+		INSERT INTO auctions
+		(ebayaccount, itemid, scheduledBy, Title, Description, PackedWeight, PackedWeight_oz,  StartingPrice, ReservePrice, BuyItNowPrice, Bold, Border, Highlight, PackageSize)
+		VALUES
+		(
+			22,
+			<cfqueryparam cfsqltype="cf_sql_varchar" value="#sqlDefault.item#">,
+			<cfqueryparam cfsqltype="cf_sql_varchar" value="#Left(session.user.first, 1)##Left(session.user.last, 1)#">,
+			<cfqueryparam cfsqltype="cf_sql_varchar" value="#Left(sqlDefault.title, 55)#">,
+			<cfqueryparam cfsqltype="cf_sql_longvarchar" value="#DynamicDescription#">,
+			<cfqueryparam cfsqltype="cf_sql_tinyint" value="#Val(sqlDefault.weight)#">,
+			<cfqueryparam cfsqltype="cf_sql_integer" value="#sqlDefault.weight_oz#">,
+			'#sqlDefault.startprice_real#',
+			'#sqlDefault.startprice#',
+			'#sqlDefault.buy_it_now#',
+			'#sqlDefault.bold#',
+			'#sqlDefault.border#',
+			'#sqlDefault.highlight#',
+			<cfif (sqlDefault.weight + sqlDefault.weight_oz/16) LT 30>
+				0
+			<cfelseif (sqlDefault.weight + sqlDefault.weight_oz/16) LT 70>
+				2
+			<cfelseif (sqlDefault.weight + sqlDefault.weight_oz/16) LT 90>
+				3
+			<cfelse>
+				0
+			</cfif>
+			
+		)
+	</cfquery>
+	<cfquery name="sqlAuction" datasource="#request.dsn#">
+		SELECT a.*
+		FROM auctions a
+		WHERE a.itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+	<!--- vlad added get auction itemspecifics --->
+	<cfquery name="get_ItemSpecifics" datasource="#request.dsn#">
+		SELECT *
+		FROM auction_itemspecifics
+		WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+
+</cfif>
+<cfif sqlAuction.use_pictures EQ "">
+	<cfset sqlAuction.use_pictures = sqlAuction.itemid>
+</cfif>
+<cfquery name="sqlEBAccount" datasource="#request.dsn#">
+	SELECT DeveloperName, ApplicationName, CertificateName,
+		UserID, UserName, Password, RequestToken,
+		TemplateHeader, TemplateDescription, TemplateSellWithUs,
+		TemplatePayment, TemplateShipping, TemplateAboutUs,
+		watermark, paypal
+	FROM ebaccounts
+	WHERE eBayAccount = <cfqueryparam cfsqltype="cf_sql_integer" value="#sqlAuction.ebayaccount#">
+</cfquery>

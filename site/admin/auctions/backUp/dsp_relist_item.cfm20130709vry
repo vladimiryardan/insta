@@ -1,0 +1,346 @@
+
+<cfif NOT isAllowed("Lister_CreateAuction") AND NOT isAllowed("Lister_EditAuction") AND NOT isAllowed("Lister_ListAuction")>
+	<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
+</cfif>
+
+
+<cfoutput>
+<script language="javascript">
+<!--//
+function fCharsLeft(objID, val, maxChars){
+	document.getElementById(objID).innerHTML = "(" + (maxChars-val.length) + " chars left)";
+}
+//-->
+</script>
+<table width="100%" style="text-align: justify;">
+<tr><td>
+	<font size="4"><strong>Relist Auction</strong></font><br>
+	<hr size="1" style="color: Black;" noshade>
+	<strong>Administrator:</strong> #session.user.first# #session.user.last#<br><br>
+	<table bgcolor="##aaaaaa" border=0 cellspacing="0" cellpadding=0 width="100%">
+	<tr><td>
+		<table width="100%" cellspacing="1" cellpadding="4">
+</cfoutput>
+	<cfif isDefined("attributes.submit")>
+		<!--- check if the item is already listed and prevent double auction --->
+		<cfquery datasource="#request.dsn#" name="relistCheck">
+			select duration, relistDate from auctions
+			WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+			and relistdate is not null
+		</cfquery>
+
+		<!--- check if duation is ok --->
+		<cfif relistCheck.RecordCount gte 1>
+
+			<!--- add duration and list date if is future date from now--->
+			<cfset pDuration = "#dateadd('d',relistCheck.duration,"#relistCheck.relistDate#")#" >
+
+			<!--- if pduration is future date then don't relist. we won't allow relist of item already relisted --->
+			<cfif pDuration gt now() >
+				<cflocation url="index.cfm?dsp=management.apayment" addtoken="false" >
+			</cfif>
+		</cfif>
+
+
+
+
+
+		<cfparam name="attributes.UpdateDescription" default="0">
+		<cfif attributes.UpdateDescription EQ 1>
+			<cfsavecontent variable="cntDescription">
+				<cfinclude template="../auctions/layout/show.cfm">
+			</cfsavecontent>
+		</cfif>
+		<cfquery name="sqlEBAccount" datasource="#request.dsn#">
+			SELECT a.eBayAccount, a.UserID, a.UserName, a.Password,
+				a.DeveloperName, a.ApplicationName, a.CertificateName, a.RequestToken
+				, u.SiteID
+			FROM auctions u
+				INNER JOIN ebaccounts a ON u.ebayaccount = a.eBayAccount
+			WHERE u.itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+		</cfquery>
+		<cfscript>
+			_ebay.UserID			= sqlEBAccount.UserID;
+			_ebay.UserName			= sqlEBAccount.UserName;
+			_ebay.Password			= sqlEBAccount.Password;
+			_ebay.DeveloperName		= sqlEBAccount.DeveloperName;
+			_ebay.ApplicationName	= sqlEBAccount.ApplicationName;
+			_ebay.CertificateName	= sqlEBAccount.CertificateName;
+			_ebay.RequestToken		= sqlEBAccount.RequestToken;
+			_ebay.SiteID			= sqlEBAccount.SiteID;
+		</cfscript>
+		<cfset attributes.CallName = "RelistItem">
+		<cfset _ebay.CallName = attributes.CallName>
+		<cfscript>
+			variables.ModifiedFields = "";
+			_ebay.XMLRequest		= '<?xml version="1.0" encoding="UTF-8"?>
+		<#attributes.CallName#Request xmlns="urn:ebay:apis:eBLBaseComponents">
+			<RequesterCredentials>
+				<eBayAuthToken>#_ebay.RequestToken#</eBayAuthToken>
+			</RequesterCredentials>
+			<Item>
+				<ItemID>#attributes.ebayitem#</ItemID>';
+			if(attributes.defTitle NEQ attributes.Title){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<Title><![CDATA[#attributes.Title#]]></Title>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.Title");
+			}
+			if(attributes.defStartPrice NEQ attributes.StartPrice){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<StartPrice>#attributes.StartPrice#</StartPrice>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.StartPrice");
+			}
+			if(attributes.defBuyItNowPrice NEQ attributes.BuyItNowPrice){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<BuyItNowPrice>#attributes.BuyItNowPrice#</BuyItNowPrice>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.BuyItNowPrice");
+			}
+			if(attributes.defReservePrice NEQ attributes.ReservePrice){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<ReservePrice>#attributes.ReservePrice#</ReservePrice>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.ReservePrice");
+			}
+			if(attributes.defListingDuration NEQ attributes.ListingDuration){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<ListingDuration>Days_#attributes.ListingDuration#</ListingDuration>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.ListingDuration");
+			}
+			if(attributes.UpdateDescription EQ 1){
+				_ebay.XMLRequest = _ebay.XMLRequest & '<Description><![CDATA[ #cntDescription# ]]></Description>';
+				variables.ModifiedFields = ListAppend(variables.ModifiedFields, "Item.Description");
+			}
+			if(attributes.bestOffer EQ 1){
+				_ebay.XMLRequest = _ebay.XMLRequest & '
+					<BestOfferDetails>
+						<BestOfferEnabled>true</BestOfferEnabled>
+					</BestOfferDetails>';
+			}else{
+				_ebay.XMLRequest = _ebay.XMLRequest & '
+					<BestOfferDetails>
+						<BestOfferEnabled>false</BestOfferEnabled>
+					</BestOfferDetails>';
+			}
+			//check weight of the item
+			if((attributes.PackedWeight + attributes.PackedWeight_oz/16) GT 3){
+				vartype_ShippingService = "UPSGround";
+			}else{
+				vartype_ShippingService = "USPSPriority";
+			}
+
+			if (IsDefined("attributes.WhoPaysShipping")) {
+				if(attributes.WhoPaysShipping EQ 1){
+				_ebay.XMLRequest = _ebay.XMLRequest & '
+				<ShippingDetails>
+				 <ShippingServiceOptions>
+			        <FreeShipping>1</FreeShipping>
+			        <ShippingService>#vartype_ShippingService#</ShippingService>
+			        <ShippingServiceCost currencyID="USD">0</ShippingServiceCost>
+			        <ShippingServicePriority>1</ShippingServicePriority>
+			      </ShippingServiceOptions>
+				</ShippingDetails>';
+				}
+			}
+
+			_ebay.XMLRequest = _ebay.XMLRequest & '
+			</Item>';
+			/*deprecated as seen by vlad in ebay docs 20110828
+			for(i=1; i LTE ListLen(variables.ModifiedFields); i=i+1){
+				_ebay.XMLRequest = _ebay.XMLRequest & '
+				<ModifiedFields>
+					<Field>#ListGetAt(variables.ModifiedFields, i)#</Field>
+				</ModifiedFields>';
+			}*/
+
+			/****** Shipping Details *****/
+
+			_ebay.XMLRequest = _ebay.XMLRequest & '
+		</#attributes.CallName#Request>';
+		</cfscript>
+		<cfset _ebay.ThrowOnError = false>
+		<cfinclude template="../../api/act_call.cfm">
+		<cfoutput><tr bgcolor="##FFFFFF"><td style="padding:40px 40px 40px 40px;"></cfoutput>
+		<cfif _ebay.Ack EQ "failure">
+			<cfoutput><h3 style="color:red;">Error while submit Relist Item. Details: #HTMLEditFormat(err_detail)#</h3></cfoutput>
+		<cfelse>
+			<cfquery datasource="#request.dsn#" name="sqlData">
+				UPDATE auctions
+				SET StartingPrice = <cfqueryparam cfsqltype="cf_sql_float" value="#attributes.StartPrice#">,
+					BuyItNowPrice = <cfqueryparam cfsqltype="cf_sql_float" value="#attributes.BuyItNowPrice#">,
+					Duration = <cfqueryparam cfsqltype="cf_sql_tinyint" value="#attributes.ListingDuration#">,
+					ReservePrice = <cfqueryparam cfsqltype="cf_sql_float" value="#attributes.ReservePrice#">,
+					relistDate = <cfqueryparam cfsqltype="cf_sql_timestamp" value="#now()#">
+					<!--- we only have seller pays shipping --->
+					<cfif isdefined("attributes.WhoPaysShipping")>
+						,WhoPaysShipping = <cfqueryparam cfsqltype="cf_sql_float" value="#attributes.WhoPaysShipping#">
+						,ShippingServiceCost = 0
+					</cfif>
+				WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+			</cfquery>
+			<cfinclude template="../auctions/dsp_list_item_result.cfm">
+			<cfset LogAction("relisted auction (#attributes.ebayitem#, #attributes.StartPrice#, #attributes.ReservePrice#)")>
+		</cfif>
+		<cfoutput></td></tr></cfoutput>
+	<cfelse>
+		<cfquery datasource="#request.dsn#" name="sqlData">
+			SELECT i.ebayitem, a.StartingPrice AS StartPrice, a.BuyItNowPrice, a.Duration AS ListingDuration, a.ReservePrice, a.ready, a.Title, a.WhoPaysShipping, a.ShippingServiceCost, a.ShipToLocations, a.PackedWeight_oz, a.PackedWeight, i.title as itemTitle, e.title AS ebtitle
+			FROM items i
+				LEFT JOIN ebitems e ON e.ebayitem = i.ebayitem
+				LEFT JOIN auctions a ON i.item = a.itemid
+			WHERE i.item = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+		</cfquery>
+		<cfoutput>
+		<tr bgcolor="##F0F1F3">
+			<td width="35%" align="right"><b>Title:</b></td>
+			<td width="65%">#sqlData.itemTitle#</td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td width="35%" align="right"><b>Ebay Title:</b></td>
+			<td width="65%">#sqlData.ebtitle#</td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td width="35%" align="right"><b>Item ID</b></td>
+			<td width="65%"><a target="_blank" href="index.cfm?dsp=management.items.edit&item=#attributes.item#">#attributes.item#</a></td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td align="right"><b>eBay Number</b></td>
+			<td><a target="_blank" href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&item=#sqlData.ebayitem#">#sqlData.ebayitem#</a></td>
+		</tr>
+		<tr bgcolor="##F0F1F3"><td colspan="2" align="center"><a href="http://pages.ebay.com/help/sell/questions/free-relist.html" target="_blank">How does the free relist policy work?</a></td></tr>
+		<form action="index.cfm?dsp=#attributes.dsp#" method="post">
+		<cfif sqlData.ready NEQ "1">
+			<tr bgcolor="##FFFFFF"><td colspan="2" style="font-weight:bold; text-align:center; color:red;">
+				Sorry, could not relist this auction because it was not listed with InstantAuctions site.
+			</td></tr>
+		<cfelse>
+			<tr bgcolor="##FFFFFF">
+				<td align="right"><label for="UpdateDescription" style="font-weight:bold; cursor:pointer;" title="Mark this checkbox if you want to update item description and/or layout, or keep it unchecked to update fields below only.">Update Description/Layout</label></td>
+				<td>
+					<table cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="50"><input type="checkbox" name="UpdateDescription" id="UpdateDescription" value="1"></td>
+					<cfif isAllowed("Lister_CreateAuction") OR isAllowed("Lister_EditAuction")>
+						<td width="40"><a href="index.cfm?dsp=admin.auctions.step1&item=#attributes.item#"><img src="#request.images_path#icon1.gif" border="0" alt="Edit Auction"></a></td>
+					</cfif>
+						<td width="40"><a href="index.cfm?dsp=admin.auctions.preview&item=#attributes.item#" target="_blank"><img src="#request.images_path#icon12.gif" border="0" alt="Preview Auction"></a></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			<tr bgcolor="##F0F1F3">
+				<td align="right"><b>Listing Title:</b></td>
+				<td>
+					<input type="hidden" name="defTitle" value="#HTMLEditFormat(sqlData.Title)#">
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><input type="text" name="Title" value="#HTMLEditFormat(sqlData.Title)#" size="80" maxlength="80" onChange="fCharsLeft('dynaTitle', this.value, 80)" onKeyUp="fCharsLeft('dynaTitle', this.value, 80)"></td>
+						<td id="dynaTitle">(#80-Len(sqlData.Title)# chars left)</td>
+					</tr>
+					<tr><td colspan="2"><small>80 Chars. Max</small></td></tr>
+					</table>
+				</td>
+			</tr>
+			<tr bgcolor="##FFFFFF">
+				<td align="right"><b>Start Price</b></td>
+				<td>
+					<input type="hidden" name="defStartPrice" value="#sqlData.StartPrice#">
+
+					<input type="text" name="StartPrice" id="StartPrice"  value="#sqlData.StartPrice#">
+					<select name="selStartPrice" id="selStartPrice">
+						<option value="0.0">-- Select --</option>
+						<option value="0.99">0.99</option>
+						<option value="6.99">6.99</option>
+						<option value="9.99">9.99</option>
+						<option value="14.99">14.99</option>
+						<option value="19.99">19.99</option>
+						<option value="24.99">24.99</option>
+						<option value="34.99">34.99</option>
+						<option value="39.99">39.99</option>
+						<option value="49.99">49.99</option>
+						<option value="69.99">69.99</option>
+						<option value="84.99">84.99</option>
+						<option value="99.99">99.99</option>
+						<option value="119.95">119.95</option>
+						<option value="149.95">149.95</option>
+
+
+					</select>
+				</td>
+			</tr>
+			<tr bgcolor="##F0F1F3">
+				<td align="right"><b>Buy It Now Price</b></td>
+				<td>
+					<input type="hidden" name="defBuyItNowPrice" value="#sqlData.BuyItNowPrice#">
+					<input type="text" name="BuyItNowPrice" id="BuyItNowPrice" value="#sqlData.BuyItNowPrice#">
+					<button type="button" id="btnBuyItNow" value="Set to 0.0">Set to 0.0</button>
+				</td>
+			</tr>
+			<tr bgcolor="##F0F1F3">
+				<td align="right"><b>Who Pays Shipping:</b></td>
+				<td align="left">
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><input type="checkbox" name="WhoPaysShipping" value="1" checked="yes"></td>
+						<td colspan="3"><label for="wpsSeller">Seller</label></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr bgcolor="##FFFFFF">
+				<td align="right"><b>Listing Duration</b></td>
+				<td>
+					<input type="hidden" name="defListingDuration" value="#sqlData.ListingDuration#">
+					<select size="1" name="ListingDuration">#SelectOptions("#sqlData.ListingDuration#", "1,1 Day;3,3 Days;5,5 Days;7,7 Days;10,10 Days;30,30 Days;60,60 Days;90,90 Days;120,120 Days")#</select>
+				</td>
+			</tr>
+			<tr bgcolor="##F0F1F3">
+				<td align="right"><b>Reserve Price</b></td>
+				<td>
+					<input type="hidden" name="defReservePrice" value="#sqlData.ReservePrice#">
+					<input type="text" name="ReservePrice" value="#sqlData.ReservePrice#">
+				</td>
+			</tr>
+			<tr bgcolor="##FFFFFF">
+				<td valign="middle" align="right"><b>Best Offer:</b></td>
+				<td align="left">
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td><input type="radio" id="boNo" name="bestOffer" value="0"></td>
+						<td><label for="boNo">No</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" id="boYes" name="bestOffer" value="1" checked></td>
+						<td><label for="boYes">Yes</label></td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			<tr bgcolor="##F0F1F3"><th colspan="2" align="center">
+				<input type="hidden" name="item" value="#attributes.item#">
+				<input type="hidden" name="ebayitem" value="#sqlData.ebayitem#">
+				<input type="hidden" name="PackedWeight_oz" value="#sqlData.PackedWeight_oz#">
+				<input type="hidden" name="PackedWeight" value="#sqlData.PackedWeight#">
+				<input type="submit" name="submit" value="Relist Item">
+			</th></tr>
+			</form>
+		</cfif>
+		</cfoutput>
+	</cfif>
+<cfoutput>
+		</table>
+	</td></tr>
+	</table>
+</td></tr>
+</table>
+<script src="layouts/default/jquery-1.4.3.min.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	$('##btnBuyItNow').click(function(){
+		$('##BuyItNowPrice').val("0.0");
+	});
+	$('##selStartPrice').change(function(){
+		 var dval = $(this).val();
+		$('##StartPrice').val(dval);
+	});
+});
+</script>
+</cfoutput>
+
+
+
+

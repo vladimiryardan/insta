@@ -1,0 +1,178 @@
+<cfif NOT isAllowed("Lister_ListAuction")>
+	<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
+</cfif>
+
+<cfparam name="attributes.item">
+<cfinclude template="get_item.cfm">
+<cfset attributes.SiteID = sqlAuction.SiteID>
+
+<cfif isDefined("attributes.vcsid")>
+	<cfset attributes.AttributeSetID = attributes.vcsid>
+<cfelse>
+	<cfquery name="sqlCategory2CS" datasource="#request.dsn#">
+		SELECT csName, csAttributeSetID, swName, swAttributeSetID
+		FROM category2cs
+		WHERE CategoryID = <cfqueryparam cfsqltype="cf_sql_bigint" value="#sqlAuction.CategoryID#">
+			AND SiteID = <cfqueryparam cfsqltype="cf_sql_bigint" value="#attributes.SiteID#">
+	</cfquery>
+	<cfset attributes.AttributeSetID = sqlCategory2CS.csAttributeSetID>
+	<cfset attributes.vcsid = sqlCategory2CS.csAttributeSetID><!--- Skip "Return Policy" (Site Wide Attribute Set) --->
+</cfif>
+<cfif isDefined("attributes.AUS_FORM_CHANGED")>
+	<cfinclude template="act_parseItemSpecific.cfm">
+<cfelse>
+	<cfset attributes.AUS_FORM_CHANGED = "default">
+</cfif>
+<cfif isDefined("attributes.done")>
+	<cfscript>
+		xmlDoc = xmlNew();
+		xmlDoc.xmlRoot = xmlElemNew(xmlDoc, "AttributeSetArray");
+		for(i=1; i LTE ArrayLen(asa); i=i+1){
+			ArrayAppend(xmlDoc.xmlRoot.xmlChildren, xmlElemNew(xmlDoc, "AttributeSet"));
+			AttributeSet = xmlDoc.xmlRoot.xmlChildren[ArrayLen(xmlDoc.xmlRoot.xmlChildren)];
+			StructInsert(AttributeSet.xmlAttributes, "attributeSetID", asa[i].attributeSetID);
+			for(j=1; j LTE ArrayLen(asa[i].attr); j=j+1){
+				ArrayAppend(AttributeSet.xmlChildren,
+					fAddAttribute(xmlDoc, asa[i].attr[j].attributeID, asa[i].attr[j].ValueID, asa[i].attr[j].ValueLiteral, asa[i].attr[j].metacharacter));
+			}
+		}
+	</cfscript>
+	<cfquery datasource="#request.dsn#">
+		UPDATE auctions
+		SET AttributeSetArray = <cfqueryparam cfsqltype="cf_sql_longvarchar" value="#toString(xmlDoc)#">
+		WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+	<cfif attributes.dsp EQ "admin.auctions.item_specific_popup">
+		<cfoutput>
+		<table height="290" align="center">
+		<tr><td valign="middle">
+			Item Specific was added.
+		</td></tr>
+		</table>
+		<script language="javascript" type="text/javascript">
+		<!--//
+			var i = setInterval(function(){clearInterval(i);window.close();}, 500);
+		//-->
+		</script>
+		</cfoutput>
+	<cfelse>
+		<cfif attributes.done EQ "back">
+			<cflocation url="index.cfm?dsp=admin.auctions.step1&item=#attributes.item#" addtoken="no">
+		<cfelseif attributes.done EQ "finish">
+			<cflocation url="index.cfm?dsp=management.items.awaiting_listing" addtoken="no">
+		<cfelse><!--- next --->
+			<cflocation url="index.cfm?dsp=admin.auctions.step2&item=#attributes.item#" addtoken="no">
+		</cfif>
+	</cfif>
+<cfelse>
+	<!--- generates xmlIS --->
+	<cfinclude template="act_GetAttributesCS.cfm">
+
+	<!--- MOVED TO admin\api\st_runall.cfm cfinclude template="act_GetAttributesXSL.cfm" --->
+	<cffile action="read" file="#request.basepath#site/admin/auctions/syi_attributes.xsl" variable="XSLFile">
+
+	<cfscript>
+		// xmlIS = XMLParse(variables.AttributeData);
+		if(attributes.AUS_FORM_CHANGED EQ "1"){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			for(i=1; i LTE ArrayLen(asa); i=i+1){
+				ArrayAppend(xmlIS.xmlRoot.SelectedAttributes.xmlChildren, xmlElemNew(xmlIS, "AttributeSet"));
+				AttributeSet = xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)];
+				StructInsert(AttributeSet.xmlAttributes, "id", asa[i].attributeSetID);
+				for(j=1; j LTE ArrayLen(asa[i].attr); j=j+1){
+					ArrayAppend(AttributeSet.xmlChildren,
+						addSelectedAttributes(xmlIS, asa[i].attr[j].attributeID, asa[i].attr[j].ValueID, asa[i].attr[j].ValueLiteral, asa[i].attr[j].metacharacter));
+				}
+			}
+		}else if(sqlAuction.AttributeSetArray NEQ ""){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			xmlASA = XMLParse(sqlAuction.AttributeSetArray);
+			for(i=1; i LTE ArrayLen(xmlASA.xmlRoot.xmlChildren); i=i+1){
+				ArrayAppend(xmlIS.xmlRoot.SelectedAttributes.xmlChildren, xmlElemNew(xmlIS, "AttributeSet"));
+				AttributeSet = xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)];
+				StructInsert(AttributeSet.xmlAttributes, "id", xmlASA.xmlRoot.xmlChildren[i].xmlAttributes["attributeSetID"]);
+				for(j=1; j LTE ArrayLen(xmlASA.xmlRoot.xmlChildren[i].xmlChildren); j=j+1){
+					attributeID = xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlAttributes["attributeID"];
+					ValueID = "";
+					ValueLiteral = "";
+					metacharacter = "";
+					for(k=1; k LTE ArrayLen(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren); k=k+1){
+						if(StructKeyExists(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k], "ValueID")){
+							ValueID = ListAppend(ValueID, xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k].ValueID.xmlText);
+							if(ValueID EQ -5){
+								metacharacter = "Y";
+							}
+						}
+						if(StructKeyExists(xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k], "ValueLiteral")){
+							ValueLiteral = ListAppend(ValueLiteral, xmlASA.xmlRoot.xmlChildren[i].xmlChildren[j].xmlChildren[k].ValueLiteral.xmlText);
+							if(metacharacter EQ "Y"){
+								ValueLiteral = Left(ValueLiteral, 4);
+							}
+						}
+					}
+					ArrayAppend(AttributeSet.xmlChildren,
+						addSelectedAttributes(xmlIS, attributeID, ValueID, ValueLiteral, metacharacter));
+				}
+			}
+		}else if(isDefined("attributes.vcsid")){
+			xmlIS.xmlRoot.SelectedAttributes = xmlElemNew(xmlIS, "SelectedAttributes");
+			if((attributes.SiteID EQ 0) AND (attributes.AttributeSetID EQ 2135)){
+				// Return Policy could not be displayed together with any other AttributesSet
+				xmlIS.xmlRoot.SelectedAttributes.xmlAttributes["pageId"] = "ReturnPolicy";
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet.xmlAttributes["id"] = "2135";
+			}else if((attributes.SiteID EQ 100) AND (attributes.AttributeSetID EQ 2318)){
+				// Return Policy could not be displayed together with any other AttributesSet
+				xmlIS.xmlRoot.SelectedAttributes.xmlAttributes["pageId"] = "ReturnPolicy";
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.AttributeSet.xmlAttributes["id"] = "2318";
+			}else{
+				// multiple allowed here
+				xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)+1] = xmlElemNew(xmlIS, "AttributeSet");
+				xmlIS.xmlRoot.SelectedAttributes.xmlChildren[ArrayLen(xmlIS.xmlRoot.SelectedAttributes.xmlChildren)].xmlAttributes["id"] = attributes.AttributeSetID;
+			}
+		}
+		
+	</cfscript>
+	<cfdump var="#xmlIS#">
+	<cfoutput>
+	<table width="100%" style="text-align: justify;">
+	<tr><td>
+		<font size="4"><strong>Auction Management - Step 2 of 4:</strong></font><br>
+		<hr size="1" style="color: Black;" noshade>
+		<strong>Administrator:</strong> #session.user.first# #session.user.last#<br><br>
+		<table width="100%" bgcolor="##aaaaaa" border="0" cellspacing="0" cellpadding="0">
+		<tr><td>
+			<table width="100%" border="0" cellpadding="4" cellspacing="1">
+			<tr bgcolor="##F0F1F3">
+				<td width="25%" valign="middle" align="right"><b>Item Number:</b></td>
+				<td align="left"><b>#sqlAuction.itemid#</b></td>
+			</tr>
+			<tr bgcolor="white"><td colspan="2">
+				#XmlTransform(toString(xmlIS), XSLFile)#
+			</td></tr>
+			</table>
+		</td></tr>
+		</table>
+	</td></tr>
+	</table>
+	<cfset formAction = "#_machine.self#&item=#attributes.item#">
+	<script language="javascript" type="text/javascript">
+	<!--//
+		document.forms['APIForm'].action = "#formAction#";
+	//-->
+	</script>
+	<center>
+		<br>
+		<cfif isDefined("attributes.vcsid")>
+			<input type="button" name="back" value="Back" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=back'; document.forms['APIForm'].submit()">
+			&nbsp;
+			<input type="button" name="next" value="Next" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=next'; document.forms['APIForm'].submit()">
+			<br><br>
+			<input type="button" name="finish" value="Finish" width="100" style="width:100px;" onClick="document.forms['APIForm'].action='#formAction#&done=finish'; document.forms['APIForm'].submit()">
+			<br>
+		</cfif>
+		<br>
+	</center>
+	</cfoutput>
+</cfif>

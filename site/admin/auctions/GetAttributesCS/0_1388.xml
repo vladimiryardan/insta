@@ -1,0 +1,3085 @@
+<eBay><Attributes>
+<AttributeSet id='2135' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<Attribute id='3993'  vivisible='true'  count='1'  source='3'  displaysequence='5' >
+<SellingDisplayLabel><![CDATA[Return shipping will be paid by]]></SellingDisplayLabel>
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+</Attribute>
+<Attribute id='3804'  vivisible='true'  count='1'  source='3'  displaysequence='2' >
+<SellingDisplayLabel><![CDATA[Item must be returned within]]></SellingDisplayLabel>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+</Attribute>
+<Attribute id='3805'  vivisible='true'  count='1'  source='3'  displaysequence='3' >
+<SellingDisplayLabel><![CDATA[Refund will be given as]]></SellingDisplayLabel>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</Attribute>
+</AttributeSet>
+<AttributeSet id='1388' >
+<DomainName><![CDATA[Nonfiction Books]]></DomainName>
+</AttributeSet>
+</Attributes>
+<Characteristics>
+<CharacteristicsSet id='2135'  type='SiteWide'  order='1' >
+<DomainName><![CDATA[Return Policy]]></DomainName>
+<PresentationInstruction pageLocation="ReturnPolicy">
+    <DomainName>Return Policy</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3803" quadrant="top">
+                    <Input align="left" bold="true" color="#000000" columns="1" face="Arial, Helvetica, Sans-Serif" size="2" type="checkbox"/>
+                </Attribute>
+                <MessageRight color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3804" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3805" quadrant="left">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+            <Widget type="normal">
+                <Attribute align="left" id="3993" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="3806" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input cols="70" rows="6" type="collapsible_textarea"/>
+                </Attribute>
+                <MessageBottom color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute id='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Returns Accepted]]></Label>
+<Type><![CDATA[2]]></Type>
+<MessageRight><![CDATA[- Specify a return policy. <A HREF="http://pages.ebay.com/help/sell/contextual/return-policy.html" onClick="if(window.openContextualHelpWindow){return openContextualHelpWindow(this.href)}" target="helpwin">Learn More</A>.]]></MessageRight>
+<EditType>3</EditType><ValueList count='1' >
+<Value id='32040' >
+<Name><![CDATA[Returns Accepted]]></Name>
+</Value>
+</ValueList>
+<Dependency count='2'  type='2'  childAttrId='3993'  parentValueId='32040' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+<IsDefault/>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  type='2'  childAttrId='3804'  parentValueId='32040' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+<IsDefault/>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</Dependency>
+<Dependency count='3'  type='2'  childAttrId='3805'  parentValueId='32040' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+<IsDefault/>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3804'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Item must be returned within]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='5' >
+<Value id='32031' >
+<Name><![CDATA[3 Days]]></Name>
+</Value>
+<Value id='32032' >
+<Name><![CDATA[7 Days]]></Name>
+</Value>
+<Value id='32035' >
+<Name><![CDATA[14 Days]]></Name>
+</Value>
+<Value id='32036' >
+<Name><![CDATA[30 Days]]></Name>
+</Value>
+<Value id='95148' >
+<Name><![CDATA[60 Days]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3805'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Refund will be given as]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='3' >
+<Value id='32038' >
+<Name><![CDATA[Exchange]]></Name>
+</Value>
+<Value id='32039' >
+<Name><![CDATA[Merchandise Credit]]></Name>
+</Value>
+<Value id='32037' >
+<Name><![CDATA[Money Back]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3806'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Return policy details]]></Label>
+<MessageBottom><![CDATA[Note: 500 character limit]]></MessageBottom>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValidationRules>
+<Rule>
+<Length>500</Length><Name>StringLengthRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='3993'  parentAttrId='3803'  pageLocation="ReturnPolicy">
+<Label><![CDATA[Return shipping will be paid by]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>3</EditType><ValueList count='2' >
+<Value id='81120' >
+<Name><![CDATA[Buyer]]></Name>
+</Value>
+<Value id='81121' >
+<Name><![CDATA[Seller]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other></Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+<CharacteristicsSet id='1388'  order='2' >
+<DomainName><![CDATA[Nonfiction Books]]></DomainName>
+<PresentationInstruction>
+    <DomainName>Nonfiction Books</DomainName>
+    <Initial>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="183" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input columns="2" type="textfield"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="25000" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="textfield"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="25001" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="textfield"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="63739" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type=""/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="25004" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="textfield"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="25002" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="textfield"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="25003" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="textfield"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="15961" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="date">
+                <Attribute align="left" id="23712" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Year align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" quadrant="top" size="13"/>
+                    <Input columns="2" type="textfield"/>
+                </Attribute>
+                <MessageBottom color="#666666" face="Verdana,Geneva,Arial,Helvetica" size="1"/>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="23713" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="23715" quadrant="top">
+                    <Input align="left" color="#000000" columns="2" face="Arial, Helvetica, Sans-Serif" size="2" type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="23717" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input columns="2" type="checkbox"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" id="23714" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+        <Row>
+            <Widget type="normal">
+                <Attribute align="left" helpId="757" id="10244" quadrant="top">
+                    <Label align="left" color="#000000" face="Arial, Helvetica, Sans-Serif" size="2"/>
+                    <Input type="dropdown"/>
+                </Attribute>
+            </Widget>
+        </Row>
+    </Initial>
+</PresentationInstruction>
+<CharacteristicsList>
+<Initial>
+<Attribute labelVisible='true'  id='183' >
+<Label><![CDATA[Title]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute Invisible='true'  id='194' >
+<Label><![CDATA[Popularity]]></Label>
+<Type><![CDATA[1]]></Type>
+<EditType>0</EditType><ValueList count='2' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='212' >
+<Label><![CDATA[Ship Format ID]]></Label>
+<Type><![CDATA[1]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='10244' >
+<Label><![CDATA[Condition]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>0</EditType><ValueList count='6' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='10425' >
+<Name><![CDATA[Brand New]]></Name>
+</Value>
+<Value id='95784' >
+<Name><![CDATA[Like New]]></Name>
+</Value>
+<Value id='95785' >
+<Name><![CDATA[Very Good]]></Name>
+</Value>
+<Value id='95786' >
+<Name><![CDATA[Good]]></Name>
+</Value>
+<Value id='10426' >
+<Name><![CDATA[Acceptable]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='15961' >
+<Label><![CDATA[Format]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><ValueList count='6' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23732' >
+<Name><![CDATA[Hardcover]]></Name>
+</Value>
+<Value id='23733' >
+<Name><![CDATA[Paperback]]></Name>
+</Value>
+<Value id='97719' >
+<Name><![CDATA[CD-ROM (Non-Audio)]]></Name>
+</Value>
+<Value id='23752' >
+<Name><![CDATA[Mixed Lot]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='23712'  dateFormat='Y' >
+<Label><![CDATA[Publication Year]]></Label>
+<MessageBottom><![CDATA[If you do not know the Publication Year, please leave blank.]]></MessageBottom>
+<Type><![CDATA[3]]></Type>
+<EditType>2</EditType><CurrentTime><DateMedium>Mar-27-13</DateMedium><TimeLong>11:06:15 PDT</TimeLong></CurrentTime><ValidationRules>
+<Rule>
+<Name>DateValidationRule</Name></Rule>
+</ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='23713' >
+<Label><![CDATA[Subject]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>0</EditType><ValueList count='36' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='2174' >
+<Name><![CDATA[Architecture & Design]]></Name>
+</Value>
+<Value id='23774' >
+<Name><![CDATA[Art & Photography]]></Name>
+</Value>
+<Value id='23775' >
+<Name><![CDATA[Biography & Autobiography]]></Name>
+</Value>
+<Value id='23776' >
+<Name><![CDATA[Books on Collecting]]></Name>
+</Value>
+<Value id='23777' >
+<Name><![CDATA[Business & Economics]]></Name>
+</Value>
+<Value id='23778' >
+<Name><![CDATA[Computers & Internet]]></Name>
+</Value>
+<Value id='2181' >
+<Name><![CDATA[Cooking, Food & Wine]]></Name>
+</Value>
+<Value id='23779' >
+<Name><![CDATA[Family & Relationships]]></Name>
+</Value>
+<Value id='23822' >
+<Name><![CDATA[Games & Puzzles]]></Name>
+</Value>
+<Value id='17090' >
+<Name><![CDATA[Health & Fitness]]></Name>
+</Value>
+<Value id='18915' >
+<Name><![CDATA[History]]></Name>
+</Value>
+<Value id='23781' >
+<Name><![CDATA[Hobbies & Crafts]]></Name>
+</Value>
+<Value id='1201' >
+<Name><![CDATA[Home & Garden]]></Name>
+</Value>
+<Value id='23782' >
+<Name><![CDATA[Humor]]></Name>
+</Value>
+<Value id='23783' >
+<Name><![CDATA[Law & Government]]></Name>
+</Value>
+<Value id='23938' >
+<Name><![CDATA[Literary Criticism]]></Name>
+</Value>
+<Value id='23784' >
+<Name><![CDATA[Medical]]></Name>
+</Value>
+<Value id='18897' >
+<Name><![CDATA[Military & War]]></Name>
+</Value>
+<Value id='23785' >
+<Name><![CDATA[Outdoor & Nature]]></Name>
+</Value>
+<Value id='23786' >
+<Name><![CDATA[Paranormal & Metaphysical]]></Name>
+</Value>
+<Value id='23787' >
+<Name><![CDATA[Performing Arts]]></Name>
+</Value>
+<Value id='23788' >
+<Name><![CDATA[Pets & Animal Care]]></Name>
+</Value>
+<Value id='23789' >
+<Name><![CDATA[Philosophy]]></Name>
+</Value>
+<Value id='23790' >
+<Name><![CDATA[Psychology]]></Name>
+</Value>
+<Value id='23791' >
+<Name><![CDATA[Reference]]></Name>
+</Value>
+<Value id='2188' >
+<Name><![CDATA[Religion & Spirituality]]></Name>
+</Value>
+<Value id='18917' >
+<Name><![CDATA[Science & Technology]]></Name>
+</Value>
+<Value id='23792' >
+<Name><![CDATA[Self-Help]]></Name>
+</Value>
+<Value id='23793' >
+<Name><![CDATA[Social Sciences]]></Name>
+</Value>
+<Value id='1197' >
+<Name><![CDATA[Sports & Recreation]]></Name>
+</Value>
+<Value id='23795' >
+<Name><![CDATA[Teaching & Education]]></Name>
+</Value>
+<Value id='2192' >
+<Name><![CDATA[Transportation]]></Name>
+</Value>
+<Value id='2193' >
+<Name><![CDATA[Travel, Geography & Exploration]]></Name>
+</Value>
+<Value id='23794' >
+<Name><![CDATA[True Crime]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<Dependency count='9'  type='1'  childAttrId='23715'  parentValueId='2174' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='2174' >
+<Name><![CDATA[Architecture]]></Name>
+</Value>
+<Value id='44318' >
+<Name><![CDATA[Construction]]></Name>
+</Value>
+<Value id='44319' >
+<Name><![CDATA[Graphic Design]]></Name>
+</Value>
+<Value id='23879' >
+<Name><![CDATA[Design]]></Name>
+</Value>
+<Value id='44320' >
+<Name><![CDATA[Industrial Design]]></Name>
+</Value>
+<Value id='23880' >
+<Name><![CDATA[Interior Design]]></Name>
+</Value>
+<Value id='44702' >
+<Name><![CDATA[Product Design]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  type='1'  childAttrId='23715'  parentValueId='23774' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23881' >
+<Name><![CDATA[Art History & Criticism]]></Name>
+</Value>
+<Value id='44153' >
+<Name><![CDATA[Art Instruction]]></Name>
+</Value>
+<Value id='97722' >
+<Name><![CDATA[Artists]]></Name>
+</Value>
+<Value id='74310' >
+<Name><![CDATA[Calligraphy]]></Name>
+</Value>
+<Value id='44150' >
+<Name><![CDATA[Catalogs & Exhibitions]]></Name>
+</Value>
+<Value id='97723' >
+<Name><![CDATA[Drawing & Cartooning]]></Name>
+</Value>
+<Value id='31502' >
+<Name><![CDATA[Fashion]]></Name>
+</Value>
+<Value id='97724' >
+<Name><![CDATA[Graphic Arts]]></Name>
+</Value>
+<Value id='2149' >
+<Name><![CDATA[Painting]]></Name>
+</Value>
+<Value id='97725' >
+<Name><![CDATA[Photographers]]></Name>
+</Value>
+<Value id='97726' >
+<Name><![CDATA[Photography & Photojournalism]]></Name>
+</Value>
+<Value id='97727' >
+<Name><![CDATA[Photography Subjects & Themes]]></Name>
+</Value>
+<Value id='97728' >
+<Name><![CDATA[Photography Techniques]]></Name>
+</Value>
+<Value id='81367' >
+<Name><![CDATA[Sculpture]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='21'  type='1'  childAttrId='23715'  parentValueId='23775' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23774' >
+<Name><![CDATA[Art]]></Name>
+</Value>
+<Value id='23885' >
+<Name><![CDATA[Business]]></Name>
+</Value>
+<Value id='23795' >
+<Name><![CDATA[Education]]></Name>
+</Value>
+<Value id='97729' >
+<Name><![CDATA[Ethnic & Cultural]]></Name>
+</Value>
+<Value id='30985' >
+<Name><![CDATA[Historic Figures]]></Name>
+</Value>
+<Value id='97759' >
+<Name><![CDATA[Law & Crime]]></Name>
+</Value>
+<Value id='23886' >
+<Name><![CDATA[Literary]]></Name>
+</Value>
+<Value id='23784' >
+<Name><![CDATA[Medical]]></Name>
+</Value>
+<Value id='23887' >
+<Name><![CDATA[Military]]></Name>
+</Value>
+<Value id='23888' >
+<Name><![CDATA[Movie & Television]]></Name>
+</Value>
+<Value id='23889' >
+<Name><![CDATA[Music]]></Name>
+</Value>
+<Value id='18919' >
+<Name><![CDATA[Political]]></Name>
+</Value>
+<Value id='18935' >
+<Name><![CDATA[Religious]]></Name>
+</Value>
+<Value id='23890' >
+<Name><![CDATA[Royalty]]></Name>
+</Value>
+<Value id='44286' >
+<Name><![CDATA[Science & Technology]]></Name>
+</Value>
+<Value id='97731' >
+<Name><![CDATA[Social Activists]]></Name>
+</Value>
+<Value id='1197' >
+<Name><![CDATA[Sports]]></Name>
+</Value>
+<Value id='1004' >
+<Name><![CDATA[Theater]]></Name>
+</Value>
+<Value id='2468' >
+<Name><![CDATA[Women]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='16'  type='1'  childAttrId='23715'  parentValueId='23776' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24075' >
+<Name><![CDATA[Antiques]]></Name>
+</Value>
+<Value id='23774' >
+<Name><![CDATA[Art]]></Name>
+</Value>
+<Value id='23891' >
+<Name><![CDATA[Books]]></Name>
+</Value>
+<Value id='23892' >
+<Name><![CDATA[Coins]]></Name>
+</Value>
+<Value id='44703' >
+<Name><![CDATA[Dolls]]></Name>
+</Value>
+<Value id='23893' >
+<Name><![CDATA[General Price Guides]]></Name>
+</Value>
+<Value id='23894' >
+<Name><![CDATA[Glass]]></Name>
+</Value>
+<Value id='25140' >
+<Name><![CDATA[Jewelry]]></Name>
+</Value>
+<Value id='23895' >
+<Name><![CDATA[Pottery & China]]></Name>
+</Value>
+<Value id='26187' >
+<Name><![CDATA[Silver]]></Name>
+</Value>
+<Value id='44704' >
+<Name><![CDATA[Stamps]]></Name>
+</Value>
+<Value id='97732' >
+<Name><![CDATA[Tobacciana]]></Name>
+</Value>
+<Value id='23896' >
+<Name><![CDATA[Toys]]></Name>
+</Value>
+<Value id='23897' >
+<Name><![CDATA[Trading Cards]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='10'  type='1'  childAttrId='23715'  parentValueId='23777' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23898' >
+<Name><![CDATA[Accounting]]></Name>
+</Value>
+<Value id='23899' >
+<Name><![CDATA[Careers, Job Hunting]]></Name>
+</Value>
+<Value id='23900' >
+<Name><![CDATA[Economics]]></Name>
+</Value>
+<Value id='23901' >
+<Name><![CDATA[General Business]]></Name>
+</Value>
+<Value id='23902' >
+<Name><![CDATA[Marketing]]></Name>
+</Value>
+<Value id='24051' >
+<Name><![CDATA[Motivation]]></Name>
+</Value>
+<Value id='23903' >
+<Name><![CDATA[Personal Finance]]></Name>
+</Value>
+<Value id='23904' >
+<Name><![CDATA[Taxes]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='14'  type='1'  childAttrId='23715'  parentValueId='23778' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23905' >
+<Name><![CDATA[Certification]]></Name>
+</Value>
+<Value id='23906' >
+<Name><![CDATA[Databases]]></Name>
+</Value>
+<Value id='25045' >
+<Name><![CDATA[E-Business]]></Name>
+</Value>
+<Value id='23907' >
+<Name><![CDATA[Graphics & Design]]></Name>
+</Value>
+<Value id='23908' >
+<Name><![CDATA[Hardware]]></Name>
+</Value>
+<Value id='23909' >
+<Name><![CDATA[Internet]]></Name>
+</Value>
+<Value id='23910' >
+<Name><![CDATA[Networking]]></Name>
+</Value>
+<Value id='23911' >
+<Name><![CDATA[Operating Systems]]></Name>
+</Value>
+<Value id='23912' >
+<Name><![CDATA[Programming]]></Name>
+</Value>
+<Value id='23791' >
+<Name><![CDATA[Reference]]></Name>
+</Value>
+<Value id='72387' >
+<Name><![CDATA[Security]]></Name>
+</Value>
+<Value id='23913' >
+<Name><![CDATA[Web Development]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='26'  type='1'  childAttrId='23715'  parentValueId='2181' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23917' >
+<Name><![CDATA[Baking]]></Name>
+</Value>
+<Value id='97734' >
+<Name><![CDATA[Barbecue & Grilling]]></Name>
+</Value>
+<Value id='23918' >
+<Name><![CDATA[Basic Cooking & Reference]]></Name>
+</Value>
+<Value id='97733' >
+<Name><![CDATA[Canning & Preservation]]></Name>
+</Value>
+<Value id='97735' >
+<Name><![CDATA[Community Recipe Collections]]></Name>
+</Value>
+<Value id='81765' >
+<Name><![CDATA[Cooking for One]]></Name>
+</Value>
+<Value id='97736' >
+<Name><![CDATA[Culinary Arts & Techniques]]></Name>
+</Value>
+<Value id='97737' >
+<Name><![CDATA[Entertaining & Dining]]></Name>
+</Value>
+<Value id='23921' >
+<Name><![CDATA[Healthy & Special Diets]]></Name>
+</Value>
+<Value id='97738' >
+<Name><![CDATA[Quick & Easy Meals]]></Name>
+</Value>
+<Value id='23929' >
+<Name><![CDATA[Regional: American (US)]]></Name>
+</Value>
+<Value id='24085' >
+<Name><![CDATA[Regional: Asian]]></Name>
+</Value>
+<Value id='27218' >
+<Name><![CDATA[Regional: European]]></Name>
+</Value>
+<Value id='24089' >
+<Name><![CDATA[Regional: French]]></Name>
+</Value>
+<Value id='22654' >
+<Name><![CDATA[Regional: Indian]]></Name>
+</Value>
+<Value id='24091' >
+<Name><![CDATA[Regional: Italian]]></Name>
+</Value>
+<Value id='44156' >
+<Name><![CDATA[Regional: Latin American]]></Name>
+</Value>
+<Value id='44705' >
+<Name><![CDATA[Regional: Middle Eastern]]></Name>
+</Value>
+<Value id='24092' >
+<Name><![CDATA[Regional: Spanish]]></Name>
+</Value>
+<Value id='23923' >
+<Name><![CDATA[Soups & Stews]]></Name>
+</Value>
+<Value id='97739' >
+<Name><![CDATA[Specific Appliances]]></Name>
+</Value>
+<Value id='23926' >
+<Name><![CDATA[Specific Ingredients]]></Name>
+</Value>
+<Value id='23927' >
+<Name><![CDATA[Vegetarian & Vegan]]></Name>
+</Value>
+<Value id='23928' >
+<Name><![CDATA[Wine & Beverages]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='10'  type='1'  childAttrId='23715'  parentValueId='23779' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='97741' >
+<Name><![CDATA[Abuse]]></Name>
+</Value>
+<Value id='23930' >
+<Name><![CDATA[Divorce]]></Name>
+</Value>
+<Value id='44321' >
+<Name><![CDATA[Grief, Bereavement]]></Name>
+</Value>
+<Value id='23931' >
+<Name><![CDATA[Love, Relationships]]></Name>
+</Value>
+<Value id='23932' >
+<Name><![CDATA[Marriage]]></Name>
+</Value>
+<Value id='23815' >
+<Name><![CDATA[Parenting]]></Name>
+</Value>
+<Value id='23933' >
+<Name><![CDATA[Pregnancy, Childbirth]]></Name>
+</Value>
+<Value id='23934' >
+<Name><![CDATA[Sexuality]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  type='1'  childAttrId='23715'  parentValueId='23822' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='66396' >
+<Name><![CDATA[Board Games]]></Name>
+</Value>
+<Value id='66397' >
+<Name><![CDATA[Card Games]]></Name>
+</Value>
+<Value id='80381' >
+<Name><![CDATA[Crosswords & Puzzles]]></Name>
+</Value>
+<Value id='44707' >
+<Name><![CDATA[Gambling]]></Name>
+</Value>
+<Value id='97742' >
+<Name><![CDATA[Game Theory]]></Name>
+</Value>
+<Value id='97743' >
+<Name><![CDATA[Logic & Brain Teasers]]></Name>
+</Value>
+<Value id='74088' >
+<Name><![CDATA[Magic]]></Name>
+</Value>
+<Value id='97744' >
+<Name><![CDATA[Trivia]]></Name>
+</Value>
+<Value id='97745' >
+<Name><![CDATA[Video & Electronic Game Theory]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  type='1'  childAttrId='23715'  parentValueId='17090' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='97746' >
+<Name><![CDATA[Aging]]></Name>
+</Value>
+<Value id='23943' >
+<Name><![CDATA[Alternative Health]]></Name>
+</Value>
+<Value id='23944' >
+<Name><![CDATA[Beauty & Grooming]]></Name>
+</Value>
+<Value id='23945' >
+<Name><![CDATA[Diet, Weight Loss]]></Name>
+</Value>
+<Value id='17090' >
+<Name><![CDATA[Exercise & Fitness]]></Name>
+</Value>
+<Value id='23946' >
+<Name><![CDATA[Health & Diseases]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='24'  type='1'  childAttrId='23715'  parentValueId='18915' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='1212' >
+<Name><![CDATA[Africa]]></Name>
+</Value>
+<Value id='1214' >
+<Name><![CDATA[Asia]]></Name>
+</Value>
+<Value id='1215' >
+<Name><![CDATA[Australia, Oceania]]></Name>
+</Value>
+<Value id='1216' >
+<Name><![CDATA[Canada]]></Name>
+</Value>
+<Value id='1219' >
+<Name><![CDATA[Europe]]></Name>
+</Value>
+<Value id='2207' >
+<Name><![CDATA[Latin America]]></Name>
+</Value>
+<Value id='1221' >
+<Name><![CDATA[Middle East]]></Name>
+</Value>
+<Value id='23950' >
+<Name><![CDATA[US: General History]]></Name>
+</Value>
+<Value id='97747' >
+<Name><![CDATA[US: Colonial Period]]></Name>
+</Value>
+<Value id='97748' >
+<Name><![CDATA[US: Revolutionary Period]]></Name>
+</Value>
+<Value id='97749' >
+<Name><![CDATA[US: Civil War Period]]></Name>
+</Value>
+<Value id='79996' >
+<Name><![CDATA[US: 19th Century]]></Name>
+</Value>
+<Value id='79997' >
+<Name><![CDATA[US: 20th Century]]></Name>
+</Value>
+<Value id='97751' >
+<Name><![CDATA[US: 21st Century]]></Name>
+</Value>
+<Value id='44706' >
+<Name><![CDATA[US: African American]]></Name>
+</Value>
+<Value id='26700' >
+<Name><![CDATA[US: Native American]]></Name>
+</Value>
+<Value id='97752' >
+<Name><![CDATA[US: State & Local]]></Name>
+</Value>
+<Value id='24094' >
+<Name><![CDATA[World]]></Name>
+</Value>
+<Value id='23955' >
+<Name><![CDATA[Ancient]]></Name>
+</Value>
+<Value id='23956' >
+<Name><![CDATA[Medieval]]></Name>
+</Value>
+<Value id='23957' >
+<Name><![CDATA[Renaissance]]></Name>
+</Value>
+<Value id='23958' >
+<Name><![CDATA[Modern]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='17'  type='1'  childAttrId='23715'  parentValueId='23781' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23963' >
+<Name><![CDATA[Chess]]></Name>
+</Value>
+<Value id='23969' >
+<Name><![CDATA[Crocheting]]></Name>
+</Value>
+<Value id='23970' >
+<Name><![CDATA[Cross-Stitch]]></Name>
+</Value>
+<Value id='23964' >
+<Name><![CDATA[Decorating]]></Name>
+</Value>
+<Value id='23971' >
+<Name><![CDATA[Embroidery]]></Name>
+</Value>
+<Value id='44707' >
+<Name><![CDATA[Gambling]]></Name>
+</Value>
+<Value id='23972' >
+<Name><![CDATA[Knitting]]></Name>
+</Value>
+<Value id='23965' >
+<Name><![CDATA[Model Railroads]]></Name>
+</Value>
+<Value id='23973' >
+<Name><![CDATA[Needlepoint]]></Name>
+</Value>
+<Value id='23966' >
+<Name><![CDATA[Origami, Paper Crafts]]></Name>
+</Value>
+<Value id='2149' >
+<Name><![CDATA[Painting]]></Name>
+</Value>
+<Value id='23974' >
+<Name><![CDATA[Quilting]]></Name>
+</Value>
+<Value id='23967' >
+<Name><![CDATA[Scrapbooking]]></Name>
+</Value>
+<Value id='30297' >
+<Name><![CDATA[Sewing, General]]></Name>
+</Value>
+<Value id='23975' >
+<Name><![CDATA[Woodwork]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='7'  type='1'  childAttrId='23715'  parentValueId='1201' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44708' >
+<Name><![CDATA[Building & Plans]]></Name>
+</Value>
+<Value id='23976' >
+<Name><![CDATA[Do-It-Yourself]]></Name>
+</Value>
+<Value id='23977' >
+<Name><![CDATA[Feng Shui]]></Name>
+</Value>
+<Value id='23978' >
+<Name><![CDATA[Gardening & Landscaping]]></Name>
+</Value>
+<Value id='23979' >
+<Name><![CDATA[Home Decor]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  type='1'  childAttrId='23715'  parentValueId='23784' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23980' >
+<Name><![CDATA[Alternative Medicine]]></Name>
+</Value>
+<Value id='23981' >
+<Name><![CDATA[First Aid]]></Name>
+</Value>
+<Value id='23982' >
+<Name><![CDATA[Nursing]]></Name>
+</Value>
+<Value id='44709' >
+<Name><![CDATA[Pediatrics]]></Name>
+</Value>
+<Value id='23983' >
+<Name><![CDATA[Pharmacology, Drug Guides]]></Name>
+</Value>
+<Value id='44710' >
+<Name><![CDATA[Psychiatry]]></Name>
+</Value>
+<Value id='44322' >
+<Name><![CDATA[Quack Medicine]]></Name>
+</Value>
+<Value id='23791' >
+<Name><![CDATA[Reference]]></Name>
+</Value>
+<Value id='23984' >
+<Name><![CDATA[Surgery, Anaesthesiology]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='21'  type='1'  childAttrId='23715'  parentValueId='18897' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23987' >
+<Name><![CDATA[Air Force]]></Name>
+</Value>
+<Value id='44161' >
+<Name><![CDATA[American Indian Wars]]></Name>
+</Value>
+<Value id='23988' >
+<Name><![CDATA[Army]]></Name>
+</Value>
+<Value id='44521' >
+<Name><![CDATA[British Wars]]></Name>
+</Value>
+<Value id='23991' >
+<Name><![CDATA[Civil War (1861-65)]]></Name>
+</Value>
+<Value id='44711' >
+<Name><![CDATA[Coast Guard]]></Name>
+</Value>
+<Value id='44158' >
+<Name><![CDATA[Foreign Militaries]]></Name>
+</Value>
+<Value id='44657' >
+<Name><![CDATA[Greek & Roman Wars]]></Name>
+</Value>
+<Value id='23992' >
+<Name><![CDATA[Iraq/Gulf Wars]]></Name>
+</Value>
+<Value id='23993' >
+<Name><![CDATA[Korean War (1950-53)]]></Name>
+</Value>
+<Value id='23989' >
+<Name><![CDATA[Marines]]></Name>
+</Value>
+<Value id='44668' >
+<Name><![CDATA[Napoleonic Wars]]></Name>
+</Value>
+<Value id='44712' >
+<Name><![CDATA[National Guard]]></Name>
+</Value>
+<Value id='23990' >
+<Name><![CDATA[Navy]]></Name>
+</Value>
+<Value id='23994' >
+<Name><![CDATA[Revolutionary War (1775-83)]]></Name>
+</Value>
+<Value id='23996' >
+<Name><![CDATA[Vietnam War (1961-75)]]></Name>
+</Value>
+<Value id='23999' >
+<Name><![CDATA[Weapons]]></Name>
+</Value>
+<Value id='23997' >
+<Name><![CDATA[WWI (1914-18)]]></Name>
+</Value>
+<Value id='23998' >
+<Name><![CDATA[WWII (1939-45)]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='11'  type='1'  childAttrId='23715'  parentValueId='23785' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24000' >
+<Name><![CDATA[Agriculture]]></Name>
+</Value>
+<Value id='44669' >
+<Name><![CDATA[Animal Husbandry]]></Name>
+</Value>
+<Value id='80395' >
+<Name><![CDATA[Birds & Bird Watching]]></Name>
+</Value>
+<Value id='24001' >
+<Name><![CDATA[Ecology]]></Name>
+</Value>
+<Value id='24002' >
+<Name><![CDATA[Environment]]></Name>
+</Value>
+<Value id='24003' >
+<Name><![CDATA[Field Guides]]></Name>
+</Value>
+<Value id='24045' >
+<Name><![CDATA[Marine Life]]></Name>
+</Value>
+<Value id='24048' >
+<Name><![CDATA[Weather]]></Name>
+</Value>
+<Value id='2173' >
+<Name><![CDATA[Wildlife]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  type='1'  childAttrId='23715'  parentValueId='23786' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24004' >
+<Name><![CDATA[Astrology]]></Name>
+</Value>
+<Value id='24005' >
+<Name><![CDATA[Paranormal]]></Name>
+</Value>
+<Value id='44670' >
+<Name><![CDATA[UFOlogy]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  type='1'  childAttrId='23715'  parentValueId='23787' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='18933' >
+<Name><![CDATA[Dance]]></Name>
+</Value>
+<Value id='23888' >
+<Name><![CDATA[Movie & Television]]></Name>
+</Value>
+<Value id='23889' >
+<Name><![CDATA[Music]]></Name>
+</Value>
+<Value id='24006' >
+<Name><![CDATA[Radio]]></Name>
+</Value>
+<Value id='24007' >
+<Name><![CDATA[Television]]></Name>
+</Value>
+<Value id='1004' >
+<Name><![CDATA[Theater]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='8'  type='1'  childAttrId='23715'  parentValueId='23788' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24008' >
+<Name><![CDATA[Birds]]></Name>
+</Value>
+<Value id='24009' >
+<Name><![CDATA[Cats]]></Name>
+</Value>
+<Value id='24010' >
+<Name><![CDATA[Dogs]]></Name>
+</Value>
+<Value id='24011' >
+<Name><![CDATA[Fish]]></Name>
+</Value>
+<Value id='44671' >
+<Name><![CDATA[Reptiles, Amphibians]]></Name>
+</Value>
+<Value id='24012' >
+<Name><![CDATA[Horses]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='13'  type='1'  childAttrId='23715'  parentValueId='23791' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24013' >
+<Name><![CDATA[Almanacs]]></Name>
+</Value>
+<Value id='24014' >
+<Name><![CDATA[Atlases]]></Name>
+</Value>
+<Value id='24015' >
+<Name><![CDATA[Bibliographies, Indexes]]></Name>
+</Value>
+<Value id='44713' >
+<Name><![CDATA[Books on Books]]></Name>
+</Value>
+<Value id='24016' >
+<Name><![CDATA[Dictionaries, Thesauri]]></Name>
+</Value>
+<Value id='24017' >
+<Name><![CDATA[Encyclopedias]]></Name>
+</Value>
+<Value id='24018' >
+<Name><![CDATA[Genealogy]]></Name>
+</Value>
+<Value id='23798' >
+<Name><![CDATA[Language Study]]></Name>
+</Value>
+<Value id='24019' >
+<Name><![CDATA[School Yearbooks]]></Name>
+</Value>
+<Value id='23935' >
+<Name><![CDATA[Weddings]]></Name>
+</Value>
+<Value id='24020' >
+<Name><![CDATA[Writing]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='17'  type='1'  childAttrId='23715'  parentValueId='2188' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24021' >
+<Name><![CDATA[Bibles]]></Name>
+</Value>
+<Value id='24030' >
+<Name><![CDATA[Buddhism]]></Name>
+</Value>
+<Value id='23827' >
+<Name><![CDATA[Christianity]]></Name>
+</Value>
+<Value id='24031' >
+<Name><![CDATA[Comparative Religion]]></Name>
+</Value>
+<Value id='24032' >
+<Name><![CDATA[Devotions, Meditations]]></Name>
+</Value>
+<Value id='31508' >
+<Name><![CDATA[General]]></Name>
+</Value>
+<Value id='24033' >
+<Name><![CDATA[Hinduism]]></Name>
+</Value>
+<Value id='24034' >
+<Name><![CDATA[Islam]]></Name>
+</Value>
+<Value id='23828' >
+<Name><![CDATA[Judaism]]></Name>
+</Value>
+<Value id='22581' >
+<Name><![CDATA[New Age]]></Name>
+</Value>
+<Value id='24035' >
+<Name><![CDATA[Occult]]></Name>
+</Value>
+<Value id='24036' >
+<Name><![CDATA[Prayerbooks]]></Name>
+</Value>
+<Value id='24037' >
+<Name><![CDATA[Sermons]]></Name>
+</Value>
+<Value id='24038' >
+<Name><![CDATA[Spirituality]]></Name>
+</Value>
+<Value id='24039' >
+<Name><![CDATA[Witchcraft, Wicca, Pagan]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='19'  type='1'  childAttrId='23715'  parentValueId='18917' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44675' >
+<Name><![CDATA[Anatomy, Physiology]]></Name>
+</Value>
+<Value id='24040' >
+<Name><![CDATA[Astronomy, Space Exploration]]></Name>
+</Value>
+<Value id='24041' >
+<Name><![CDATA[Biological Science]]></Name>
+</Value>
+<Value id='25040' >
+<Name><![CDATA[Botany]]></Name>
+</Value>
+<Value id='24042' >
+<Name><![CDATA[Chemistry]]></Name>
+</Value>
+<Value id='24043' >
+<Name><![CDATA[Earth Science]]></Name>
+</Value>
+<Value id='24044' >
+<Name><![CDATA[Electronics]]></Name>
+</Value>
+<Value id='23797' >
+<Name><![CDATA[Engineering]]></Name>
+</Value>
+<Value id='44715' >
+<Name><![CDATA[Forensics]]></Name>
+</Value>
+<Value id='23799' >
+<Name><![CDATA[Mathematics]]></Name>
+</Value>
+<Value id='24046' >
+<Name><![CDATA[Natural Disasters]]></Name>
+</Value>
+<Value id='44164' >
+<Name><![CDATA[Paleontology]]></Name>
+</Value>
+<Value id='24047' >
+<Name><![CDATA[Physics]]></Name>
+</Value>
+<Value id='23791' >
+<Name><![CDATA[Reference]]></Name>
+</Value>
+<Value id='44676' >
+<Name><![CDATA[Technology]]></Name>
+</Value>
+<Value id='25029' >
+<Name><![CDATA[Veterinary Medicine]]></Name>
+</Value>
+<Value id='44677' >
+<Name><![CDATA[Zoology]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='5'  type='1'  childAttrId='23715'  parentValueId='23792' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24049' >
+<Name><![CDATA[Addiction, Recovery]]></Name>
+</Value>
+<Value id='2183' >
+<Name><![CDATA[Inspirational]]></Name>
+</Value>
+<Value id='44678' >
+<Name><![CDATA[Mental Health]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='9'  type='1'  childAttrId='23715'  parentValueId='23793' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24053' >
+<Name><![CDATA[Anthropology]]></Name>
+</Value>
+<Value id='24054' >
+<Name><![CDATA[Archaeology]]></Name>
+</Value>
+<Value id='24055' >
+<Name><![CDATA[Ethnic & Minority Studies]]></Name>
+</Value>
+<Value id='97720' >
+<Name><![CDATA[Gay & Lesbian Studies]]></Name>
+</Value>
+<Value id='97721' >
+<Name><![CDATA[Gender Studies]]></Name>
+</Value>
+<Value id='24056' >
+<Name><![CDATA[Sociology]]></Name>
+</Value>
+<Value id='24057' >
+<Name><![CDATA[Women's Studies]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='27'  type='1'  childAttrId='23715'  parentValueId='1197' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='1007' >
+<Name><![CDATA[Baseball]]></Name>
+</Value>
+<Value id='2299' >
+<Name><![CDATA[Basketball]]></Name>
+</Value>
+<Value id='44716' >
+<Name><![CDATA[Bodybuilding]]></Name>
+</Value>
+<Value id='18945' >
+<Name><![CDATA[Boxing]]></Name>
+</Value>
+<Value id='24058' >
+<Name><![CDATA[Cricket]]></Name>
+</Value>
+<Value id='24059' >
+<Name><![CDATA[Cycling]]></Name>
+</Value>
+<Value id='24060' >
+<Name><![CDATA[Equestrian]]></Name>
+</Value>
+<Value id='18946' >
+<Name><![CDATA[Extreme Sports]]></Name>
+</Value>
+<Value id='24061' >
+<Name><![CDATA[Field Hockey]]></Name>
+</Value>
+<Value id='18947' >
+<Name><![CDATA[Football]]></Name>
+</Value>
+<Value id='1012' >
+<Name><![CDATA[Golf]]></Name>
+</Value>
+<Value id='24063' >
+<Name><![CDATA[Hiking, Camping]]></Name>
+</Value>
+<Value id='24062' >
+<Name><![CDATA[Hunting, Fishing]]></Name>
+</Value>
+<Value id='24080' >
+<Name><![CDATA[Ice Hockey]]></Name>
+</Value>
+<Value id='18896' >
+<Name><![CDATA[Martial Arts]]></Name>
+</Value>
+<Value id='18948' >
+<Name><![CDATA[Motor Sports]]></Name>
+</Value>
+<Value id='40071' >
+<Name><![CDATA[Mountaineering]]></Name>
+</Value>
+<Value id='18949' >
+<Name><![CDATA[Olympic Games]]></Name>
+</Value>
+<Value id='24066' >
+<Name><![CDATA[Racquet Sports]]></Name>
+</Value>
+<Value id='31007' >
+<Name><![CDATA[Rugby]]></Name>
+</Value>
+<Value id='24064' >
+<Name><![CDATA[Skating]]></Name>
+</Value>
+<Value id='1014' >
+<Name><![CDATA[Soccer]]></Name>
+</Value>
+<Value id='18950' >
+<Name><![CDATA[Water Sports]]></Name>
+</Value>
+<Value id='24065' >
+<Name><![CDATA[Winter Sports]]></Name>
+</Value>
+<Value id='1015' >
+<Name><![CDATA[Wrestling]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='6'  type='1'  childAttrId='23715'  parentValueId='2192' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='24067' >
+<Name><![CDATA[Aircraft]]></Name>
+</Value>
+<Value id='24068' >
+<Name><![CDATA[Automobiles]]></Name>
+</Value>
+<Value id='24069' >
+<Name><![CDATA[Boats, Ships]]></Name>
+</Value>
+<Value id='24070' >
+<Name><![CDATA[Railroadiana]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<Dependency count='29'  type='1'  childAttrId='23715'  parentValueId='2193' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='1212' >
+<Name><![CDATA[Africa]]></Name>
+</Value>
+<Value id='1214' >
+<Name><![CDATA[Asia]]></Name>
+</Value>
+<Value id='1215' >
+<Name><![CDATA[Australia, Oceania]]></Name>
+</Value>
+<Value id='1338' >
+<Name><![CDATA[Austria]]></Name>
+</Value>
+<Value id='1216' >
+<Name><![CDATA[Canada]]></Name>
+</Value>
+<Value id='1217' >
+<Name><![CDATA[Caribbean]]></Name>
+</Value>
+<Value id='1313' >
+<Name><![CDATA[China]]></Name>
+</Value>
+<Value id='1347' >
+<Name><![CDATA[England]]></Name>
+</Value>
+<Value id='1219' >
+<Name><![CDATA[Europe]]></Name>
+</Value>
+<Value id='1351' >
+<Name><![CDATA[France]]></Name>
+</Value>
+<Value id='1352' >
+<Name><![CDATA[Germany]]></Name>
+</Value>
+<Value id='1315' >
+<Name><![CDATA[India]]></Name>
+</Value>
+<Value id='1358' >
+<Name><![CDATA[Ireland]]></Name>
+</Value>
+<Value id='1359' >
+<Name><![CDATA[Italy]]></Name>
+</Value>
+<Value id='1317' >
+<Name><![CDATA[Japan]]></Name>
+</Value>
+<Value id='2207' >
+<Name><![CDATA[Latin America]]></Name>
+</Value>
+<Value id='1812' >
+<Name><![CDATA[Mediterranean]]></Name>
+</Value>
+<Value id='1221' >
+<Name><![CDATA[Middle East]]></Name>
+</Value>
+<Value id='1368' >
+<Name><![CDATA[Netherlands]]></Name>
+</Value>
+<Value id='1813' >
+<Name><![CDATA[North America]]></Name>
+</Value>
+<Value id='1376' >
+<Name><![CDATA[Spain]]></Name>
+</Value>
+<Value id='1377' >
+<Name><![CDATA[Sweden]]></Name>
+</Value>
+<Value id='97753' >
+<Name><![CDATA[US: General Travel]]></Name>
+</Value>
+<Value id='23951' >
+<Name><![CDATA[US: Midwest]]></Name>
+</Value>
+<Value id='23952' >
+<Name><![CDATA[US: Northeast]]></Name>
+</Value>
+<Value id='23953' >
+<Name><![CDATA[US: South]]></Name>
+</Value>
+<Value id='23954' >
+<Name><![CDATA[US: West]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</Dependency>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='23714' >
+<Label><![CDATA[Language]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>2</EditType><ValueList count='10' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='23746' >
+<Name><![CDATA[Chinese]]></Name>
+</Value>
+<Value id='23722' >
+<Name><![CDATA[English]]></Name>
+</Value>
+<Value id='23723' >
+<Name><![CDATA[French]]></Name>
+</Value>
+<Value id='23724' >
+<Name><![CDATA[German]]></Name>
+</Value>
+<Value id='23725' >
+<Name><![CDATA[Italian]]></Name>
+</Value>
+<Value id='23749' >
+<Name><![CDATA[Japanese]]></Name>
+</Value>
+<Value id='23727' >
+<Name><![CDATA[Russian]]></Name>
+</Value>
+<Value id='23726' >
+<Name><![CDATA[Spanish]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute id='23715'  parentAttrId='23713' >
+<Label><![CDATA[Topic]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>0</EditType><ValueList count='372' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='97741' >
+<Name><![CDATA[Abuse]]></Name>
+</Value>
+<Value id='23898' >
+<Name><![CDATA[Accounting]]></Name>
+</Value>
+<Value id='17082' >
+<Name><![CDATA[Action, Adventure]]></Name>
+</Value>
+<Value id='24049' >
+<Name><![CDATA[Addiction, Recovery]]></Name>
+</Value>
+<Value id='1212' >
+<Name><![CDATA[Africa]]></Name>
+</Value>
+<Value id='97746' >
+<Name><![CDATA[Aging]]></Name>
+</Value>
+<Value id='24000' >
+<Name><![CDATA[Agriculture]]></Name>
+</Value>
+<Value id='24067' >
+<Name><![CDATA[Aircraft]]></Name>
+</Value>
+<Value id='23987' >
+<Name><![CDATA[Air Force]]></Name>
+</Value>
+<Value id='24013' >
+<Name><![CDATA[Almanacs]]></Name>
+</Value>
+<Value id='23943' >
+<Name><![CDATA[Alternative Health]]></Name>
+</Value>
+<Value id='23980' >
+<Name><![CDATA[Alternative Medicine]]></Name>
+</Value>
+<Value id='44161' >
+<Name><![CDATA[American Indian Wars]]></Name>
+</Value>
+<Value id='44675' >
+<Name><![CDATA[Anatomy, Physiology]]></Name>
+</Value>
+<Value id='23955' >
+<Name><![CDATA[Ancient]]></Name>
+</Value>
+<Value id='44669' >
+<Name><![CDATA[Animal Husbandry]]></Name>
+</Value>
+<Value id='24053' >
+<Name><![CDATA[Anthropology]]></Name>
+</Value>
+<Value id='24075' >
+<Name><![CDATA[Antiques]]></Name>
+</Value>
+<Value id='24054' >
+<Name><![CDATA[Archaeology]]></Name>
+</Value>
+<Value id='2174' >
+<Name><![CDATA[Architecture]]></Name>
+</Value>
+<Value id='23988' >
+<Name><![CDATA[Army]]></Name>
+</Value>
+<Value id='23774' >
+<Name><![CDATA[Art]]></Name>
+</Value>
+<Value id='23881' >
+<Name><![CDATA[Art History & Criticism]]></Name>
+</Value>
+<Value id='44153' >
+<Name><![CDATA[Art Instruction]]></Name>
+</Value>
+<Value id='97722' >
+<Name><![CDATA[Artists]]></Name>
+</Value>
+<Value id='1214' >
+<Name><![CDATA[Asia]]></Name>
+</Value>
+<Value id='24004' >
+<Name><![CDATA[Astrology]]></Name>
+</Value>
+<Value id='24040' >
+<Name><![CDATA[Astronomy, Space Exploration]]></Name>
+</Value>
+<Value id='24014' >
+<Name><![CDATA[Atlases]]></Name>
+</Value>
+<Value id='1215' >
+<Name><![CDATA[Australia, Oceania]]></Name>
+</Value>
+<Value id='24086' >
+<Name><![CDATA[Australian]]></Name>
+</Value>
+<Value id='1338' >
+<Name><![CDATA[Austria]]></Name>
+</Value>
+<Value id='24068' >
+<Name><![CDATA[Automobiles]]></Name>
+</Value>
+<Value id='23917' >
+<Name><![CDATA[Baking]]></Name>
+</Value>
+<Value id='24025' >
+<Name><![CDATA[Baptist]]></Name>
+</Value>
+<Value id='97734' >
+<Name><![CDATA[Barbecue & Grilling]]></Name>
+</Value>
+<Value id='1007' >
+<Name><![CDATA[Baseball]]></Name>
+</Value>
+<Value id='23918' >
+<Name><![CDATA[Basic Cooking & Reference]]></Name>
+</Value>
+<Value id='2299' >
+<Name><![CDATA[Basketball]]></Name>
+</Value>
+<Value id='23944' >
+<Name><![CDATA[Beauty & Grooming]]></Name>
+</Value>
+<Value id='24021' >
+<Name><![CDATA[Bibles]]></Name>
+</Value>
+<Value id='24015' >
+<Name><![CDATA[Bibliographies, Indexes]]></Name>
+</Value>
+<Value id='24041' >
+<Name><![CDATA[Biological Science]]></Name>
+</Value>
+<Value id='24008' >
+<Name><![CDATA[Birds]]></Name>
+</Value>
+<Value id='80395' >
+<Name><![CDATA[Birds & Bird Watching]]></Name>
+</Value>
+<Value id='66396' >
+<Name><![CDATA[Board Games]]></Name>
+</Value>
+<Value id='24069' >
+<Name><![CDATA[Boats, Ships]]></Name>
+</Value>
+<Value id='44716' >
+<Name><![CDATA[Bodybuilding]]></Name>
+</Value>
+<Value id='23891' >
+<Name><![CDATA[Books]]></Name>
+</Value>
+<Value id='44713' >
+<Name><![CDATA[Books on Books]]></Name>
+</Value>
+<Value id='25040' >
+<Name><![CDATA[Botany]]></Name>
+</Value>
+<Value id='18945' >
+<Name><![CDATA[Boxing]]></Name>
+</Value>
+<Value id='44521' >
+<Name><![CDATA[British Wars]]></Name>
+</Value>
+<Value id='24030' >
+<Name><![CDATA[Buddhism]]></Name>
+</Value>
+<Value id='44708' >
+<Name><![CDATA[Building & Plans]]></Name>
+</Value>
+<Value id='23885' >
+<Name><![CDATA[Business]]></Name>
+</Value>
+<Value id='23947' >
+<Name><![CDATA[By Country]]></Name>
+</Value>
+<Value id='24083' >
+<Name><![CDATA[By Country]]></Name>
+</Value>
+<Value id='23948' >
+<Name><![CDATA[By Region]]></Name>
+</Value>
+<Value id='24084' >
+<Name><![CDATA[By Region]]></Name>
+</Value>
+<Value id='23949' >
+<Name><![CDATA[By Time Period]]></Name>
+</Value>
+<Value id='74310' >
+<Name><![CDATA[Calligraphy]]></Name>
+</Value>
+<Value id='1216' >
+<Name><![CDATA[Canada]]></Name>
+</Value>
+<Value id='97733' >
+<Name><![CDATA[Canning & Preservation]]></Name>
+</Value>
+<Value id='66397' >
+<Name><![CDATA[Card Games]]></Name>
+</Value>
+<Value id='23899' >
+<Name><![CDATA[Careers, Job Hunting]]></Name>
+</Value>
+<Value id='1217' >
+<Name><![CDATA[Caribbean]]></Name>
+</Value>
+<Value id='44150' >
+<Name><![CDATA[Catalogs & Exhibitions]]></Name>
+</Value>
+<Value id='24026' >
+<Name><![CDATA[Catholic]]></Name>
+</Value>
+<Value id='24009' >
+<Name><![CDATA[Cats]]></Name>
+</Value>
+<Value id='1218' >
+<Name><![CDATA[Central America, Mexico]]></Name>
+</Value>
+<Value id='23905' >
+<Name><![CDATA[Certification]]></Name>
+</Value>
+<Value id='24042' >
+<Name><![CDATA[Chemistry]]></Name>
+</Value>
+<Value id='23963' >
+<Name><![CDATA[Chess]]></Name>
+</Value>
+<Value id='1313' >
+<Name><![CDATA[China]]></Name>
+</Value>
+<Value id='23827' >
+<Name><![CDATA[Christianity]]></Name>
+</Value>
+<Value id='23991' >
+<Name><![CDATA[Civil War (1861-65)]]></Name>
+</Value>
+<Value id='23805' >
+<Name><![CDATA[Classics]]></Name>
+</Value>
+<Value id='44711' >
+<Name><![CDATA[Coast Guard]]></Name>
+</Value>
+<Value id='23892' >
+<Name><![CDATA[Coins]]></Name>
+</Value>
+<Value id='97735' >
+<Name><![CDATA[Community Recipe Collections]]></Name>
+</Value>
+<Value id='24031' >
+<Name><![CDATA[Comparative Religion]]></Name>
+</Value>
+<Value id='44318' >
+<Name><![CDATA[Construction]]></Name>
+</Value>
+<Value id='81765' >
+<Name><![CDATA[Cooking for One]]></Name>
+</Value>
+<Value id='24058' >
+<Name><![CDATA[Cricket]]></Name>
+</Value>
+<Value id='23882' >
+<Name><![CDATA[Criticism]]></Name>
+</Value>
+<Value id='23969' >
+<Name><![CDATA[Crocheting]]></Name>
+</Value>
+<Value id='23970' >
+<Name><![CDATA[Cross-Stitch]]></Name>
+</Value>
+<Value id='80381' >
+<Name><![CDATA[Crosswords & Puzzles]]></Name>
+</Value>
+<Value id='97736' >
+<Name><![CDATA[Culinary Arts & Techniques]]></Name>
+</Value>
+<Value id='24059' >
+<Name><![CDATA[Cycling]]></Name>
+</Value>
+<Value id='18933' >
+<Name><![CDATA[Dance]]></Name>
+</Value>
+<Value id='23906' >
+<Name><![CDATA[Databases]]></Name>
+</Value>
+<Value id='23964' >
+<Name><![CDATA[Decorating]]></Name>
+</Value>
+<Value id='23879' >
+<Name><![CDATA[Design]]></Name>
+</Value>
+<Value id='24032' >
+<Name><![CDATA[Devotions, Meditations]]></Name>
+</Value>
+<Value id='24016' >
+<Name><![CDATA[Dictionaries, Thesauri]]></Name>
+</Value>
+<Value id='23945' >
+<Name><![CDATA[Diet, Weight Loss]]></Name>
+</Value>
+<Value id='23930' >
+<Name><![CDATA[Divorce]]></Name>
+</Value>
+<Value id='24010' >
+<Name><![CDATA[Dogs]]></Name>
+</Value>
+<Value id='23976' >
+<Name><![CDATA[Do-It-Yourself]]></Name>
+</Value>
+<Value id='44703' >
+<Name><![CDATA[Dolls]]></Name>
+</Value>
+<Value id='97723' >
+<Name><![CDATA[Drawing & Cartooning]]></Name>
+</Value>
+<Value id='24043' >
+<Name><![CDATA[Earth Science]]></Name>
+</Value>
+<Value id='25045' >
+<Name><![CDATA[E-Business]]></Name>
+</Value>
+<Value id='24001' >
+<Name><![CDATA[Ecology]]></Name>
+</Value>
+<Value id='23900' >
+<Name><![CDATA[Economics]]></Name>
+</Value>
+<Value id='23795' >
+<Name><![CDATA[Education]]></Name>
+</Value>
+<Value id='24044' >
+<Name><![CDATA[Electronics]]></Name>
+</Value>
+<Value id='23971' >
+<Name><![CDATA[Embroidery]]></Name>
+</Value>
+<Value id='24017' >
+<Name><![CDATA[Encyclopedias]]></Name>
+</Value>
+<Value id='23797' >
+<Name><![CDATA[Engineering]]></Name>
+</Value>
+<Value id='1347' >
+<Name><![CDATA[England]]></Name>
+</Value>
+<Value id='97737' >
+<Name><![CDATA[Entertaining & Dining]]></Name>
+</Value>
+<Value id='24002' >
+<Name><![CDATA[Environment]]></Name>
+</Value>
+<Value id='44672' >
+<Name><![CDATA[Episcopal]]></Name>
+</Value>
+<Value id='24060' >
+<Name><![CDATA[Equestrian]]></Name>
+</Value>
+<Value id='97729' >
+<Name><![CDATA[Ethnic & Cultural]]></Name>
+</Value>
+<Value id='24055' >
+<Name><![CDATA[Ethnic & Minority Studies]]></Name>
+</Value>
+<Value id='1219' >
+<Name><![CDATA[Europe]]></Name>
+</Value>
+<Value id='17090' >
+<Name><![CDATA[Exercise & Fitness]]></Name>
+</Value>
+<Value id='18946' >
+<Name><![CDATA[Extreme Sports]]></Name>
+</Value>
+<Value id='2178' >
+<Name><![CDATA[Fantasy]]></Name>
+</Value>
+<Value id='31502' >
+<Name><![CDATA[Fashion]]></Name>
+</Value>
+<Value id='23977' >
+<Name><![CDATA[Feng Shui]]></Name>
+</Value>
+<Value id='24003' >
+<Name><![CDATA[Field Guides]]></Name>
+</Value>
+<Value id='24061' >
+<Name><![CDATA[Field Hockey]]></Name>
+</Value>
+<Value id='23883' >
+<Name><![CDATA[Fine Arts]]></Name>
+</Value>
+<Value id='23981' >
+<Name><![CDATA[First Aid]]></Name>
+</Value>
+<Value id='24011' >
+<Name><![CDATA[Fish]]></Name>
+</Value>
+<Value id='23936' >
+<Name><![CDATA[Folklore, Mythology]]></Name>
+</Value>
+<Value id='18947' >
+<Name><![CDATA[Football]]></Name>
+</Value>
+<Value id='44158' >
+<Name><![CDATA[Foreign Militaries]]></Name>
+</Value>
+<Value id='44715' >
+<Name><![CDATA[Forensics]]></Name>
+</Value>
+<Value id='1351' >
+<Name><![CDATA[France]]></Name>
+</Value>
+<Value id='44707' >
+<Name><![CDATA[Gambling]]></Name>
+</Value>
+<Value id='23822' >
+<Name><![CDATA[Games]]></Name>
+</Value>
+<Value id='97742' >
+<Name><![CDATA[Game Theory]]></Name>
+</Value>
+<Value id='23978' >
+<Name><![CDATA[Gardening & Landscaping]]></Name>
+</Value>
+<Value id='97720' >
+<Name><![CDATA[Gay & Lesbian Studies]]></Name>
+</Value>
+<Value id='97721' >
+<Name><![CDATA[Gender Studies]]></Name>
+</Value>
+<Value id='24018' >
+<Name><![CDATA[Genealogy]]></Name>
+</Value>
+<Value id='31508' >
+<Name><![CDATA[General]]></Name>
+</Value>
+<Value id='23901' >
+<Name><![CDATA[General Business]]></Name>
+</Value>
+<Value id='23893' >
+<Name><![CDATA[General Price Guides]]></Name>
+</Value>
+<Value id='1352' >
+<Name><![CDATA[Germany]]></Name>
+</Value>
+<Value id='23894' >
+<Name><![CDATA[Glass]]></Name>
+</Value>
+<Value id='1012' >
+<Name><![CDATA[Golf]]></Name>
+</Value>
+<Value id='97724' >
+<Name><![CDATA[Graphic Arts]]></Name>
+</Value>
+<Value id='44319' >
+<Name><![CDATA[Graphic Design]]></Name>
+</Value>
+<Value id='23907' >
+<Name><![CDATA[Graphics & Design]]></Name>
+</Value>
+<Value id='44657' >
+<Name><![CDATA[Greek & Roman Wars]]></Name>
+</Value>
+<Value id='44321' >
+<Name><![CDATA[Grief, Bereavement]]></Name>
+</Value>
+<Value id='23908' >
+<Name><![CDATA[Hardware]]></Name>
+</Value>
+<Value id='23946' >
+<Name><![CDATA[Health & Diseases]]></Name>
+</Value>
+<Value id='23921' >
+<Name><![CDATA[Healthy & Special Diets]]></Name>
+</Value>
+<Value id='24063' >
+<Name><![CDATA[Hiking, Camping]]></Name>
+</Value>
+<Value id='24033' >
+<Name><![CDATA[Hinduism]]></Name>
+</Value>
+<Value id='18915' >
+<Name><![CDATA[Historical]]></Name>
+</Value>
+<Value id='30985' >
+<Name><![CDATA[Historic Figures]]></Name>
+</Value>
+<Value id='23979' >
+<Name><![CDATA[Home Decor]]></Name>
+</Value>
+<Value id='17091' >
+<Name><![CDATA[Horror]]></Name>
+</Value>
+<Value id='24012' >
+<Name><![CDATA[Horses]]></Name>
+</Value>
+<Value id='23782' >
+<Name><![CDATA[Humor]]></Name>
+</Value>
+<Value id='24062' >
+<Name><![CDATA[Hunting, Fishing]]></Name>
+</Value>
+<Value id='24080' >
+<Name><![CDATA[Ice Hockey]]></Name>
+</Value>
+<Value id='1315' >
+<Name><![CDATA[India]]></Name>
+</Value>
+<Value id='44320' >
+<Name><![CDATA[Industrial Design]]></Name>
+</Value>
+<Value id='2183' >
+<Name><![CDATA[Inspirational]]></Name>
+</Value>
+<Value id='23880' >
+<Name><![CDATA[Interior Design]]></Name>
+</Value>
+<Value id='23909' >
+<Name><![CDATA[Internet]]></Name>
+</Value>
+<Value id='23992' >
+<Name><![CDATA[Iraq/Gulf Wars]]></Name>
+</Value>
+<Value id='1358' >
+<Name><![CDATA[Ireland]]></Name>
+</Value>
+<Value id='24034' >
+<Name><![CDATA[Islam]]></Name>
+</Value>
+<Value id='1359' >
+<Name><![CDATA[Italy]]></Name>
+</Value>
+<Value id='1317' >
+<Name><![CDATA[Japan]]></Name>
+</Value>
+<Value id='25140' >
+<Name><![CDATA[Jewelry]]></Name>
+</Value>
+<Value id='23828' >
+<Name><![CDATA[Judaism]]></Name>
+</Value>
+<Value id='23972' >
+<Name><![CDATA[Knitting]]></Name>
+</Value>
+<Value id='23993' >
+<Name><![CDATA[Korean War (1950-53)]]></Name>
+</Value>
+<Value id='23798' >
+<Name><![CDATA[Language Study]]></Name>
+</Value>
+<Value id='2207' >
+<Name><![CDATA[Latin America]]></Name>
+</Value>
+<Value id='97759' >
+<Name><![CDATA[Law & Crime]]></Name>
+</Value>
+<Value id='23886' >
+<Name><![CDATA[Literary]]></Name>
+</Value>
+<Value id='23937' >
+<Name><![CDATA[Literary Collections]]></Name>
+</Value>
+<Value id='23938' >
+<Name><![CDATA[Literary Criticism]]></Name>
+</Value>
+<Value id='23829' >
+<Name><![CDATA[Literature, Ancient]]></Name>
+</Value>
+<Value id='23830' >
+<Name><![CDATA[Literature, Classic]]></Name>
+</Value>
+<Value id='23831' >
+<Name><![CDATA[Literature, Modern]]></Name>
+</Value>
+<Value id='97743' >
+<Name><![CDATA[Logic & Brain Teasers]]></Name>
+</Value>
+<Value id='23931' >
+<Name><![CDATA[Love, Relationships]]></Name>
+</Value>
+<Value id='24027' >
+<Name><![CDATA[Lutheran]]></Name>
+</Value>
+<Value id='74088' >
+<Name><![CDATA[Magic]]></Name>
+</Value>
+<Value id='24045' >
+<Name><![CDATA[Marine Life]]></Name>
+</Value>
+<Value id='23989' >
+<Name><![CDATA[Marines]]></Name>
+</Value>
+<Value id='23902' >
+<Name><![CDATA[Marketing]]></Name>
+</Value>
+<Value id='23932' >
+<Name><![CDATA[Marriage]]></Name>
+</Value>
+<Value id='18896' >
+<Name><![CDATA[Martial Arts]]></Name>
+</Value>
+<Value id='23799' >
+<Name><![CDATA[Mathematics]]></Name>
+</Value>
+<Value id='23784' >
+<Name><![CDATA[Medical]]></Name>
+</Value>
+<Value id='23956' >
+<Name><![CDATA[Medieval]]></Name>
+</Value>
+<Value id='1812' >
+<Name><![CDATA[Mediterranean]]></Name>
+</Value>
+<Value id='44678' >
+<Name><![CDATA[Mental Health]]></Name>
+</Value>
+<Value id='24050' >
+<Name><![CDATA[Mental Illness]]></Name>
+</Value>
+<Value id='44673' >
+<Name><![CDATA[Methodist]]></Name>
+</Value>
+<Value id='23914' >
+<Name><![CDATA[Methods, Ingredients]]></Name>
+</Value>
+<Value id='1220' >
+<Name><![CDATA[Mexico]]></Name>
+</Value>
+<Value id='1221' >
+<Name><![CDATA[Middle East]]></Name>
+</Value>
+<Value id='23887' >
+<Name><![CDATA[Military]]></Name>
+</Value>
+<Value id='23965' >
+<Name><![CDATA[Model Railroads]]></Name>
+</Value>
+<Value id='23958' >
+<Name><![CDATA[Modern]]></Name>
+</Value>
+<Value id='24028' >
+<Name><![CDATA[Mormon]]></Name>
+</Value>
+<Value id='24051' >
+<Name><![CDATA[Motivation]]></Name>
+</Value>
+<Value id='18948' >
+<Name><![CDATA[Motor Sports]]></Name>
+</Value>
+<Value id='40071' >
+<Name><![CDATA[Mountaineering]]></Name>
+</Value>
+<Value id='23888' >
+<Name><![CDATA[Movie & Television]]></Name>
+</Value>
+<Value id='23889' >
+<Name><![CDATA[Music]]></Name>
+</Value>
+<Value id='23939' >
+<Name><![CDATA[Mystery, Detective]]></Name>
+</Value>
+<Value id='18912' >
+<Name><![CDATA[Mystery, Espionage]]></Name>
+</Value>
+<Value id='30292' >
+<Name><![CDATA[Mystery, General]]></Name>
+</Value>
+<Value id='23940' >
+<Name><![CDATA[Mystery, Legal Thriller]]></Name>
+</Value>
+<Value id='23941' >
+<Name><![CDATA[Mystery, Medical]]></Name>
+</Value>
+<Value id='18905' >
+<Name><![CDATA[Mystery, Thriller]]></Name>
+</Value>
+<Value id='44668' >
+<Name><![CDATA[Napoleonic Wars]]></Name>
+</Value>
+<Value id='44712' >
+<Name><![CDATA[National Guard]]></Name>
+</Value>
+<Value id='24046' >
+<Name><![CDATA[Natural Disasters]]></Name>
+</Value>
+<Value id='23990' >
+<Name><![CDATA[Navy]]></Name>
+</Value>
+<Value id='23973' >
+<Name><![CDATA[Needlepoint]]></Name>
+</Value>
+<Value id='1368' >
+<Name><![CDATA[Netherlands]]></Name>
+</Value>
+<Value id='23910' >
+<Name><![CDATA[Networking]]></Name>
+</Value>
+<Value id='22581' >
+<Name><![CDATA[New Age]]></Name>
+</Value>
+<Value id='1813' >
+<Name><![CDATA[North America]]></Name>
+</Value>
+<Value id='23982' >
+<Name><![CDATA[Nursing]]></Name>
+</Value>
+<Value id='24035' >
+<Name><![CDATA[Occult]]></Name>
+</Value>
+<Value id='18949' >
+<Name><![CDATA[Olympic Games]]></Name>
+</Value>
+<Value id='23911' >
+<Name><![CDATA[Operating Systems]]></Name>
+</Value>
+<Value id='23966' >
+<Name><![CDATA[Origami, Paper Crafts]]></Name>
+</Value>
+<Value id='44714' >
+<Name><![CDATA[Orthodox]]></Name>
+</Value>
+<Value id='2149' >
+<Name><![CDATA[Painting]]></Name>
+</Value>
+<Value id='44164' >
+<Name><![CDATA[Paleontology]]></Name>
+</Value>
+<Value id='24005' >
+<Name><![CDATA[Paranormal]]></Name>
+</Value>
+<Value id='23815' >
+<Name><![CDATA[Parenting]]></Name>
+</Value>
+<Value id='44709' >
+<Name><![CDATA[Pediatrics]]></Name>
+</Value>
+<Value id='23903' >
+<Name><![CDATA[Personal Finance]]></Name>
+</Value>
+<Value id='23983' >
+<Name><![CDATA[Pharmacology, Drug Guides]]></Name>
+</Value>
+<Value id='97725' >
+<Name><![CDATA[Photographers]]></Name>
+</Value>
+<Value id='23884' >
+<Name><![CDATA[Photography]]></Name>
+</Value>
+<Value id='97726' >
+<Name><![CDATA[Photography & Photojournalism]]></Name>
+</Value>
+<Value id='97727' >
+<Name><![CDATA[Photography Subjects & Themes]]></Name>
+</Value>
+<Value id='97728' >
+<Name><![CDATA[Photography Techniques]]></Name>
+</Value>
+<Value id='24047' >
+<Name><![CDATA[Physics]]></Name>
+</Value>
+<Value id='1017' >
+<Name><![CDATA[Plays, Screenplays]]></Name>
+</Value>
+<Value id='23810' >
+<Name><![CDATA[Poetry]]></Name>
+</Value>
+<Value id='18919' >
+<Name><![CDATA[Political]]></Name>
+</Value>
+<Value id='23895' >
+<Name><![CDATA[Pottery & China]]></Name>
+</Value>
+<Value id='24036' >
+<Name><![CDATA[Prayerbooks]]></Name>
+</Value>
+<Value id='23933' >
+<Name><![CDATA[Pregnancy, Childbirth]]></Name>
+</Value>
+<Value id='44674' >
+<Name><![CDATA[Presbyterian]]></Name>
+</Value>
+<Value id='44702' >
+<Name><![CDATA[Product Design]]></Name>
+</Value>
+<Value id='23912' >
+<Name><![CDATA[Programming]]></Name>
+</Value>
+<Value id='24029' >
+<Name><![CDATA[Protestant]]></Name>
+</Value>
+<Value id='44710' >
+<Name><![CDATA[Psychiatry]]></Name>
+</Value>
+<Value id='24052' >
+<Name><![CDATA[Public Speaking]]></Name>
+</Value>
+<Value id='23824' >
+<Name><![CDATA[Pulps]]></Name>
+</Value>
+<Value id='44322' >
+<Name><![CDATA[Quack Medicine]]></Name>
+</Value>
+<Value id='97738' >
+<Name><![CDATA[Quick & Easy Meals]]></Name>
+</Value>
+<Value id='23974' >
+<Name><![CDATA[Quilting]]></Name>
+</Value>
+<Value id='24066' >
+<Name><![CDATA[Racquet Sports]]></Name>
+</Value>
+<Value id='24006' >
+<Name><![CDATA[Radio]]></Name>
+</Value>
+<Value id='24070' >
+<Name><![CDATA[Railroadiana]]></Name>
+</Value>
+<Value id='23791' >
+<Name><![CDATA[Reference]]></Name>
+</Value>
+<Value id='23915' >
+<Name><![CDATA[Regional]]></Name>
+</Value>
+<Value id='23929' >
+<Name><![CDATA[Regional: American (US)]]></Name>
+</Value>
+<Value id='24085' >
+<Name><![CDATA[Regional: Asian]]></Name>
+</Value>
+<Value id='27218' >
+<Name><![CDATA[Regional: European]]></Name>
+</Value>
+<Value id='24089' >
+<Name><![CDATA[Regional: French]]></Name>
+</Value>
+<Value id='22654' >
+<Name><![CDATA[Regional: Indian]]></Name>
+</Value>
+<Value id='24091' >
+<Name><![CDATA[Regional: Italian]]></Name>
+</Value>
+<Value id='44156' >
+<Name><![CDATA[Regional: Latin American]]></Name>
+</Value>
+<Value id='44705' >
+<Name><![CDATA[Regional: Middle Eastern]]></Name>
+</Value>
+<Value id='24092' >
+<Name><![CDATA[Regional: Spanish]]></Name>
+</Value>
+<Value id='18935' >
+<Name><![CDATA[Religious]]></Name>
+</Value>
+<Value id='2188' >
+<Name><![CDATA[Religious, Inspirational]]></Name>
+</Value>
+<Value id='23957' >
+<Name><![CDATA[Renaissance]]></Name>
+</Value>
+<Value id='44671' >
+<Name><![CDATA[Reptiles, Amphibians]]></Name>
+</Value>
+<Value id='23994' >
+<Name><![CDATA[Revolutionary War (1775-83)]]></Name>
+</Value>
+<Value id='18907' >
+<Name><![CDATA[Romance]]></Name>
+</Value>
+<Value id='23942' >
+<Name><![CDATA[Romance, Contemporary]]></Name>
+</Value>
+<Value id='30436' >
+<Name><![CDATA[Romance, Fantasy]]></Name>
+</Value>
+<Value id='30293' >
+<Name><![CDATA[Romance, General]]></Name>
+</Value>
+<Value id='30294' >
+<Name><![CDATA[Romance, Historical]]></Name>
+</Value>
+<Value id='23890' >
+<Name><![CDATA[Royalty]]></Name>
+</Value>
+<Value id='31007' >
+<Name><![CDATA[Rugby]]></Name>
+</Value>
+<Value id='24019' >
+<Name><![CDATA[School Yearbooks]]></Name>
+</Value>
+<Value id='44286' >
+<Name><![CDATA[Science & Technology]]></Name>
+</Value>
+<Value id='17093' >
+<Name><![CDATA[Science Fiction]]></Name>
+</Value>
+<Value id='23967' >
+<Name><![CDATA[Scrapbooking]]></Name>
+</Value>
+<Value id='81367' >
+<Name><![CDATA[Sculpture]]></Name>
+</Value>
+<Value id='72387' >
+<Name><![CDATA[Security]]></Name>
+</Value>
+<Value id='24037' >
+<Name><![CDATA[Sermons]]></Name>
+</Value>
+<Value id='30297' >
+<Name><![CDATA[Sewing, General]]></Name>
+</Value>
+<Value id='23968' >
+<Name><![CDATA[Sewing, Needlework]]></Name>
+</Value>
+<Value id='23934' >
+<Name><![CDATA[Sexuality]]></Name>
+</Value>
+<Value id='26187' >
+<Name><![CDATA[Silver]]></Name>
+</Value>
+<Value id='24064' >
+<Name><![CDATA[Skating]]></Name>
+</Value>
+<Value id='1014' >
+<Name><![CDATA[Soccer]]></Name>
+</Value>
+<Value id='97731' >
+<Name><![CDATA[Social Activists]]></Name>
+</Value>
+<Value id='24056' >
+<Name><![CDATA[Sociology]]></Name>
+</Value>
+<Value id='23923' >
+<Name><![CDATA[Soups & Stews]]></Name>
+</Value>
+<Value id='1223' >
+<Name><![CDATA[South America]]></Name>
+</Value>
+<Value id='1376' >
+<Name><![CDATA[Spain]]></Name>
+</Value>
+<Value id='97739' >
+<Name><![CDATA[Specific Appliances]]></Name>
+</Value>
+<Value id='23926' >
+<Name><![CDATA[Specific Ingredients]]></Name>
+</Value>
+<Value id='23986' >
+<Name><![CDATA[Specific Wars]]></Name>
+</Value>
+<Value id='24038' >
+<Name><![CDATA[Spirituality]]></Name>
+</Value>
+<Value id='1197' >
+<Name><![CDATA[Sports]]></Name>
+</Value>
+<Value id='44704' >
+<Name><![CDATA[Stamps]]></Name>
+</Value>
+<Value id='23984' >
+<Name><![CDATA[Surgery, Anaesthesiology]]></Name>
+</Value>
+<Value id='1377' >
+<Name><![CDATA[Sweden]]></Name>
+</Value>
+<Value id='23904' >
+<Name><![CDATA[Taxes]]></Name>
+</Value>
+<Value id='44676' >
+<Name><![CDATA[Technology]]></Name>
+</Value>
+<Value id='24007' >
+<Name><![CDATA[Television]]></Name>
+</Value>
+<Value id='1004' >
+<Name><![CDATA[Theater]]></Name>
+</Value>
+<Value id='97732' >
+<Name><![CDATA[Tobacciana]]></Name>
+</Value>
+<Value id='23896' >
+<Name><![CDATA[Toys]]></Name>
+</Value>
+<Value id='23897' >
+<Name><![CDATA[Trading Cards]]></Name>
+</Value>
+<Value id='41736' >
+<Name><![CDATA[Travel]]></Name>
+</Value>
+<Value id='2193' >
+<Name><![CDATA[Travel, Geography, Exploration]]></Name>
+</Value>
+<Value id='97744' >
+<Name><![CDATA[Trivia]]></Name>
+</Value>
+<Value id='44670' >
+<Name><![CDATA[UFOlogy]]></Name>
+</Value>
+<Value id='1225' >
+<Name><![CDATA[United States]]></Name>
+</Value>
+<Value id='79996' >
+<Name><![CDATA[US: 19th Century]]></Name>
+</Value>
+<Value id='79997' >
+<Name><![CDATA[US: 20th Century]]></Name>
+</Value>
+<Value id='97751' >
+<Name><![CDATA[US: 21st Century]]></Name>
+</Value>
+<Value id='44706' >
+<Name><![CDATA[US: African American]]></Name>
+</Value>
+<Value id='97749' >
+<Name><![CDATA[US: Civil War Period]]></Name>
+</Value>
+<Value id='97747' >
+<Name><![CDATA[US: Colonial Period]]></Name>
+</Value>
+<Value id='23950' >
+<Name><![CDATA[US: General History]]></Name>
+</Value>
+<Value id='97753' >
+<Name><![CDATA[US: General Travel]]></Name>
+</Value>
+<Value id='23951' >
+<Name><![CDATA[US: Midwest]]></Name>
+</Value>
+<Value id='26700' >
+<Name><![CDATA[US: Native American]]></Name>
+</Value>
+<Value id='23952' >
+<Name><![CDATA[US: Northeast]]></Name>
+</Value>
+<Value id='97748' >
+<Name><![CDATA[US: Revolutionary Period]]></Name>
+</Value>
+<Value id='23953' >
+<Name><![CDATA[US: South]]></Name>
+</Value>
+<Value id='97752' >
+<Name><![CDATA[US: State & Local]]></Name>
+</Value>
+<Value id='23954' >
+<Name><![CDATA[US: West]]></Name>
+</Value>
+<Value id='23985' >
+<Name><![CDATA[US Armed Forces]]></Name>
+</Value>
+<Value id='23927' >
+<Name><![CDATA[Vegetarian & Vegan]]></Name>
+</Value>
+<Value id='25029' >
+<Name><![CDATA[Veterinary Medicine]]></Name>
+</Value>
+<Value id='97745' >
+<Name><![CDATA[Video & Electronic Game Theory]]></Name>
+</Value>
+<Value id='23996' >
+<Name><![CDATA[Vietnam War (1961-75)]]></Name>
+</Value>
+<Value id='18950' >
+<Name><![CDATA[Water Sports]]></Name>
+</Value>
+<Value id='23999' >
+<Name><![CDATA[Weapons]]></Name>
+</Value>
+<Value id='24048' >
+<Name><![CDATA[Weather]]></Name>
+</Value>
+<Value id='23913' >
+<Name><![CDATA[Web Development]]></Name>
+</Value>
+<Value id='23935' >
+<Name><![CDATA[Weddings]]></Name>
+</Value>
+<Value id='18898' >
+<Name><![CDATA[Westerns]]></Name>
+</Value>
+<Value id='2173' >
+<Name><![CDATA[Wildlife]]></Name>
+</Value>
+<Value id='23928' >
+<Name><![CDATA[Wine & Beverages]]></Name>
+</Value>
+<Value id='24065' >
+<Name><![CDATA[Winter Sports]]></Name>
+</Value>
+<Value id='24039' >
+<Name><![CDATA[Witchcraft, Wicca, Pagan]]></Name>
+</Value>
+<Value id='2468' >
+<Name><![CDATA[Women]]></Name>
+</Value>
+<Value id='24057' >
+<Name><![CDATA[Women's Studies]]></Name>
+</Value>
+<Value id='23975' >
+<Name><![CDATA[Woodwork]]></Name>
+</Value>
+<Value id='24094' >
+<Name><![CDATA[World]]></Name>
+</Value>
+<Value id='1015' >
+<Name><![CDATA[Wrestling]]></Name>
+</Value>
+<Value id='24020' >
+<Name><![CDATA[Writing]]></Name>
+</Value>
+<Value id='23997' >
+<Name><![CDATA[WWI (1914-18)]]></Name>
+</Value>
+<Value id='23998' >
+<Name><![CDATA[WWII (1939-45)]]></Name>
+</Value>
+<Value id='44677' >
+<Name><![CDATA[Zoology]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute Invisible='true'  id='23716' >
+<Label><![CDATA[Subject 3]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>0</EditType><ValueList count='47' >
+<Value id='-10' >
+<Name><![CDATA[-]]></Name>
+</Value>
+<Value id='44706' >
+<Name><![CDATA[African-American]]></Name>
+</Value>
+<Value id='44411' >
+<Name><![CDATA[African Wars]]></Name>
+</Value>
+<Value id='23987' >
+<Name><![CDATA[Air Force]]></Name>
+</Value>
+<Value id='44161' >
+<Name><![CDATA[American Indian Wars]]></Name>
+</Value>
+<Value id='23988' >
+<Name><![CDATA[Army]]></Name>
+</Value>
+<Value id='24025' >
+<Name><![CDATA[Baptist]]></Name>
+</Value>
+<Value id='44521' >
+<Name><![CDATA[British Wars]]></Name>
+</Value>
+<Value id='44150' >
+<Name><![CDATA[Catalogs, Exhibitions]]></Name>
+</Value>
+<Value id='24026' >
+<Name><![CDATA[Catholic]]></Name>
+</Value>
+<Value id='44714' >
+<Name><![CDATA[Orthodox]]></Name>
+</Value>
+<Value id='23991' >
+<Name><![CDATA[Civil War (1861-65)]]></Name>
+</Value>
+<Value id='44711' >
+<Name><![CDATA[Coast Guard]]></Name>
+</Value>
+<Value id='44151' >
+<Name><![CDATA[Collections]]></Name>
+</Value>
+<Value id='44581' >
+<Name><![CDATA[Crimean War]]></Name>
+</Value>
+<Value id='44625' >
+<Name><![CDATA[Crusades]]></Name>
+</Value>
+<Value id='44672' >
+<Name><![CDATA[Episcopal]]></Name>
+</Value>
+<Value id='44158' >
+<Name><![CDATA[Foreign Millitaries]]></Name>
+</Value>
+<Value id='30992' >
+<Name><![CDATA[French Revolution]]></Name>
+</Value>
+<Value id='44657' >
+<Name><![CDATA[Greek & Roman Wars]]></Name>
+</Value>
+<Value id='23992' >
+<Name><![CDATA[Iraq/Gulf Wars]]></Name>
+</Value>
+<Value id='23993' >
+<Name><![CDATA[Korea (1950-53)]]></Name>
+</Value>
+<Value id='24027' >
+<Name><![CDATA[Lutheran]]></Name>
+</Value>
+<Value id='23989' >
+<Name><![CDATA[Marines]]></Name>
+</Value>
+<Value id='44673' >
+<Name><![CDATA[Methodist]]></Name>
+</Value>
+<Value id='44666' >
+<Name><![CDATA[Mexican Wars]]></Name>
+</Value>
+<Value id='44667' >
+<Name><![CDATA[Middle East Conflicts]]></Name>
+</Value>
+<Value id='44152' >
+<Name><![CDATA[Monographs]]></Name>
+</Value>
+<Value id='24028' >
+<Name><![CDATA[Mormon]]></Name>
+</Value>
+<Value id='44668' >
+<Name><![CDATA[Napoleonic Wars]]></Name>
+</Value>
+<Value id='44712' >
+<Name><![CDATA[National Guard]]></Name>
+</Value>
+<Value id='23990' >
+<Name><![CDATA[Navy]]></Name>
+</Value>
+<Value id='44674' >
+<Name><![CDATA[Presbyterian]]></Name>
+</Value>
+<Value id='24029' >
+<Name><![CDATA[Protestant]]></Name>
+</Value>
+<Value id='23994' >
+<Name><![CDATA[Revolutionary War (1775-83)]]></Name>
+</Value>
+<Value id='30994' >
+<Name><![CDATA[Russian Revolution]]></Name>
+</Value>
+<Value id='23995' >
+<Name><![CDATA[Spanish-American War (1898-1907)]]></Name>
+</Value>
+<Value id='23950' >
+<Name><![CDATA[US, General History]]></Name>
+</Value>
+<Value id='23951' >
+<Name><![CDATA[US, Midwest]]></Name>
+</Value>
+<Value id='23952' >
+<Name><![CDATA[US, Northeast]]></Name>
+</Value>
+<Value id='23953' >
+<Name><![CDATA[US, South]]></Name>
+</Value>
+<Value id='23954' >
+<Name><![CDATA[US, Western]]></Name>
+</Value>
+<Value id='23996' >
+<Name><![CDATA[Vietnam (1961-75)]]></Name>
+</Value>
+<Value id='44162' >
+<Name><![CDATA[War of 1812]]></Name>
+</Value>
+<Value id='23997' >
+<Name><![CDATA[WWI (1914-18)]]></Name>
+</Value>
+<Value id='23998' >
+<Name><![CDATA[WWII (1939-45)]]></Name>
+</Value>
+<Value id='-6' >
+<Name><![CDATA[Other]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='23717' >
+<Label><![CDATA[Special Attributes]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>0</EditType><ValueList count='4' >
+<Value id='23753' >
+<Name><![CDATA[1st Edition]]></Name>
+</Value>
+<Value id='23817' >
+<Name><![CDATA[Illustrated]]></Name>
+</Value>
+<Value id='23754' >
+<Name><![CDATA[Signed]]></Name>
+</Value>
+<Value id='97718' >
+<Name><![CDATA[Large Print]]></Name>
+</Value>
+</ValueList>
+<ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25000' >
+<Label><![CDATA[Author]]></Label>
+<MessageBottom><![CDATA[Please enter first name followed by last name, separating multiple names with a comma.]]></MessageBottom>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25001' >
+<Label><![CDATA[ISBN-10]]></Label>
+<MessageBottom><![CDATA[Please enter the 10-digit ISBN code without dashes or spaces, example: 065425364X]]></MessageBottom>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25002' >
+<Label><![CDATA[Edition]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25003' >
+<Label><![CDATA[Edition Description]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='25004' >
+<Label><![CDATA[Publisher]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+<Attribute labelVisible='true'  id='63739' >
+<Label><![CDATA[ISBN-13]]></Label>
+<Type><![CDATA[2]]></Type>
+<EditType>1</EditType><ValidationRules></ValidationRules>
+</Attribute>
+</Initial>
+<Conditional></Conditional>
+<Other>
+<Attribute id='23713' >
+<Label><![CDATA[Subject]]></Label>
+</Attribute>
+<Attribute id='23714' >
+<Label><![CDATA[Language]]></Label>
+</Attribute>
+<Attribute id='194' >
+<Label><![CDATA[Popularity]]></Label>
+</Attribute>
+<Attribute id='23715' >
+<Label><![CDATA[Topic]]></Label>
+</Attribute>
+<Attribute id='23716' >
+<Label><![CDATA[Subject 3]]></Label>
+</Attribute>
+<Attribute id='15961' >
+<Label><![CDATA[Format]]></Label>
+</Attribute>
+</Other>
+</CharacteristicsList>
+</CharacteristicsSet>
+</Characteristics>
+<GlobalSettings>
+<MonthDescendingLong>December;November;October;September;August;July;June;May;April;March;February;January;</MonthDescendingLong><MonthAscendingShort>Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec;</MonthAscendingShort><MonthAscendingLong>January;February;March;April;May;June;July;August;September;October;November;December;</MonthAscendingLong><MonthDescendingShort>Dec;Nov;Oct;Sep;Aug;Jul;Jun;May;Apr;Mar;Feb;Jan;</MonthDescendingShort><BaseHTMLPath><![CDATA[http://pages.ebay.com/]]></BaseHTMLPath>
+</GlobalSettings>
+</eBay>

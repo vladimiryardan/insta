@@ -1,0 +1,365 @@
+<cfif NOT isAllowed("Lister_CreateAuction") AND NOT isAllowed("Lister_EditAuction") AND NOT isAllowed("Lister_ListAuction")>
+	<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
+</cfif>
+
+
+
+<cfparam name="attributes.item">
+<cfinclude template="get_item.cfm">
+<cfquery datasource="#request.dsn#" name="sqlDimensions">
+	SELECT width, height, depth, internalShipToLocations
+	FROM items
+	WHERE item = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+</cfquery>
+
+
+<cfoutput>
+<script language="javascript" type="text/javascript">
+<!--//
+function fEnable(b){
+	document.getElementById("StartingPrice").disabled = b;
+	document.getElementById("ReservePrice").disabled = b;
+	if (b) {
+		document.getElementById("itemQty").disabled = false;
+	}else{
+		document.getElementById("itemQty").disabled = true;
+	}
+}
+
+function setLayout(n){
+	document.getElementById("imgLayoutPreview").src = "site/admin/auctions/layout/" + n + "/preview.gif";
+}
+function setImgLayout(n){
+	document.getElementById("imgLayout").src = "site/admin/auctions/layout/images/" + n + ".gif";
+}
+function fCheck(formObj){
+	if(!formObj.psRegular.checked && (formObj.ShipToLocations.selectedIndex == 1)){
+		alert("Oversize 1, 2, 3, or Local Pick-Up are not allowed for Worldwide. Please change.");
+		return false;
+	}
+	if(isNaN(formObj.PackedWeight.value) || (formObj.PackedWeight.value <= 0)){
+		if (isNaN(formObj.PackedWeight_oz.value) || (formObj.PackedWeight_oz.value <= 0)) {
+			alert("Packed Weight Major should be greater than zero. Please change.");
+			return false;
+		}
+	}
+	if(isNaN(formObj.PackedWeight_oz.value) || (formObj.PackedWeight_oz.value < 0) || (formObj.PackedWeight_oz.value > 15)){
+		alert("Packed Weight Minor should be between 0 and 15. Please change.");
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+<table width="100%" style="text-align: justify;">
+<tr><td>
+	<font size="4"><strong>Auction Management - Step 3 of 4:</strong></font><br>
+	<hr size="1" style="color: Black;" noshade>
+	<strong>Administrator:</strong> #session.user.first# #session.user.last#<br><br>
+
+	<table width="100%" bgcolor="##aaaaaa" border="0" cellspacing="0" cellpadding="0">
+	<form method="POST" action="index.cfm?act=admin.auctions.step2" onSubmit="return fCheck(this)">
+	<input type="hidden" name="item" value="#sqlAuction.itemid#">
+	<tr><td>
+		<table width="100%" border="0" cellpadding="4" cellspacing="1">
+		<tr bgcolor="##FFFFFF">
+			<td width="25%" valign="middle" align="right"><b>Item Number:</b></td>
+			<td align="left"><b>#sqlAuction.itemid#</b></td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Listing Type:</b></td>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="20"><input type="radio" id="ltAuction" name="ListingType" value="0" onClick="fEnable(false)"<cfif sqlAuction.ListingType EQ 0> checked</cfif>></td>
+					<td width="130"><label for="ltAuction">Auction</label></td>
+					<td width="20"><input type="radio" id="ltFixedPrice" name="ListingType" value="1" onClick="fEnable(true)"<cfif sqlAuction.ListingType EQ 1> checked</cfif>></td>
+					<td width="130"><label for="ltFixedPrice">Fixed Price</label></td>
+					<td width="20"><input type="radio" id="ltStoresFixedPrice" name="ListingType" value="2" onClick="fEnable(true)"<cfif sqlAuction.ListingType EQ 2> checked</cfif>></td>
+					<td width="130"><label for="ltStoresFixedPrice">Stores Fixed Price</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right">&nbsp;</td>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0">
+
+
+
+				<tr>
+					<td>Starting Price:</td>
+					<td><input type="text" size="10" id="StartingPrice" name="StartingPrice" value="#sqlAuction.StartingPrice#"<cfif sqlAuction.ListingType NEQ 0> disabled</cfif>></td>
+				</tr>
+				<tr>
+					<td>Reserve Price:</td>
+					<td><!---<input type="text" size="10" id="ReservePrice" name="ReservePrice" value="#sqlAuction.ReservePrice#"<cfif sqlAuction.ListingType NEQ 0> disabled</cfif>>--->
+							<input type="text" size="10" id="ReservePrice" name="ReservePrice" value="0.0"<cfif sqlAuction.ListingType NEQ 0> disabled</cfif>>
+					</td>
+				</tr>
+				<tr>
+					<td>Buy It Now:</td>
+					<td><input type="text" size="10" id="BuyItNowPrice" name="BuyItNowPrice" value="#sqlAuction.BuyItNowPrice#"></td>
+				</tr>
+				<tr>
+					<td>Quantity:</td>
+					<td>
+						<input type="text" id="itemQty" name="itemQty" size="10" value="#sqlAuction.itemQty#" <cfif sqlAuction.ListingType NEQ 1> disabled</cfif>>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Duration:</b></td>
+			<td align="left">
+				<select size="1" name="Duration">
+					#SelectOptions(sqlAuction.Duration, "1,1;3,3;5,5;7,7;10,10;30,30;60,60;90,90;120,120;0,Relist every 30")#
+				</select>
+				day(s) <small>(Note that 30, 60, 90, 120 and Relist every 30 options applicable to <b>Stores Fixed Price</b> only)</small>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Layout:</b></td>
+			<td valign="top" align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td valign="top" width="160">
+						<select name="Layout" id="LayoutFlag" size="10" style="width:150px;" onChange="setLayout(this.value)">
+						<cfloop index="i" from="1" to="#ArrayLen(_layout.aNames)#">
+							<option value="#i#"<cfif sqlAuction.Layout EQ i> selected</cfif>>#_layout.aNames[i]#</option>
+						</cfloop>
+						</select>
+					</td>
+					<td valign="middle" width="110">
+						<img src="site/admin/auctions/layout/#sqlAuction.Layout#/preview.gif" id="imgLayoutPreview" width="100" height="120" border="1" alt="Layout Preview">
+					</td>
+					<td valign="top" width="90">
+						<select name="imagesLayout" size="10" style="width:80px;" onChange="setImgLayout(this.value)">
+						#SelectOptions(sqlAuction.imagesLayout, "left_8,left-8;right_8,right-8;left_10,left-10;right_10,right-10;L_25,L-25;C_40,C-40;BIG_30,BIG-30")#
+						</select>
+					</td>
+					<td valign="middle">
+						<img src="site/admin/auctions/layout/images/#sqlAuction.imagesLayout#.gif" id="imgLayout" width="160" height="90" border="1" alt="Images Layout">
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Features:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="checkbox" id="Bold" name="Bold" value="1"<cfif sqlAuction.Bold EQ "1"> checked</cfif>></td>
+					<td><label for="Bold">Bold</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="Border" name="Border" value="1"<cfif sqlAuction.Border EQ "1"> checked</cfif>></td>
+					<td><label for="Border">Border</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="Highlight" name="Highlight" value="1"<cfif sqlAuction.Highlight EQ "1"> checked</cfif>></td>
+					<td><label for="Highlight">Highlight</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="FeaturedPlus" name="FeaturedPlus" value="1"<cfif sqlAuction.FeaturedPlus EQ "1"> checked</cfif>></td>
+					<td><label for="FeaturedPlus">Featured Plus</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Best Offer:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="radio" id="boNo" name="bestOffer" value="0"<cfif NOT sqlAuction.bestOffer> checked</cfif>></td>
+					<td><label for="boNo">No</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="boYes" name="bestOffer" value="1"<cfif sqlAuction.bestOffer> checked</cfif>></td>
+					<td><label for="boYes">Yes</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Private Auctions:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="radio" id="paNo" name="PrivateAuctions" value="0"<cfif sqlAuction.PrivateAuctions EQ "0"> checked</cfif>></td>
+					<td><label for="paNo">No</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="paYes" name="PrivateAuctions" value="1"<cfif sqlAuction.PrivateAuctions EQ "1"> checked</cfif>></td>
+					<td><label for="paYes">Yes</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Payment Methods:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="checkbox" id="PayPal" name="PaymentMethods" value="PayPal"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "PayPal")> checked</cfif>></td>
+					<td><label for="PayPal">PayPal</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="MOCC" name="PaymentMethods" value="MOCC"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "MOCC")> checked</cfif>></td>
+					<td><label for="MOCC">Money Order / Cashiers Check</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="VisaMC" name="PaymentMethods" value="VisaMC"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "VisaMC")> checked</cfif>></td>
+					<td><label for="VisaMC">Visa/Mastercard</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="AmEx" name="PaymentMethods" value="AmEx"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "AmEx")> checked</cfif>></td>
+					<td><label for="AmEx">American Express</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="Discover" name="PaymentMethods" value="Discover"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "Discover")> checked</cfif>></td>
+					<td><label for="Discover">Discover</label></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="PersonalCheck" name="PaymentMethods" value="PersonalCheck"<cfif ListFindNoCase(sqlAuction.PaymentMethods, "PersonalCheck")> checked</cfif>></td>
+					<td><label for="PersonalCheck">Personal Check</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Location:</b></td>
+			<td align="left"><input type="text" name="location" value="#sqlAuction.location#" maxlength="50"></td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Who Pays Shipping:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="radio" id="wpsSeller" name="WhoPaysShipping" value="1"<cfif sqlAuction.WhoPaysShipping EQ 1> checked</cfif>></td>
+					<td colspan="3"><label for="wpsSeller">Seller</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="wpsBuyerASC" name="WhoPaysShipping" value="2"<cfif sqlAuction.WhoPaysShipping EQ 2> checked</cfif>></td>
+					<td colspan="3"><label for="wpsBuyerASC">Buyer pays Actual Shipping Costs</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="wpsBuyerFSC" name="WhoPaysShipping" value="3"<cfif sqlAuction.WhoPaysShipping EQ 3> checked</cfif>></td>
+					<td><label for="wpsBuyerFSC">Buyer pays Fixed Shipping Costs</label></td>
+					<td align="right" width="20"><b>$</b></td>
+					<td><input type="text" name="ShippingServiceCost" value="#sqlAuction.ShippingServiceCost#" maxlength="5" style="width:30px; text-align:right;" onFocus="document.getElementById('wpsBuyerFSC').checked=true;"></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="wpsSeeItemDescription" name="WhoPaysShipping" value="4"<cfif sqlAuction.WhoPaysShipping EQ 4> checked</cfif>></td>
+					<td colspan="3"><label for="wpsSeeItemDescription">See Item Description</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+
+			<td valign="middle" align="right"><b>Packed Weight Major:</b></td>
+				<td align="left"><input type="text" name="PackedWeight" style="width:25px;" value="#sqlAuction.PackedWeight#"> lbs</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Packed Weight Minor:</b></td>
+			<td align="left"><input type="text" name="PackedWeight_oz" style="width:25px;" value="#sqlAuction.PackedWeight_oz#"> oz</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Width (in):</b></td>
+			<td align="left"><input type="text" size="5" maxlength="3" name="width" value="#sqlDimensions.width#" style="font-size: 11px;"></td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Height (in):</b></td>
+			<td align="left"><input type="text" size="5" maxlength="3" name="height" value="#sqlDimensions.height#" style="font-size: 11px;"></td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Depth (in):</b></td>
+			<td align="left"><input type="text" size="5" maxlength="3" name="depth" value="#sqlDimensions.depth#" style="font-size: 11px;"></td>
+		</tr>
+		<tr bgcolor="##F0F1F3">
+			<td valign="middle" align="right"><b>Package Size:</b></td>
+			<td align="left">
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><input type="radio" id="psRegular" name="PackageSize" value="0"<cfif (sqlAuction.LocalPickUp NEQ "1") AND (sqlAuction.PackageSize EQ 0)> checked</cfif>></td>
+					<td><label for="psRegular">Regular</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="psOversize1" name="PackageSize" value="1"<cfif (sqlAuction.LocalPickUp NEQ "1") AND (sqlAuction.PackageSize EQ 1)> checked</cfif>></td>
+					<td><label for="psOversize1">Oversize 1</label></td>
+				</tr>
+				<!---tr>
+					<td><input type="radio" id="psOversize2" name="PackageSize" value="2"<cfif (sqlAuction.LocalPickUp NEQ "1") AND (sqlAuction.PackageSize EQ 2)> checked</cfif>></td>
+					<td><label for="psOversize2">Oversize 2</label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="psOversize3" name="PackageSize" value="3"<cfif (sqlAuction.LocalPickUp NEQ "1") AND (sqlAuction.PackageSize EQ 3)> checked</cfif>></td>
+					<td><label for="psOversize3">Oversize 3</label></td>
+				</tr--->
+				<tr>
+					<td><input type="radio" id="psFlatRate" name="PackageSize" value="4"<cfif (sqlAuction.LocalPickUp NEQ "1") AND (sqlAuction.PackageSize EQ 4)> checked</cfif>></td>
+					<td><label for="psFlatRate">Flat Rate<!--- USPS Flat Rate Envelope ---></label></td>
+				</tr>
+				<tr>
+					<td><input type="radio" id="psLocalPickUp" name="PackageSize" value="-1"<cfif sqlAuction.LocalPickUp EQ "1"> checked</cfif>></td>
+					<td><label for="psLocalPickUp">Local Pick-Up Only</label></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Ship To:</b></td>
+			<td align="left">
+
+<!---			<cfif sqlAuction.ShipToLocations neq "">
+				<cfset ShipToLocationsVar = sqlDefault.internalShipToLocations>
+			<cfelse>
+				<cfset ShipToLocations1 = sqlDimensions.internalShipToLocations>
+			</cfif>--->
+			<cfset ShipToLocationsVar = sqlDefault.internalShipToLocations>
+
+				<select name="ShipToLocations">
+					#SelectOptions(ShipToLocationsVar, "WorldWide,Worldwide;US,USA;None,Pickup Only")#
+				</select>
+
+			</td>
+		</tr>
+		<tr bgcolor="##FFFFFF">
+			<td valign="middle" align="right"><b>Use rate table:</b></td>
+			<td align="left">
+				<!--- rate table --->
+				<input type="checkbox" id="ratetable" name="ratetable" value="1"
+				<cfif sqlAuction.ratetable EQ "1">checked</cfif>>
+			</td>
+		</tr>		
+		</table>
+	</td></tr>
+	</table>
+</td></tr>
+</table>
+<br>
+<center>
+<input type="submit" name="back" value="Back" width="100" style="width:100px;">
+&nbsp;
+<input type="submit" name="next" value="Next" width="100" style="width:100px;">
+<br><br>
+<input type="submit" name="finish" value="Finish" width="100" style="width:100px;">
+</form>
+</center>
+<br>
+
+<script src="layouts/default/jquery-1.4.3.min.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript" >
+	$(function(){
+		//set to patriotic flag which is 35
+		$('##LayoutFlag').val('35').trigger('change');
+			
+	});//doc ready
+</script>
+</cfoutput>
+

@@ -1,0 +1,43 @@
+<cfoutput>
+<table valign="middle" align="center" cellpadding="0" cellspacing="0" border="0" style='table-layout:fixed'>
+<tr>
+	<td valign="top">
+		<table border="0" cellpadding="3" cellspacing="0" >
+			<tr>
+				<td align="left" valign="top">#fShowImage(1)#</td>	
+			
+				<td align="center" valign="top">#fShowImage(2)#</td>
+			</tr>
+			
+			<tr>
+				<td align="left" valign="top">#fShowImage(3)#</td>
+
+				<td align="center" valign="top">#fShowImage(4)#</td>
+			</tr>
+				
+			<tr>
+				<td align="left" valign="top">#fShowImage(5)#</td>
+
+				<td align="center" valign="top">#fShowImage(6)#</td>
+			</tr>
+				
+			<tr>
+				<td align="left" valign="top">#fShowImage(7)#</td>
+
+				<td align="center" valign="top">#fShowImage(8)#</td>
+			</tr>
+		</table>
+	</td>
+	
+	<!--- lets maintain aspect ratio --->
+	
+	<td align="center" valign="top" style="table-layout: fixed;width:800px;" >
+		<div>
+			<img name="clicPicBig" src="#_layout.ia_images##sqlAuction.use_pictures#/1.jpg" border="1" 
+			style="max-width:800px;height:auto;min-width:600px;">
+		</div>
+		
+	</td>
+</tr>
+</table>
+</cfoutput>

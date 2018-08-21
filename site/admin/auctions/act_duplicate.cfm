@@ -1,0 +1,61 @@
+<cfif NOT isAllowed("Lister_CreateAuction")>
+	<cflocation url="index.cfm?dsp=slim_login&next_dsp=#attributes.dsp#" addtoken="no">
+</cfif>
+<cfset _machine.cflocation = "index.cfm?dsp=" & attributes.dsp>
+<cfparam name="attributes.customitem" default="">
+<cfif attributes.customitem NEQ "">
+	<cfset attributes.newitem = attributes.customitem>
+</cfif>
+<cfif NOT isDefined("attributes.multidup")>
+	<cfset attributes.multidup = 0>
+	<cfset attributes.item_0 = attributes.item>
+	<cfset attributes.newitem_0 = attributes.newitem>
+</cfif>
+<cfloop index="i" list="#attributes.multidup#">
+	<cfset attributes.item = attributes["item_#i#"]>
+	<cfset attributes.newitem = attributes["newitem_#i#"]>
+
+
+
+
+<cftransaction>
+
+<cfquery datasource="#request.dsn#">
+	DELETE FROM auctions WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.newitem#">
+</cfquery>
+
+
+
+	<cfquery datasource="#request.dsn#">
+		INSERT INTO auctions
+		(
+			itemid, ebayitem, Title, SubTitle, SiteID, CategoryID, StoreCategoryID, StoreCategory2ID, Description, ListingType,
+			StartingPrice, ReservePrice, BuyItNowPrice, Duration, Layout, Bold, Border, Highlight, FeaturedPlus,
+			PrivateAuctions, PaymentMethods, WhoPaysShipping, ShippingServiceCost, PackedWeight, PackedWeight_oz, PackageSize, ready, sandbox, GalleryImage,
+			imagesLayout, location, scheduledBy, ShipToLocations, AttributeSetArray, LocalPickUp, use_pictures, ebayaccount, videoURL, ConditionID, conditionName
+		)
+		SELECT
+			<cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.newitem#"> AS itemid,
+			ebayitem, Title, SubTitle, SiteID, CategoryID, StoreCategoryID, StoreCategory2ID, Description, ListingType,
+			StartingPrice, ReservePrice, BuyItNowPrice, Duration, Layout, Bold, Border, Highlight, FeaturedPlus,
+			PrivateAuctions, PaymentMethods, WhoPaysShipping, ShippingServiceCost, PackedWeight, PackedWeight_oz, PackageSize, ready, sandbox, GalleryImage,
+			imagesLayout, location, scheduledBy, ShipToLocations, AttributeSetArray, LocalPickUp,
+			CASE WHEN LEN(use_pictures) > 0
+				THEN use_pictures
+				ELSE itemid
+			END AS use_pictures, ebayaccount, videoURL,ConditionID,conditionName
+		FROM auctions
+		WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.item#">
+	</cfquery>
+
+	<cfset LogAction("duplicated auction #attributes.item# to #attributes.newitem#")>
+	<cfif FileExists("#request.basepath#images/#attributes.newitem#/1.jpg")>
+		<cfquery datasource="#request.dsn#">
+			UPDATE auctions
+			SET use_pictures = NULL
+			WHERE itemid = <cfqueryparam cfsqltype="cf_sql_varchar" value="#attributes.newitem#">
+		</cfquery>
+	</cfif>
+
+</cftransaction>
+</cfloop>
