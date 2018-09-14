@@ -30,7 +30,7 @@
 		SELECT a.eBayAccount, a.UserID, a.UserName, a.Password,
 			a.DeveloperName, a.ApplicationName, a.CertificateName, a.RequestToken
 		FROM ebaccounts a
-		WHERE a.eBayAccount = 22
+		WHERE a.eBayAccount = 9
 	</cfquery>
 <cfelse>
 	<!--- for auctions --->
