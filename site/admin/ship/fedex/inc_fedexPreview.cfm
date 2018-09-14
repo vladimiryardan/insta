@@ -58,8 +58,8 @@ Ends
 
 
 <cfset result = fedexShipper.getRatesByOneRate(
-	shipperZip = "#_vars.upsFrom.ZIPCode#",
-	shipperState = "#_vars.upsFrom.State#",
+	shipperZip = "#_vars.fedex.shipperZip#",
+	shipperState = "#_vars.fedex.shipperState#",
 	shipperCountry = "US",
 	shipToZip = "#get_item.byrPostalCode#",
 	shipToState = "#parseState(get_item.byrStateOrProvince)#",
@@ -72,7 +72,8 @@ Ends
 	pkgWidth="#attributes.Width#",
 	pkgHeight="#attributes.height#"
 ) />
-
+<cfdump var="#_vars.fedex.shipperZip#"><br>
+<cfdump var="#_vars.fedex.shipperState#">
 <!---<cfdump var="#result#">
 <cfabort>--->
 <cfif result.success is "yes">		
@@ -160,6 +161,13 @@ Ends
      			<td colspan="2" align="left">
      				<b>
      					Fedex Preview Error
+     					<cftry>
+                         	<cfdump var="#result#">                         
+                         <cfcatch type="Any" >
+                         </cfcatch>
+                         </cftry>
+
+     					
      				</b>
      			</td>
      		</tr>
