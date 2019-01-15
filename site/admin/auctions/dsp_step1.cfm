@@ -265,9 +265,14 @@ function fCharsLeft(objID, val, maxChars){
 			<td valign="middle" align="right"><b>List as Seller:</b></td>
 			<td align="left">
 				<select id="ebayaccount" name="ebayaccount">
+
+					<!--- force default to be 9 = bigbluewholesale2020 --->
+					<option value="9" selected="selected" >bigbluewholesale2020</option>
+										
 					<cfloop query="sqlEBAS">
-						<option value="#eBayAccount#"<cfif sqlAuction.ebayaccount EQ eBayAccount> selected</cfif>>#UserID#</option>
+						<option value="#eBayAccount#"<!---<cfif sqlAuction.ebayaccount EQ eBayAccount> selected</cfif>--->>#UserID#</option>
 					</cfloop>
+
 				</select>
 			</td>
 		</tr>
