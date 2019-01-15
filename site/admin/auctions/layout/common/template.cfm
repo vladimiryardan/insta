@@ -58,10 +58,10 @@ h1{
 		</td></tr>
 		<tr><td id="shipping">
 			<hr width=90%>
-			<a name="shipping" ></a><a href="https://ebaytradingassistant.com/directory/index.php?page=profile&ebayID=instantauctions">
+			<a name="shipping" ></a>
 				<!---<img src="#_layout.ia_design#sell-with-us.jpg" alt="Sell With US" border="0">--->
 				<img src="#_layout.ia_design#aboutus.jpg" alt="About Us">
-			</a><br><br>
+			<br><br>
 			#sqlEBAccount.TemplateSellWithUs#
 		</td></tr>
 		<tr>

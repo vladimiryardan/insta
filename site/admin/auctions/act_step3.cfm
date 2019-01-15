@@ -59,12 +59,16 @@
 			/* :vladedit: 20180221 - after server port to CF 2016 this line is added to fix image path error "c:\inetpub\wwwroot\images/" */
 			imagePathX = rereplaceNoCase("#request.basepath##_layout.images_path##sqlEBAccount.watermark#","\\","/","all" );
 
-			/*
+			
+			/*			
 			writeDump("request.basepath : #request.basepath#  <br>");
 			writeDump("_layout.images_path : #_layout.images_path#  <br>");
 			writeDump("sqlEBAccount.watermark: #sqlEBAccount.watermark# <br>");
+			writeDump("#imagePathX#");
 			*/
 			watermarkImage.readImage("#imagePathX#");
+			
+			
 
 			watermarkWidth = watermarkImage.getWidth();
 			watermarkHeight = watermarkImage.getHeight();
