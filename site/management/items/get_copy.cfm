@@ -29,7 +29,7 @@
 	attributes.purchase_price = sqlCopy.purchase_price;
 	attributes.startprice = sqlCopy.startprice;
 	attributes.startprice_real = sqlCopy.startprice_real;
-	//attributes.sku = sqlCopy.internal_itemSKU;
+	attributes.sku = sqlCopy.internal_itemSKU;
 	//attributes.itemCondition = sqlCopy.internal_itemCondition;
 	attributes.specialNotes = sqlCopy.specialNotes;
 	attributes.upc = sqlCopy.upc;
