@@ -2,6 +2,8 @@
 	<cflocation url="index.cfm?dsp=slim_login" addtoken="no">
 </cfif>
 
+
+
 <cfparam name="attributes.item">
 <cfinclude template="get_item.cfm">
 <cfset attributes.SiteID = sqlAuction.SiteID>
@@ -229,7 +231,8 @@
 
 </#_ebay.CallName#Request>'>
 <cfset _ebay.ThrowOnError = false>
-<cfinclude template="../../api/act_call.cfm">	
+<cfinclude template="../../api/act_call.cfm">
+
 <!--- add GetCategoryFeatures ENDS--->	
   
 <!---<cfdump var="#_ebay.xmlResponse#">--->
@@ -270,24 +273,23 @@
 						</select>
 
 
-<!---GetCategorySpecifics  starts--->
-<cfset _ebay.CallName ="GetCategorySpecifics">
-<cfset _ebay.XMLRequest = '<?xml version="1.0" encoding="utf-8"?>
-<#_ebay.CallName#Request xmlns="urn:ebay:apis:eBLBaseComponents">
-	<RequesterCredentials>
-		<eBayAuthToken>#_ebay.RequestToken#</eBayAuthToken>
-	</RequesterCredentials>
-	
-	<WarningLevel>High</WarningLevel>
-  <CategorySpecific>
-    <CategoryID>#sqlAuction.CategoryID#</CategoryID>
-  </CategorySpecific>  
-  <IncludeConfidence>true</IncludeConfidence>
-  <MaxValuesPerName>50</MaxValuesPerName>	
-  <MaxNames>50</MaxNames>
-</#_ebay.CallName#Request>'>
-<cfset _ebay.ThrowOnError = false>
-<cfinclude template="../../api/act_call.cfm">		
+						<!---GetCategorySpecifics  starts--->
+						<cfset _ebay.CallName ="GetCategorySpecifics">
+						<cfset _ebay.XMLRequest = '<?xml version="1.0" encoding="utf-8"?>
+						<#_ebay.CallName#Request xmlns="urn:ebay:apis:eBLBaseComponents">
+							<RequesterCredentials>
+								<eBayAuthToken>#_ebay.RequestToken#</eBayAuthToken>
+							</RequesterCredentials>
+							<WarningLevel>High</WarningLevel>
+						  <CategorySpecific>
+						    <CategoryID>#sqlAuction.CategoryID#</CategoryID>
+						  </CategorySpecific>  
+						  <IncludeConfidence>true</IncludeConfidence>
+						  <MaxValuesPerName>50</MaxValuesPerName>	
+						  <MaxNames>50</MaxNames>
+						</#_ebay.CallName#Request>'>
+						<cfset _ebay.ThrowOnError = false>
+						<cfinclude template="../../api/act_call.cfm">		
 <!---GetCategorySpecifics  ENDS--->
 
 <!---<cfdump var="#_ebay.xmlResponse#">--->
