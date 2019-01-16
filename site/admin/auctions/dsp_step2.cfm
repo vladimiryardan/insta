@@ -115,7 +115,8 @@ function fCheck(formObj){
 			<td valign="middle" align="right"><b>Duration:</b></td>
 			<td align="left">
 				<select size="1" name="Duration">
-					#SelectOptions(sqlAuction.Duration, "1,1;3,3;5,5;7,7;10,10;30,30;60,60;90,90;120,120;0,Relist every 30")#
+					<!--- 20190116: Patrick wants it to always be 30 --->
+					#SelectOptions(0, "1,1;3,3;5,5;7,7;10,10;30,30;60,60;90,90;120,120;0,Relist every 30")#
 				</select>
 				day(s) <small>(Note that 30, 60, 90, 120 and Relist every 30 options applicable to <b>Stores Fixed Price</b> only)</small>
 			</td>
@@ -334,7 +335,7 @@ function fCheck(formObj){
 			<td align="left">
 				<!--- rate table --->
 				<input type="checkbox" id="ratetable" name="ratetable" value="1"
-				<cfif sqlAuction.ratetable EQ "1">checked</cfif>>
+				<!---<cfif sqlAuction.ratetable EQ "1">checked</cfif>--->>
 			</td>
 		</tr>		
 		</table>
