@@ -387,7 +387,7 @@ function fShipNote(itemid){
 					<option value="">Select Item Condition</option>
 					<option value="New" <cfif #lcase(sqlItem.internal_itemCondition)# eq "new">selected</cfif>>New</option>
 					<!---<option value="Excellent" <cfif #lcase(sqlItem.internal_itemCondition)# eq "excellent">selected</cfif>>Excellent</option>--->
-					<option value="New (Other) Opened" <cfif #lcase(sqlItem.internal_itemCondition)# eq "New (Other) Opened">selected</cfif>>New (Other) Opened</option>
+					<option value="Open Box" <cfif #lcase(sqlItem.internal_itemCondition)# eq "Open Box">selected</cfif>>Open Box</option>
 					<!---
 					<option value="GOOD" <cfif #lcase(sqlItem.internal_itemCondition)# eq "good">selected</cfif>>GOOD</option>
 					<option value="FAIR" <cfif #lcase(sqlItem.internal_itemCondition)# eq "fair">selected</cfif>>FAIR</option>
