@@ -239,7 +239,8 @@ function fSum(){
 				<option value="" <cfif #lcase(attributes.itemCondition)# eq "">selected</cfif>>Select Item Condition</option>
 				<option value="New" <cfif #lcase(attributes.itemCondition)# eq "new">selected</cfif>>New</option>
 				<!---<option value="EXCELLENT" <cfif #lcase(attributes.itemCondition)# eq "excellent">selected</cfif>>Excellent</option>--->
-				<option value="New (Other) Opened" <cfif #lcase(attributes.itemCondition)# eq "New (Other) Opened">selected</cfif>>New (Other) Opened</option>
+				<!---<option value="New (Other) Opened" <cfif #lcase(attributes.itemCondition)# eq "New (Other) Opened">selected</cfif>>New (Other) Opened</option>--->
+				<option value="Open Box" <cfif #lcase(attributes.itemCondition)# eq "Open Box">selected</cfif>>Open Box</option>
 				<!---<option value="GOOD" <cfif #lcase(attributes.itemCondition)# eq "good">selected</cfif>>GOOD</option>
 				<option value="FAIR" <cfif #lcase(attributes.itemCondition)# eq "fair">selected</cfif>>FAIR</option>--->
 				<option value="USED" <cfif #lcase(attributes.itemCondition)# eq "used">selected</cfif>>USED</option>
