@@ -58,9 +58,13 @@ send mail function for incident reports --->
 		</cfquery>
 </cfif><!---submitted --->
 
+<!---<cfset daysBackdt = DATEADD(DAY, -100, GETDATE()) >--->
+<cfset daysBackdt = DATEADD("d", -100, now()) >
 
-<cfquery name="sqlTemp" datasource="#request.dsn#">
-	SELECT i.item, 
+
+<!--- 20190621: Deadlock in the db. solution is limit by using top 200 --->
+<cfquery name="sqlTemp" datasource="#request.dsn#" >
+	SELECT top 40 i.item, 
 		i.title,
 		CASE WHEN i.dreceived=0 THEN i.dcreated ELSE i.dreceived END AS drec,
 		CASE WHEN i.dreceived=0 THEN '0' ELSE '1' END AS isrec,
@@ -78,25 +82,31 @@ send mail function for incident reports --->
 		,CASE 
 	    WHEN TRY_PARSE(i.age as float) IS NULL
 	    THEN #dummyValue# 
-	    ELSE CONVERT(float, i.age) -- or something huge
+	    ELSE CONVERT(float, i.age) <!----- or something huge--->
 	  	END as retailPrice <!--- this is use in sorting price --->
 	  	,i.age as retailpriceNotParsed <!--- this is for display only --->
 	  	,i.buy_it_now
   		,i.internal_itemSKU2
-			,(
+			<!---,(
 				SELECT top 1 
 				x.item
 				FROM items x
 				where x.itemis_template = <cfqueryparam cfsqltype="cf_sql_bit" value="1">
 				and x.internal_itemCondition =  i.internal_itemCondition 
 				and x.internal_itemSKU2 = i.internal_itemSKU2	
-			) as itemMatch
+			) as itemMatch--->
 			,i.incident_text	
   	
-	FROM accounts a
-		INNER JOIN items i ON a.id = i.aid
+	FROM items i 
+		INNER JOIN accounts a ON a.id = i.aid
 		LEFT JOIN auctions u ON i.item = u.itemid
 	WHERE i.status = '3'<!--- Item Received --->
+		AND CASE WHEN i.dreceived=0 THEN i.dcreated ELSE i.dreceived END > <cfqueryparam cfsqltype="cf_sql_date" value="#daysBackdt#">	
+		and (
+			u.ready = ''  
+			or u.ready is null 
+			or u.ready = 0 <!--- image uploaded and auction auto created. usually happens in the image uploader --->
+		)
 		AND i.lid != 'RTC'
 		AND i.lid != 'DTC'
 		AND i.lid != 'RELOT'
@@ -105,13 +115,11 @@ send mail function for incident reports --->
 		AND (i.internal_itemCondition != 'amazon')
 		and  i.internal_itemCondition != 'craiglist'
 		and  i.internal_itemCondition != 'bonanza'
-		and (
-			u.ready = ''  
-			or u.ready is null 
-			or u.ready = 0 <!--- image uploaded and auction auto created. usually happens in the image uploader --->
-		)
+
 		<!---AND (i.dpictured IS NULL or i.dpictured = '')--->
-		AND CASE WHEN i.dreceived=0 THEN i.dcreated ELSE i.dreceived END > DATEADD(DAY, -#_vars.auctions.awaiting_auction_daysbackward_check#, GETDATE())
+		<!---AND CASE WHEN i.dreceived=0 THEN i.dcreated ELSE i.dreceived END > DATEADD(DAY, -100, GETDATE())--->
+
+		
 		<cfif session.user.store EQ "202">
 			AND a.store = <cfqueryparam cfsqltype="cf_sql_integer" value="#session.user.store#">
 		</cfif>
@@ -225,10 +233,10 @@ send mail function for incident reports --->
 					<td><a href="JavaScript: void fSort(13);">Retail <br> Price</a></td>
 					<td><a href="JavaScript: void fSort(14);">Buy_Now</a></td>
 					<td class="ColHead" width="5%">Pictured At</td>
-					<td class="ColHead" width="5%"><a href="JavaScript: void fSort('itemMatch');">
+					<!---<td class="ColHead" width="5%"><a href="JavaScript: void fSort('itemMatch');">
 						Template<br>Match</a>
 						
-					</td>
+					</td>--->
 				</cfif>
 				</tr>
 				</cfoutput>
