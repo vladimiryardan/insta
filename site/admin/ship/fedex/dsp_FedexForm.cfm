@@ -414,6 +414,8 @@
 		</cfquery>
 	</cfif>
 
+	
+
 	<cfoutput>
 
 		<table width="100%" style="text-align: justify;">
@@ -423,8 +425,9 @@
 						<strong>Administrator:</strong> #session.user.first# #session.user.last#
 			<br><br>
 					</hr>
+					
 		</table>
-
+	
 
    <cftry>
    		<cfinclude template="../inc_shippingCostUPSPreview.cfm" >
@@ -478,17 +481,7 @@
 	<tr><td>
 		<table width="100%" border="0" cellpadding="4" cellspacing="1">
 	
-    	<!--- catch PO box in ups --->
-    	<cfif lcase(pageData.TO_Address1).startsWith("po") or lcase(pageData.TO_Address1).startsWith("p.o") 
-    	      or lcase(pageData.TO_Address1) contains "p.o box">
-    		<tr>
-    			<td colspan="2" align="center">
-    				<div style="color:white;background-color:##E81747;padding:10px;font-weight:bold">
-    					ALERT! The Address is possibly a PO box. UPS does not ship to PO box.
-    				</div>
-    			</td>
-    		</tr>
-    	</cfif>
+    	
 	
 		<tr bgcolor="##D4CCBF"><td colspan="2"><b>General</b></td></tr>
 		<tr bgcolor="##FFFFFF">
@@ -665,7 +658,8 @@
 				<td><input type="text" size="40" maxlength="80" name="DeclaredValue" value="#pageData.DeclaredValue#" style="font-size: 11px;"></td>
 			</tr>
 			
-
+		
+    	
 		<tr bgcolor="##FFFFFF">
 			<td colspan="3" height="50px" background-color="gray">
 				
@@ -737,7 +731,21 @@
 
 			</td>
 		</tr>		
-				
+			
+	<!--- catch PO box in ups --->
+    	<cfif lcase(pageData.TO_Address1).startsWith("po") or lcase(pageData.TO_Address1).startsWith("p.o") 
+    	      or lcase(pageData.TO_Address1) contains "p.o box">
+    		<tr>
+    			<td colspan="2" align="center">
+    				<div style="color:white; border-style:solid; border-color:black; background-color:##E81747; padding:8px; font-weight:bold;">
+    					<p style="font-size:16px;"><strong>ALERT! The Address is possibly a PO box. FEDEX does not ship to PO box</strong></p>
+    				</div>
+    			</td>
+    		</tr>
+  
+    	</cfif>
+    	
+    		
 	<!---
 			<tr bgcolor="##FFFFFF">
 				<td valign="middle"><b>Oversize Package:</b></td>
