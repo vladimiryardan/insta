@@ -56,6 +56,9 @@ Ends
 	<cfset finalWeight = 1 >
 </cfif>	
 
+<cfset fedexServiceType = "GROUND_HOME_DELIVERY">
+<cfset fedexServiceType = "FEDEX_GROUND">
+
 
 <cfset result = fedexShipper.getRatesByOneRate(
 	shipperZip = "#_vars.fedex.shipperZip#",
@@ -67,7 +70,7 @@ Ends
 	pkgWeight = "#finalWeight#",
 	pkgValue = "#get_item.price#",
 	shipToResidential = "true",
-	fedexServiceType="GROUND_HOME_DELIVERY",
+	fedexServiceType="#fedexServiceType#",
 	pkgLength="#attributes.Length#",
 	pkgWidth="#attributes.Width#",
 	pkgHeight="#attributes.height#"
