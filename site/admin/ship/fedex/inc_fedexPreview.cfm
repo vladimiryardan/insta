@@ -57,7 +57,23 @@ Ends
 </cfif>	
 
 <cfset fedexServiceType = "GROUND_HOME_DELIVERY">
-<cfset fedexServiceType = "FEDEX_GROUND">
+<!---<cfset fedexServiceType = "FEDEX_GROUND">--->
+
+
+<cfif finalWeight gt 70>
+	<cfset fedexServiceType = "FEDEX_GROUND">
+	<cfset pkgLength = attributes.Length >
+	<cfset pkgWidth	= attributes.Width >
+	<cfset pkgHeight= attributes.height >
+<cfelse>
+	<cfset fedexServiceType = "GROUND_HOME_DELIVERY">
+ 	<cfset pkgLength 	= "24">
+ 	<cfset pkgWidth 	= "24">
+ 	<cfset pkgHeight 	= "24">
+</cfif>
+
+<!---<cfdump var="#fedexServiceType#">
+<cfabort>--->
 
 
 <cfset result = fedexShipper.getRatesByOneRate(
@@ -71,12 +87,18 @@ Ends
 	pkgValue = "#get_item.price#",
 	shipToResidential = "true",
 	fedexServiceType="#fedexServiceType#",
-	pkgLength="#attributes.Length#",
-	pkgWidth="#attributes.Width#",
-	pkgHeight="#attributes.height#"
+	pkgLength="#pkgLength#",
+	pkgWidth="#pkgWidth#",
+	pkgHeight="#pkgHeight#"
 ) />
-<cfdump var="#_vars.fedex.shipperZip#"><br>
-<cfdump var="#_vars.fedex.shipperState#">
+
+
+<cfif not isdefined("result")>
+	<cfset result = structnew()>
+</cfif>
+<!---<cfdump var="#_vars.fedex.shipperZip#"><br>
+<cfdump var="#_vars.fedex.shipperState#">--->
+
 <!---<cfdump var="#result#">
 <cfabort>--->
 <cfif result.success is "yes">		
