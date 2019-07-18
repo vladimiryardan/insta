@@ -57,7 +57,11 @@ Ends
 </cfif>	
 
 <cfset fedexServiceType = "GROUND_HOME_DELIVERY">
-<!---<cfset fedexServiceType = "FEDEX_GROUND">--->
+	<cfset fedexServiceType = "FEDEX_GROUND">
+	<cfset pkgLength = attributes.Length >
+	<cfset pkgWidth	= attributes.Width >
+	<cfset pkgHeight= attributes.height >
+
 
 
 <cfif finalWeight gt 70>
