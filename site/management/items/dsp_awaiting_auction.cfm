@@ -64,7 +64,7 @@ send mail function for incident reports --->
 
 <!--- 20190621: Deadlock in the db. solution is limit by using top 200 --->
 <cfquery name="sqlTemp" datasource="#request.dsn#" >
-	SELECT top 40 i.item, 
+	SELECT top 60 i.item, 
 		i.title,
 		CASE WHEN i.dreceived=0 THEN i.dcreated ELSE i.dreceived END AS drec,
 		CASE WHEN i.dreceived=0 THEN '0' ELSE '1' END AS isrec,
