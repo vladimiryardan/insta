@@ -310,7 +310,7 @@ function fShipNote(itemid){
 		</cfoutput>
 		<cfset num = 0>
 		<cfoutput query="sqlTemp" maxrows="#_paging.RowsOnPage#" startrow="#_paging.StartRow#">
-			<cfset num = num + 1>
+		<cfset num = num + 1>
 		<tr bgcolor="##F0F1F3">
 			
 			<td rowspan="2" bgcolor="##FFFFFF" align="center" id="tThumb#sqlTemp.item#">
@@ -324,8 +324,8 @@ function fShipNote(itemid){
 				<cfif sqlTemp.galleryurl EQ "">
 					<img src="http://pics.ebaystatic.com/aw/pics/stockimage1.jpg">
 				<cfelse>
-					<!---
-					<cftry>
+					
+					
 							
 							<cfhttp method="head" url="#replaceNoCase(sqlTemp.galleryurl,"https","http")#" result="sc">
 							<cfif sc.statuscode is "200 OK">
@@ -339,18 +339,19 @@ function fShipNote(itemid){
 							</cfif>
 							
 							<!--- patrick wants smaller than 500 to display red background --->
-							<cfimage source="#sqlTemp.galleryurl#" name="myImage">
+							<!---<cfimage source="#sqlTemp.galleryurl#" name="myImage">
 							<cfif myImage.width lt 500 and myImage.height lt 500>
 								<script type="text/javascript">									
 									var element = document.getElementById('tThumb#sqlTemp.item#');
 									element.style.background = '##ff0000';
 								</script>
-							</cfif>
+							</cfif>--->
+					<cftry>		
 					<cfcatch>
 						<img src="http://pics.ebaystatic.com/aw/pics/stockimage1.jpg">
 					</cfcatch>
 					</cftry>
-					--->
+					
 				</cfif>
 			</td>
 			<td rowspan="2" align=center><cfif isAllowed("Listings_EditShippingNote")><a href="javascript: fShipNote('#sqlTemp.item#')"><cfif sqlTemp.shipnote EQ ""><img src="#request.images_path#icon14.gif" border=0><cfelse>Edit</cfif></a><cfelse><cfif sqlTemp.shipnote EQ "">N/A<cfelse><a href="javascript: fShipNote('#sqlTemp.item#')">View</a></cfif></cfif></td>
