@@ -267,8 +267,10 @@ function fShipNote(itemid){
 	<br><br><b>Item Owner:</b> <a href="index.cfm?dsp=account.edit&id=#sqlItem.aid#">#sqlItem.first# #sqlItem.last#</a>
 	<a href="mailto:#sqlItem.email#?subject=Instant Auctions: Item #sqlItem.item#"><img src="#request.images_path#icon5.gif" align="middle" border=0></a><br><br>
 	<input type="button" value="Print Label" onClick="javascript:document.getElementById('label_printed').value = '1';document.getElementById('updateStatus').submit();nw=window.open('index.cfm?dsp=management.items.itemslip&item=#sqlItem.item#','NewWin','height=250,width=355,location=no,scrollbars=yes,menubars=no,toolbars=no,resizable=yes');nw.opener=self;return false;">
-	<input type="button" value="Print Signing Sheet" onClick="javascript:nw=window.open('index.cfm?dsp=management.items.customerslip&item=#sqlItem.item#','NewWin','height=500,width=750,location=no,scrollbars=yes,menubars=no,toolbars=no,resizable=yes');nw.opener=self;return false;"><br><br>
-
+	<input type="button" value="Print Signing Sheet" onClick="javascript:nw=window.open('index.cfm?dsp=management.items.customerslip&item=#sqlItem.item#','NewWin','height=500,width=750,location=no,scrollbars=yes,menubars=no,toolbars=no,resizable=yes');nw.opener=self;return false;">
+	
+	<input type="button" value="Create Similar Item" onclick="location.href='index.cfm?dsp=management.items.copy&item=#attributes.item#'"><br><br>
+		
 	<cfif isAllowed("Items_AuctionFeeRecords")>
 		<cfif (sqlItem.ebayitem NEQ "") OR (sqlItem.offebay EQ "1")>
 			<b>Auction Record: </b><a href="index.cfm?dsp=management.records&item=#sqlItem.item#">View All Fees</a><br><br>
