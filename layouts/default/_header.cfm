@@ -94,14 +94,15 @@ function fAddress(itemid){
 				<tr>
 					<td align="right">
 						<select name="srchfield" style="font-size: 13px;">
-							#SelectOptions(attributes.srchfield, "all,All Fields;item,Item Number;title,Item Title;description,Description;Owner,Owner;ebayitem,eBay Number;ebaytitle,eBay Title;HighBidder,High Bidder ID;HighBidderEmail,High Bidder Email;tracking,Tracking Number;ebayhistory,eBay History;extExternalTransactionID,PayPal Transaction ID;internal_itemSKU,SKU;internal_itemSKU2,SKU2;LID,LID;UPC,UPC;itemExact,Item Exact Number")#
+							#SelectOptions(attributes.srchfield, "all,All Fields;item,Item Number;title,Item Title;description,Description;Owner,Owner;ebayitem,eBay Number;ebaytitle,eBay Title;HighBidder,High Bidder ID;HighBidderEmail,High Bidder Email;tracking,Tracking Number;ebayhistory,eBay History;extExternalTransactionID,PayPal Transaction ID;internal_itemSKU,SKU;internal_itemSKU2,SKU2;LID,LID;UPC,UPC;itemExact,Item Exact Number;,Sales Record")#
 						</select>
 						<br>
 						<input type="submit" name="frmsubmit" value="go">
 					</td>
 				</tr>
 			</cfif>
-
+			
+			
 
 			</form>
 			</table>
