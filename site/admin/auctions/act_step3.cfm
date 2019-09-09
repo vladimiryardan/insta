@@ -42,7 +42,7 @@
 	<cfset attributes.ScheduleOnly = TRUE>
 	<cfinclude template="st_scheduler.cfm">
 <cfelseif isDefined("attributes.finish")>
-	<cfset _machine.cflocation = "index.cfm?dsp=management.items.awaiting_auction">
+	<cfset _machine.cflocation = "index.cfm?dsp=management.items">
 	<cfquery datasource="#request.dsn#">
 		UPDATE auctions
 		SET ready = '1'
