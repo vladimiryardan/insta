@@ -166,7 +166,7 @@ function fShipNote(itemid){
 			SELECT top 500 i.title, e.price, a.first + ' ' + a.last AS owner, a.first, a.last, i.item,i.internal_itemCondition, a.id,
 				s.status, s.id as statusid, e.galleryurl, i.dcreated, a.email, i.ebayitem, a.store,
 				i.lid, i.ebayitem, i.startprice, i.shipnote, u.ready, i.label_printed, i.internal_itemSKU,a.is_archived, u.use_pictures, i.paid, 
-				i.ShippedTime, i.customer_returned, i.dpictured, i.itemis_template,i.itemis_template_setdate
+				i.ShippedTime, i.customer_returned, i.dpictured, i.itemis_template,i.itemis_template_setdate, i.ebayTxnid
 
 			FROM accounts a
 				INNER JOIN items i ON a.id = i.aid
@@ -268,6 +268,13 @@ function fShipNote(itemid){
 			</cfif>	
 			
 		</cfquery>
+		
+		<!---getting salesRecord --->
+		<cfquery name="getSalesRecord" datasource="#request.dsn#">
+			SELECT salesRecord
+			from ebtransactions
+			WHERE TransactionID = '#sqlTemp.ebayTxnid#'
+		</cfquery>
 
 <!---
 <cfdump var = "#sqlTemp#">
@@ -368,6 +375,7 @@ function fShipNote(itemid){
 				<b style="color:#titleColor#">#sqlTemp.title#</b>
 				<i>(#DateFormat(sqlTemp.dcreated)#)</i>
 			</td>
+			
 			<td colspan="4" align="right">
 			<cfif isAllowed("Items_ChangeStatus") OR (isAllowed("Items_NormalChangeStatus") AND ListFind("2,3,9,12", sqlTemp.statusid))>
 				<input type="hidden" name="item#num#" value="#sqlTemp.item#">
@@ -384,6 +392,7 @@ function fShipNote(itemid){
 			<cfelse>
 				#sqlTemp.status#
 			</cfif>
+			
 			</td>
 		</tr>
 		
@@ -435,6 +444,14 @@ function fShipNote(itemid){
 				</cfif>
 			</td>--->
 		</tr>
+		<tr bgcolor="##F0F1F3">
+		<cfif getSalesRecord.recordcount gte 1>
+			<tr bgcolor="##FFFFFF">
+				<td valign="middle" align="right"><b>Sales Record:</b></td>
+				<td colspan="10" align="left">#getSalesRecord.salesRecord#</td>
+			</tr>
+		</cfif>
+		</tr>
 		<cfif sqlTemp.shipnote NEQ "">
 			<tr bgcolor="##F0F1F3"><td colspan="10"><b>Note: </b>#sqlTemp.shipnote#<br><br></td></tr>
 		<cfelse>
@@ -447,7 +464,8 @@ function fShipNote(itemid){
 				</td>
 			</tr>
 		</cfif>
-		<tr bgcolor="##F0F1F3"><td colspan="10">&nbsp;</td></tr>
+		
+		<td colspan="10">&nbsp;</td>
 		<tr bgcolor="##FFFFFF"><td colspan="10">&nbsp;</td></tr>
 		</cfoutput>
 		<cfoutput>
