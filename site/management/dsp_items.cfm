@@ -142,7 +142,7 @@ function fShipNote(itemid){
 			<form method="POST" action="#_machine.self#">
 				<input type="text" size="20" maxlength="50" name="srch" value="#HTMLEditFormat(attributes.srch)#">
 				<select name="srchfield" style="font-size: 13px;">
-					#SelectOptions(attributes.srchfield, "all,All Fields;item,Item Number;title,Item Title;description,Description;Owner,Owner;ebayitem,eBay Number;ebaytitle,eBay Title;HighBidder,High Bidder ID;HighBidderEmail,High Bidder Email;tracking,Tracking Number;ebayhistory,eBay History;extExternalTransactionID,PayPal Transaction ID;internal_itemSKU,SKU;internal_itemSKU2,SKU2;LID,LID;UPC,UPC;itemExact,Item Exact Number;Bonanza,Bonanza Bidder")#
+					#SelectOptions(attributes.srchfield, "all,All Fields;item,Item Number;title,Item Title;description,Description;Owner,Owner;ebayitem,eBay Number;ebaytitle,eBay Title;HighBidder,High Bidder ID;HighBidderEmail,High Bidder Email;tracking,Tracking Number;ebayhistory,eBay History;extExternalTransactionID,PayPal Transaction ID;internal_itemSKU,SKU;internal_itemSKU2,SKU2;LID,LID;UPC,UPC;itemExact,Item Exact Number;Bonanza,Bonanza Bidder;salesRecord, sales Record")#
 				</select>
 				<input type="submit" value="Search">
 			</form>
@@ -203,7 +203,7 @@ function fShipNote(itemid){
 							OR i.lid LIKE '#attributes.srch#%'
 							OR i.internal_itemSKU LIKE '#attributes.srch#%'
 							OR i.internal_itemSKU2 LIKE '#attributes.srch#%'							
-
+							OR i.ebayTxnid LIKE '#attributes.srch#%'
 						)
 
 					</cfcase>
@@ -246,7 +246,10 @@ function fShipNote(itemid){
 					</cfcase>	
 					<cfcase value="Bonanza">
 						WHERE i.bonanza_bidder = '#attributes.srch#'
-					</cfcase>									
+					</cfcase>	
+					<cfcase value="salesRecord">
+						WHERE i.ebayTxnid = '#attributes.srch#'
+					</cfcase>								
 					<cfdefaultcase>
 						WHERE i.#attributes.srchfield# LIKE '%#attributes.srch#%'
 					</cfdefaultcase>
@@ -269,12 +272,7 @@ function fShipNote(itemid){
 			
 		</cfquery>
 		
-		<!---getting salesRecord --->
-		<cfquery name="getSalesRecord" datasource="#request.dsn#">
-			SELECT salesRecord
-			from ebtransactions
-			WHERE TransactionID = '#sqlTemp.ebayTxnid#'
-		</cfquery>
+		
 
 <!---
 <cfdump var = "#sqlTemp#">
@@ -445,10 +443,10 @@ function fShipNote(itemid){
 			</td>--->
 		</tr>
 		<tr bgcolor="##F0F1F3">
-		<cfif getSalesRecord.recordcount gte 1>
+		<cfif sqlTemp.ebayTxnid gte 1>
 			<tr bgcolor="##FFFFFF">
 				<td valign="middle" align="right"><b>Sales Record:</b></td>
-				<td colspan="10" align="left">#getSalesRecord.salesRecord#</td>
+				<td colspan="10" align="left">#sqlTemp.ebayTxnid#</td>
 			</tr>
 		</cfif>
 		</tr>
