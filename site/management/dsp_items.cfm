@@ -167,7 +167,8 @@ function fShipNote(itemid){
 				s.status, s.id as statusid, e.galleryurl, i.dcreated, a.email, i.ebayitem, a.store,
 				i.lid, i.ebayitem, i.startprice, i.shipnote, u.ready, i.label_printed, i.internal_itemSKU,a.is_archived, u.use_pictures, i.paid, 
 				i.ShippedTime, i.customer_returned, i.dpictured, i.itemis_template,i.itemis_template_setdate, i.ebayTxnid
-
+				,i.ebaySalesRecord
+					
 			FROM accounts a
 				INNER JOIN items i ON a.id = i.aid
 				LEFT JOIN ebitems e ON i.ebayitem = e.ebayitem
@@ -179,6 +180,7 @@ function fShipNote(itemid){
 						INNER JOIN ebtransactions t ON t.itmItemID = i.ebayitem
 						WHERE t.extExternalTransactionID = '#attributes.srch#'
 					</cfcase>
+						
 					<cfcase value="all">
 					<!--- vlad added filter of archived users --->
 						WHERE
@@ -203,7 +205,8 @@ function fShipNote(itemid){
 							OR i.lid LIKE '#attributes.srch#%'
 							OR i.internal_itemSKU LIKE '#attributes.srch#%'
 							OR i.internal_itemSKU2 LIKE '#attributes.srch#%'							
-							OR i.ebayTxnid LIKE '#attributes.srch#%'
+							<!---OR i.ebayTxnid LIKE '#attributes.srch#%'--->
+							OR i.ebaySalesRecord LIKE '#attributes.srch#'
 						)
 
 					</cfcase>
@@ -248,8 +251,8 @@ function fShipNote(itemid){
 						WHERE i.bonanza_bidder = '#attributes.srch#'
 					</cfcase>	
 					<cfcase value="salesRecord">
-						WHERE i.ebayTxnid = '#attributes.srch#'
-					</cfcase>								
+						WHERE i.ebaySalesRecord = '#attributes.srch#'
+					</cfcase>							
 					<cfdefaultcase>
 						WHERE i.#attributes.srchfield# LIKE '%#attributes.srch#%'
 					</cfdefaultcase>
@@ -443,10 +446,10 @@ function fShipNote(itemid){
 			</td>--->
 		</tr>
 		<tr bgcolor="##F0F1F3">
-		<cfif sqlTemp.ebayTxnid gte 1>
+		<cfif sqlTemp.ebaySalesRecord gte 1>
 			<tr bgcolor="##FFFFFF">
 				<td valign="middle" align="right"><b>Sales Record:</b></td>
-				<td colspan="10" align="left">#sqlTemp.ebayTxnid#</td>
+				<td colspan="10" align="left">#sqlTemp.ebaySalesRecord#</td>
 			</tr>
 		</cfif>
 		</tr>

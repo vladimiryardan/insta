@@ -31,7 +31,26 @@
 	itmItemID,
 	itmStartTime,
 	itmEndTime,
-	itmTitle,stseBayPaymentStatus,stsCheckoutStatus,stsLastTimeModified,stsPaymentMethodUsed,stsCompleteStatus,stsBuyerSelectedShipping,TransactionID,TransactionPrice,BestOfferSale,extExternalTransactionID,extExternalTransactionTime,extFeeOrCreditAmount,extPaymentOrRefundAmount,PaidTime,ShippedTime,itmQuantitySold,itmSKU,salesRecord,listingtype
+	itmTitle,
+	stseBayPaymentStatus,
+	stsCheckoutStatus,
+	stsLastTimeModified,
+	stsPaymentMethodUsed,
+	stsCompleteStatus,
+	stsBuyerSelectedShipping,
+	TransactionID,
+	TransactionPrice,
+	BestOfferSale,
+	extExternalTransactionID,
+	extExternalTransactionTime,
+	extFeeOrCreditAmount,
+	extPaymentOrRefundAmount,
+	PaidTime,
+	ShippedTime,
+	itmQuantitySold,
+	itmSKU,
+	salesRecord,
+	listingtype
 	from ebtransactions
 	WHERE tid = <cfqueryparam cfsqltype="cf_sql_float" value="#attributes.tid#">
 </cfquery>
