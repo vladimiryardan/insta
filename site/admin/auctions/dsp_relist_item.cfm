@@ -293,11 +293,11 @@ function fCharsLeft(objID, val, maxChars){
 				<td align="left">
 					<table cellpadding="0" cellspacing="0" border="0">
 					<tr>
-						<td><input type="radio" id="boNo" name="bestOffer" value="0"></td>
+						<td><input type="radio" id="boNo" name="bestOffer" value="0" checked></td>
 						<td><label for="boNo">No</label></td>
 					</tr>
 					<tr>
-						<td><input type="radio" id="boYes" name="bestOffer" value="1" checked></td>
+						<td><input type="radio" id="boYes" name="bestOffer" value="1" ></td>
 						<td><label for="boYes">Yes</label></td>
 					</tr>
 					</table>
