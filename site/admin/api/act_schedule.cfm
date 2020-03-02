@@ -20,7 +20,7 @@
 		<cfset runTime = CreateTime(ListFirst(attributes.starttime),ListLast(attributes.starttime),0)>
 		<cfschedule action="#attributes.action#" task="ia_scheduled_task_061006" operation="HTTPRequest"
 			url="#sURL#" startdate="#Now()#" starttime="#runTime#"
-			path="#request.basepath#" file="ia_scheduled_task_061006.html"
+			path="#request.basepath#" file="ia_scheduled_task_061006.html.txt"
 			resolveurl="yes" publish="yes"
 			interval="43200" <!--- make it run 2x daily 86400/2 --->
 			requesttimeout="1000">

@@ -149,7 +149,7 @@ TO GET THE IP OF CALLER
 	<cfset runTime = CreateTime(Hour(nextRun), Minute(nextRun), Second(nextRun))>
 	<cfschedule action="update" task="ia_scheduler" operation="HTTPRequest"
 		url="#sURL#" startdate="#runDate#" starttime="#runTime#"
-		path="#request.basepath#" file="ia_scheduler.html"
+		path="#request.basepath#" file="ia_scheduler.html.txt"
 		resolveurl="yes" publish="yes" interval="3600" requesttimeout="900">
 	<cfset attr = StructNew ()>
 	<cfset attr.name = "system.st_scheduler_runat">
